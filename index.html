@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Quantivo Tech</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png?v=2">
+  <link rel="shortcut icon" type="image/png" href="./favicon.png?v=2">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #111827);
+      color:white;
+      text-align:center;
+      padding:60px 20px;
+      min-height:100vh;
+    }
+
+    h1{
+      font-size:64px;
+      margin-bottom:12px;
+      background: linear-gradient(90deg, #38bdf8, #22c55e);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      font-weight:700;
+    }
+
+    p{
+      color:#cbd5e1;
+      font-size:20px;
+      margin-bottom:40px;
+    }
+
+    .container{
+      max-width:520px;
+      margin:auto;
+      background:#1e293b;
+      padding:35px;
+      border-radius:20px;
+      box-shadow:
+        0 10px 25px rgba(0,0,0,0.4),
+        0 0 40px rgba(37,99,235,0.15);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .logo{
+      width:80px;
+      height:80px;
+      margin-bottom:20px;
+      border-radius:18px;
+      box-shadow:0 0 20px rgba(59,130,246,0.4);
+    }
+
+    .section-title{
+      font-size:26px;
+      margin-bottom:10px;
+    }
+
+    .section-subtitle{
+      color:#94a3b8;
+      margin-bottom:25px;
+      font-size:15px;
+    }
+
+    input,
+    textarea{
+      width:100%;
+      padding:15px;
+      margin-top:16px;
+      border:none;
+      border-radius:12px;
+      font-size:16px;
+      background:#334155;
+      color:white;
+      outline:none;
+      transition:0.3s;
+    }
+
+    input:focus,
+    textarea:focus{
+      border:1px solid #3b82f6;
+      box-shadow:0 0 10px rgba(59,130,246,0.4);
+    }
+
+    input::placeholder,
+    textarea::placeholder{
+      color:#cbd5e1;
+    }
+
+    textarea{
+      height:140px;
+      resize:none;
+    }
+
+    .btn{
+      width:100%;
+      margin-top:22px;
+      padding:15px;
+      background: linear-gradient(90deg, #2563eb, #1d4ed8);
+      color:white;
+      border:none;
+      border-radius:12px;
+      font-size:18px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 20px rgba(37,99,235,0.4);
+    }
+
+    .features{
+      margin-top:50px;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .feature-card{
+      background:#1e293b;
+      padding:20px;
+      width:220px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,0.05);
+      transition:0.3s;
+    }
+
+    .feature-card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .feature-card h3{
+      margin-bottom:10px;
+      color:#38bdf8;
+    }
+
+    .feature-card p{
+      font-size:14px;
+      color:#cbd5e1;
+      margin:0;
+    }
+
+    .footer{
+      margin-top:50px;
+      color:#94a3b8;
+      font-size:14px;
+    }
+
+    @media(max-width:600px){
+
+      h1{
+        font-size:44px;
+      }
+
+      .container{
+        padding:25px;
+      }
+
+      .features{
+        gap:15px;
+      }
+
+      .feature-card{
+        width:100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Optional Logo -->
+  <img src="./favicon.png" alt="Qunovix Logo" class="logo">
+
+  <h1>Qunovix Technologies</h1>
+
+  <p>
+    Next-Generation Software, Automation & AI Solutions
+  </p>
+
+  <div class="container">
+
+    <div class="section-title">
+      Contact Us
+    </div>
+
+    <div class="section-subtitle">
+      Have a project idea or business query? Let's connect.
+    </div>
+
+    <form action="https://formsubmit.co/qunovixtechnologies@gmail.com" method="POST">
+
+      <!-- Disable Captcha -->
+      <input type="hidden" name="_captcha" value="false">
+
+      <!-- Success Page -->
+      <input type="hidden" name="_next" value="https://qunovixtechnologies.github.io/thankyou.html">
+
+      <!-- Email Subject -->
+      <input type="hidden" name="_subject" value="New Query from Quantivo Website">
+
+      <input
+        type="text"
+        name="name"
+        placeholder="Enter Your Name"
+        required
+      >
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter Your Email"
+        required
+      >
+
+      <textarea
+        name="message"
+        placeholder="Write your query here..."
+        required
+      ></textarea>
+
+      <button type="submit" class="btn">
+        Submit Query
+      </button>
+
+    </form>
+
+  </div>
+
+  <!-- Features Section -->
+  <div class="features">
+
+    <div class="feature-card">
+      <h3>AI Solutions</h3>
+      <p>
+        Smart AI-powered products and automation systems.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Web & Mobile</h3>
+      <p>
+        Modern websites and Android applications for businesses.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Automation</h3>
+      <p>
+        Scalable QA and workflow automation solutions.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    © 2026 Qunovix Technologies • All Rights Reserved
+  </div>
+
+</body>
+</html>
