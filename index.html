@@ -12,6 +12,7 @@
   <link rel="shortcut icon" type="image/png" href="./favicon.png?v=2">
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -179,20 +180,24 @@
         width:100%;
       }
     }
+
   </style>
+
 </head>
 
 <body>
 
-  <!-- Optional Logo -->
+  <!-- Logo -->
   <img src="./favicon.png" alt="Qunovix Logo" class="logo">
 
+  <!-- Heading -->
   <h1>Qunovix Technologies</h1>
 
   <p>
     Next-Generation Software, Automation & AI Solutions
   </p>
 
+  <!-- Contact Form -->
   <div class="container">
 
     <div class="section-title">
@@ -203,16 +208,43 @@
       Have a project idea or business query? Let's connect.
     </div>
 
-    <form action="https://formsubmit.co/qunovixtechnologies@gmail.com" method="POST">
+    <form action="https://api.web3forms.com/submit" method="POST">
 
-      <!-- Disable Captcha -->
-      <input type="hidden" name="_captcha" value="false">
-
-      <!-- Success Page -->
-      <input type="hidden" name="_next" value="https://qunovixtechnologies.github.io/thankyou.html">
+      <!-- Web3Forms Access Key -->
+      <input 
+        type="hidden" 
+        name="access_key" 
+        value="4e64cb43-f86e-4791-9211-893c42280b64"
+      >
 
       <!-- Email Subject -->
-      <input type="hidden" name="_subject" value="New Query from Qunovix Technologies Website">
+      <input 
+        type="hidden" 
+        name="subject" 
+        value="New Query from Qunovix Technologies Website"
+      >
+
+      <!-- Redirect After Submit -->
+      <input 
+        type="hidden" 
+        name="redirect" 
+        value="https://qunovixtechnologies.github.io/thankyou.html"
+      >
+
+      <!-- Sender Name -->
+      <input 
+        type="hidden" 
+        name="from_name" 
+        value="Qunovix Technologies"
+      >
+
+      <!-- Honeypot Spam Protection -->
+      <input 
+        type="checkbox" 
+        name="botcheck" 
+        class="hidden" 
+        style="display:none;"
+      >
 
       <input
         type="text"
@@ -242,7 +274,7 @@
 
   </div>
 
-  <!-- Features Section -->
+  <!-- Features -->
   <div class="features">
 
     <div class="feature-card">
@@ -268,8 +300,9 @@
 
   </div>
 
+  <!-- Footer -->
   <div class="footer">
-    &copy; 2026 Qunovix Technologies &bull; All Rights Reserved
+    &copy; 2026 Qunovix Technologies • All Rights Reserved
   </div>
 
 </body>
