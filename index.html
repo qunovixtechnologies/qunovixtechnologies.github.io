@@ -1,309 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Qunovix Technologies</title>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png?v=2">
   <link rel="shortcut icon" type="image/png" href="./favicon.png?v=2">
 
   <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    body{
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #111827);
-      color:white;
-      text-align:center;
-      padding:60px 20px;
-      min-height:100vh;
+    :root {
+      --bg: #050816;
+      --card: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.14);
+      --text: #ffffff;
+      --muted: #a7b0c3;
+      --blue: #38bdf8;
+      --green: #22c55e;
+      --purple: #8b5cf6;
     }
 
-    h1{
-      font-size:64px;
-      margin-bottom:12px;
-      background: linear-gradient(90deg, #38bdf8, #22c55e);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-      font-weight:700;
+    body {
+      font-family: Inter, Arial, sans-serif;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.22), transparent 32%),
+        radial-gradient(circle at top right, rgba(139,92,246,0.22), transparent 28%),
+        radial-gradient(circle at bottom, rgba(34,197,94,0.12), transparent 35%),
+        var(--bg);
+      overflow-x: hidden;
     }
 
-    p{
-      color:#cbd5e1;
-      font-size:20px;
-      margin-bottom:40px;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, black, transparent);
+      pointer-events: none;
     }
 
-    .container{
-      max-width:520px;
-      margin:auto;
-      background:#1e293b;
-      padding:35px;
-      border-radius:20px;
-      box-shadow:
-        0 10px 25px rgba(0,0,0,0.4),
-        0 0 40px rgba(37,99,235,0.15);
-      border:1px solid rgba(255,255,255,0.08);
+    .page {
+      width: min(1180px, 92%);
+      margin: auto;
+      padding: 34px 0 28px;
+      position: relative;
+      z-index: 1;
     }
 
-    .logo{
-      width:80px;
-      height:80px;
-      margin-bottom:20px;
-      border-radius:18px;
-      box-shadow:0 0 20px rgba(59,130,246,0.4);
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 80px;
     }
 
-    .section-title{
-      font-size:26px;
-      margin-bottom:10px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
     }
 
-    .section-subtitle{
-      color:#94a3b8;
-      margin-bottom:25px;
-      font-size:15px;
+    .brand img {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      box-shadow: 0 0 28px rgba(56,189,248,0.35);
+    }
+
+    .nav-pill {
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: #dbeafe;
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(16px);
+      font-size: 14px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 10px 15px;
+      border-radius: 999px;
+      border: 1px solid rgba(56,189,248,0.25);
+      background: rgba(56,189,248,0.08);
+      color: #bae6fd;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 82px);
+      line-height: 0.95;
+      letter-spacing: -3px;
+      margin-bottom: 22px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--blue), var(--green), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 34px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+      text-decoration: none;
+      padding: 15px 22px;
+      border-radius: 16px;
+      font-weight: 800;
+      transition: 0.25s ease;
+    }
+
+    .primary-btn {
+      color: #03111f;
+      background: linear-gradient(135deg, #38bdf8, #22c55e);
+      box-shadow: 0 18px 40px rgba(34,197,94,0.22);
+    }
+
+    .secondary-btn {
+      color: #e5e7eb;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .primary-btn:hover,
+    .secondary-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .stats {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      min-width: 145px;
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 24px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .contact-card {
+      padding: 30px;
+      border-radius: 30px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.13), rgba(255,255,255,0.06));
+      border: 1px solid var(--border);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.38);
+      backdrop-filter: blur(24px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      right: -70px;
+      top: -70px;
+      background: radial-gradient(circle, rgba(56,189,248,0.35), transparent 70%);
+    }
+
+    .contact-card h2 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      margin-bottom: 22px;
+      line-height: 1.6;
     }
 
     input,
-    textarea{
-      width:100%;
-      padding:15px;
-      margin-top:16px;
-      border:none;
-      border-radius:12px;
-      font-size:16px;
-      background:#334155;
-      color:white;
-      outline:none;
-      transition:0.3s;
+    textarea {
+      width: 100%;
+      padding: 16px 17px;
+      margin-top: 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(2,6,23,0.55);
+      color: white;
+      font-size: 15px;
+      outline: none;
+      transition: 0.25s ease;
     }
 
     input:focus,
-    textarea:focus{
-      border:1px solid #3b82f6;
-      box-shadow:0 0 10px rgba(59,130,246,0.4);
+    textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 4px rgba(56,189,248,0.12);
     }
 
     input::placeholder,
-    textarea::placeholder{
-      color:#cbd5e1;
+    textarea::placeholder {
+      color: #94a3b8;
     }
 
-    textarea{
-      height:140px;
-      resize:none;
+    textarea {
+      height: 140px;
+      resize: none;
     }
 
-    .btn{
-      width:100%;
-      margin-top:22px;
-      padding:15px;
-      background: linear-gradient(90deg, #2563eb, #1d4ed8);
-      color:white;
-      border:none;
-      border-radius:12px;
-      font-size:18px;
-      font-weight:bold;
-      cursor:pointer;
-      transition:0.3s;
+    .btn {
+      width: 100%;
+      margin-top: 18px;
+      padding: 16px;
+      border: 0;
+      border-radius: 16px;
+      color: #03111f;
+      font-size: 17px;
+      font-weight: 900;
+      cursor: pointer;
+      background: linear-gradient(135deg, #38bdf8, #22c55e);
+      box-shadow: 0 18px 40px rgba(56,189,248,0.22);
+      transition: 0.25s ease;
     }
 
-    .btn:hover{
-      transform:translateY(-2px);
-      box-shadow:0 10px 20px rgba(37,99,235,0.4);
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 24px 50px rgba(34,197,94,0.28);
     }
 
-    .features{
-      margin-top:50px;
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
+    .services {
+      margin-top: 90px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
-    .feature-card{
-      background:#1e293b;
-      padding:20px;
-      width:220px;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,0.05);
-      transition:0.3s;
+    .service-card {
+      padding: 26px;
+      border-radius: 26px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(18px);
+      transition: 0.25s ease;
     }
 
-    .feature-card:hover{
-      transform:translateY(-5px);
-      box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    .service-card:hover {
+      transform: translateY(-7px);
+      background: rgba(255,255,255,0.11);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.32);
     }
 
-    .feature-card h3{
-      margin-bottom:10px;
-      color:#38bdf8;
+    .icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, rgba(56,189,248,0.25), rgba(34,197,94,0.18));
+      font-size: 24px;
     }
 
-    .feature-card p{
-      font-size:14px;
-      color:#cbd5e1;
-      margin:0;
+    .service-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
     }
 
-    .footer{
-      margin-top:50px;
-      color:#94a3b8;
-      font-size:14px;
+    .service-card p {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 15px;
     }
 
-    @media(max-width:600px){
+    .footer {
+      margin-top: 70px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #94a3b8;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
 
-      h1{
-        font-size:44px;
+    @media (max-width: 900px) {
+      .nav {
+        margin-bottom: 54px;
       }
 
-      .container{
-        padding:25px;
+      .hero {
+        grid-template-columns: 1fr;
       }
 
-      .features{
-        gap:15px;
+      .services {
+        grid-template-columns: 1fr;
+        margin-top: 60px;
       }
 
-      .feature-card{
-        width:100%;
+      .contact-card {
+        padding: 24px;
       }
     }
 
+    @media (max-width: 520px) {
+      .nav-pill {
+        display: none;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .primary-btn,
+      .secondary-btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .stat {
+        width: 100%;
+      }
+    }
   </style>
-
 </head>
 
 <body>
 
-  <!-- Logo -->
-  <img src="./favicon.png" alt="Qunovix Logo" class="logo">
+  <main class="page">
 
-  <!-- Heading -->
-  <h1>Qunovix Technologies</h1>
+    <nav class="nav">
+      <div class="brand">
+        <img src="./favicon.png" alt="Qunovix Logo">
+        <span>Qunovix Technologies</span>
+      </div>
 
-  <p>
-    Next-Generation Software, Automation & AI Solutions
-  </p>
+      <div class="nav-pill">
+        Software • Automation • AI
+      </div>
+    </nav>
 
-  <!-- Contact Form -->
-  <div class="container">
+    <section class="hero">
 
-    <div class="section-title">
-      Contact Us
-    </div>
+      <div>
+        <div class="badge">⚡ Future-ready digital solutions</div>
 
-    <div class="section-subtitle">
-      Have a project idea or business query? Let's connect.
-    </div>
+        <h1>
+          Build smarter. <br>
+          Launch faster with <span class="gradient-text">Qunovix.</span>
+        </h1>
 
-    <form action="https://api.web3forms.com/submit" method="POST">
+        <p>
+          We create modern websites, Android apps, AI-powered tools and automation solutions
+          that help businesses move faster with reliable, scalable technology.
+        </p>
 
-      <!-- Web3Forms Access Key -->
-      <input 
-        type="hidden" 
-        name="access_key" 
-        value="4e64cb43-f86e-4791-9211-893c42280b64"
-      >
+        <div class="hero-actions">
+          <a href="#contact" class="primary-btn">Start a Project</a>
+          <a href="#services" class="secondary-btn">Explore Services</a>
+        </div>
 
-      <!-- Email Subject -->
-      <input 
-        type="hidden" 
-        name="subject" 
-        value="New Query from Qunovix Technologies Website"
-      >
+        <div class="stats">
+          <div class="stat">
+            <strong>2026</strong>
+            <span>Modern technology focus</span>
+          </div>
+          <div class="stat">
+            <strong>AI</strong>
+            <span>Smart automation ready</span>
+          </div>
+          <div class="stat">
+            <strong>Mobile</strong>
+            <span>Android-first solutions</span>
+          </div>
+        </div>
+      </div>
 
-      <!-- Redirect After Submit -->
-      <input 
-        type="hidden" 
-        name="redirect" 
-        value="https://qunovixtechnologies.github.io/thankyou.html"
-      >
+      <div class="contact-card" id="contact">
+        <h2>Let’s Talk</h2>
+        <p>
+          Have a project idea, app requirement or business query?
+          Send us a message and we’ll connect with you.
+        </p>
 
-      <!-- Sender Name -->
-      <input 
-        type="hidden" 
-        name="from_name" 
-        value="Qunovix Technologies"
-      >
+        <form action="https://api.web3forms.com/submit" method="POST">
 
-      <!-- Honeypot Spam Protection -->
-      <input 
-        type="checkbox" 
-        name="botcheck" 
-        class="hidden" 
-        style="display:none;"
-      >
+          <input type="hidden" name="access_key" value="4e64cb43-f86e-4791-9211-893c42280b64">
+          <input type="hidden" name="subject" value="New Query from Qunovix Technologies Website">
+          <input type="hidden" name="redirect" value="https://qunovixtechnologies.github.io/thankyou.html">
+          <input type="hidden" name="from_name" value="Qunovix Technologies">
 
-      <input
-        type="text"
-        name="name"
-        placeholder="Enter Your Name"
-        required
-      >
+          <input type="checkbox" name="botcheck" style="display:none;">
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Enter Your Email"
-        required
-      >
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email Address" required>
+          <textarea name="message" placeholder="Tell us about your project or query..." required></textarea>
 
-      <textarea
-        name="message"
-        placeholder="Write your query here..."
-        required
-      ></textarea>
+          <button type="submit" class="btn">Submit Query →</button>
+        </form>
+      </div>
 
-      <button type="submit" class="btn">
-        Submit Query
-      </button>
+    </section>
 
-    </form>
+    <section class="services" id="services">
 
-  </div>
+      <div class="service-card">
+        <div class="icon">🤖</div>
+        <h3>AI Solutions</h3>
+        <p>
+          Smart AI-powered tools, app features and automation systems designed for real business use.
+        </p>
+      </div>
 
-  <!-- Features -->
-  <div class="features">
+      <div class="service-card">
+        <div class="icon">📱</div>
+        <h3>Web & Mobile Apps</h3>
+        <p>
+          Clean, responsive websites and Android applications with modern UI, speed and reliability.
+        </p>
+      </div>
 
-    <div class="feature-card">
-      <h3>AI Solutions</h3>
-      <p>
-        Smart AI-powered products and automation systems.
-      </p>
-    </div>
+      <div class="service-card">
+        <div class="icon">⚙️</div>
+        <h3>QA Automation</h3>
+        <p>
+          Scalable test automation and workflow automation to improve delivery quality and speed.
+        </p>
+      </div>
 
-    <div class="feature-card">
-      <h3>Web & Mobile</h3>
-      <p>
-        Modern websites and Android applications for businesses.
-      </p>
-    </div>
+    </section>
 
-    <div class="feature-card">
-      <h3>Automation</h3>
-      <p>
-        Scalable QA and workflow automation solutions.
-      </p>
-    </div>
+    <footer class="footer">
+      <span>© 2026 Qunovix Technologies. All rights reserved.</span>
+      <span>Built for modern digital businesses.</span>
+    </footer>
 
-  </div>
-
-  <!-- Footer -->
-  <div class="footer">
-    &copy; 2026 Qunovix Technologies • All Rights Reserved
-  </div>
+  </main>
 
 </body>
 </html>
