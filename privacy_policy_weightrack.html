@@ -20,10 +20,10 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="effective">Last updated: July 21, 2026</p>
+<p class="effective">Last updated: August 20, 2026</p>
 
 <div class="notice">
-  <strong>Local-first health tracking:</strong> WeightTrack stores profiles, weight records, notes, and progress-photo references locally on your device. Qunovix Technologies does not operate a server that receives or stores this content. Information may leave your device only when you request a feature such as sharing an export, importing Health data, viewing an ad, or completing a Google Play purchase.
+  <strong>Local-first health tracking:</strong> WeightTrack stores profiles, weight records, notes, and progress-photo references locally on your device. Qunovix Technologies does not upload this health content to Firebase or operate a server that receives or stores it. Limited app-usage and diagnostic information may be processed by Firebase Analytics and Firebase Crashlytics, as described below. Information may also leave your device when you request a feature such as sharing an export, importing Health data, viewing an ad, or completing a Google Play purchase.
 </div>
 
 <h2>1. Who We Are</h2>
@@ -72,7 +72,18 @@
   Learn more from <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>, <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses information for advertising</a>, and <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob policies</a>.
 </p>
 
-<h2>6. Google Play Billing and Remove Ads</h2>
+<h2>6. Firebase Analytics and Crashlytics</h2>
+<p>
+  WeightTrack uses Firebase Analytics to understand general App usage and Firebase Crashlytics to identify crashes, non-fatal errors, and application-not-responding events. These services may process a Firebase installation identifier, app instance and session information, App version, screen or route activity, device model, operating-system version, language, broad geographic information, timestamps, crash state, stack traces, and related technical diagnostics. Google may also associate Analytics data with advertising identifiers where permitted by your device settings, region, and consent choices.
+</p>
+<p>
+  We do not deliberately log profile names, entered weights, goals, notes, progress photos, Health Connect or HealthKit records, or backup contents as Firebase Analytics events, user properties, Crashlytics custom keys, or Crashlytics logs. Firebase reporting is disabled in developer debug builds and enabled in production Android releases. The information is used to measure feature and screen usage, maintain App stability, investigate failures, prevent abuse, and improve WeightTrack. It is not used by us to provide medical advice or build a health profile about you.
+</p>
+<p>
+  Google acts as a service provider for these Firebase features and may process information on servers outside your country. Learn more from <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a>, <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from apps that use its services</a>, and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
+</p>
+
+<h2>7. Google Play Billing and Remove Ads</h2>
 <p>
   WeightTrack offers a one-time, non-consumable Remove Ads product through Google Play Billing. Google Play processes the transaction and payment method. We do not receive your full payment-card or bank-account details.
 </p>
@@ -80,71 +91,76 @@
   The App receives product information, localized price, purchase status, purchase token or verification data, and restoration results needed to start, verify, acknowledge, restore, and deliver the ad-free entitlement. A local entitlement flag is stored after a successful or restored purchase. Google processes purchase information under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and <a href="https://play.google.com/intl/en_in/about/play-terms/" target="_blank" rel="noopener">Google Play Terms of Service</a>.
 </p>
 
-<h2>7. Permissions</h2>
+<h2>8. Permissions</h2>
 <p>Depending on the features you use, WeightTrack may request:</p>
 <ul>
   <li><strong>Camera and photos/media:</strong> to take, select, save, or share progress photos;</li>
   <li><strong>Health weight read access:</strong> to import a weight sample when you request it;</li>
   <li><strong>Notifications, alarms, and boot completion:</strong> to schedule optional daily reminders and restore them after a device restart;</li>
   <li><strong>Files/storage:</strong> to import or export backups and share CSV files where required by the operating system; and</li>
-  <li><strong>Internet:</strong> for ads, consent messages, Google Play Billing, reviews, and external links.</li>
+  <li><strong>Internet:</strong> for Firebase Analytics and Crashlytics, ads, consent messages, Google Play Billing, reviews, and external links.</li>
 </ul>
 <p>You can manage permissions in device settings. Disabling a permission may prevent the related feature from working.</p>
 
-<h2>8. How Information Is Used</h2>
+<h2>9. How Information Is Used</h2>
 <p>Information is used to:</p>
 <ul>
   <li>provide profiles, weight history, charts, statistics, goals, reminders, progress photos, and the home widget;</li>
   <li>import weight data and create exports or backups when you request those actions;</li>
   <li>display and measure ads for users who have not purchased Remove Ads;</li>
+  <li>measure general App and screen usage and diagnose crashes, errors, and performance problems through Firebase;</li>
   <li>process, acknowledge, restore, and remember the Remove Ads entitlement;</li>
   <li>maintain security, prevent fraud and invalid advertising activity, diagnose problems, and comply with law and platform rules.</li>
 </ul>
 
-<h2>9. Sharing and Third-Party Processing</h2>
+<h2>10. Sharing and Third-Party Processing</h2>
 <p>We do not sell your locally stored weight or health information. Information may be processed by:</p>
 <ul>
   <li>Google Mobile Ads and consent partners for advertising, consent, measurement, and fraud prevention;</li>
+  <li>Google Firebase for App analytics, installation identification, crash reporting, diagnostics, stability, and service security;</li>
   <li>Google Play for product details, payment processing, purchase verification, restoration, refunds, and order management;</li>
   <li>Health Connect or HealthKit when you request health import;</li>
   <li>your operating system and apps you choose for notifications, files, photos, exports, backups, reviews, or sharing; and</li>
   <li>authorities or other parties when required by law or necessary to protect rights, safety, and security.</li>
 </ul>
 
-<h2>10. Retention and Deletion</h2>
+<h2>11. Retention and Deletion</h2>
 <p>
   Local data remains until you delete records or profiles, clear the App's storage, or uninstall the App. Progress-photo files may need to be removed separately if a copy exists outside the App. Exported files remain in the destination you selected until you delete them.
 </p>
 <p>
   Purchase and transaction records are retained by Google Play according to Google's policies and legal obligations. Uninstalling the App does not cancel, refund, or erase a Google Play order. A valid Remove Ads purchase can be restored using the Google Play account that owns it.
 </p>
+<p>
+  Firebase Analytics and Crashlytics information is retained according to our Firebase project settings and Google's applicable retention practices. Clearing App data or uninstalling WeightTrack resets or removes local identifiers on your device but may not immediately delete information already retained by Google. You may contact us to request assistance with applicable data rights; because WeightTrack has no user account, we may not be able to connect a Firebase installation identifier to a specific person without information from that device.
+</p>
 
-<h2>11. Security</h2>
+<h2>12. Security</h2>
 <p>
   We use reasonable safeguards appropriate to a local-first app, but no device, network, file, or software system is completely secure. Protect your device with a screen lock, keep the operating system updated, and store exports or backups securely.
 </p>
 
-<h2>12. Children's Privacy</h2>
+<h2>13. Children's Privacy</h2>
 <p>
   WeightTrack is not directed to children under 13. A parent or guardian should supervise any minor's use and decide whether health, photo, reminder, advertising, and purchase features are appropriate. Do not allow a child to make a purchase without authorization from the Google Play account holder.
 </p>
 
-<h2>13. Your Choices and Rights</h2>
+<h2>14. Your Choices and Rights</h2>
 <p>
   You can edit or delete local records, remove profiles, revoke permissions, turn reminders off, change advertising privacy choices where available, purchase Remove Ads, clear App data, or uninstall the App. Depending on your location, you may also have legal rights concerning personal information processed by us or third parties. Contact us to make a request; for information controlled by Google, use Google's privacy and account tools.
 </p>
 
-<h2>14. International Processing</h2>
+<h2>15. International Processing</h2>
 <p>
   Google and other device or platform providers may process information in countries other than your own. Their policies describe the safeguards they use for international transfers.
 </p>
 
-<h2>15. Changes to This Policy</h2>
+<h2>16. Changes to This Policy</h2>
 <p>
   We may update this Privacy Policy to reflect changes to WeightTrack, third-party services, laws, or platform requirements. The current version will show its latest revision date.
 </p>
 
-<h2>16. Contact Us</h2>
+<h2>17. Contact Us</h2>
 <p>
   Email: <a href="mailto:qunovixtechnologies@gmail.com">qunovixtechnologies@gmail.com</a><br>
   Address: Pune, Maharashtra, India
