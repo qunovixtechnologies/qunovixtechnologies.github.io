@@ -20,7 +20,7 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="effective">Last updated: July 20, 2026</p>
+<p class="effective">Last updated: August 20, 2026</p>
 
 <div class="notice">
   <strong>Privacy-first diary:</strong> MyDiary is designed as a personal journal app. Your diary entries are stored locally on your device unless you choose to export them or back them up using a third-party service such as Google Drive.
@@ -64,6 +64,7 @@
 <ul>
   <li>Device type, operating system, app version, approximate location derived from network information, and identifiers such as advertising identifiers;</li>
   <li>Ad impressions, ad interactions, fraud-prevention signals, crash data, diagnostics, and performance information;</li>
+  <li>Firebase and analytics information, such as a per-installation identifier, app version, device and operating-system information, language, approximate region, session activity, first opens, and interactions with App features;</li>
   <li>Purchase and subscription status processed by Google Play or other app store providers;</li>
   <li>Authentication and file-transfer information when you choose Google sign-in or Google Drive backup.</li>
 </ul>
@@ -84,6 +85,7 @@
   <li>To create exports and backups when you request them;</li>
   <li>To show advertisements where ads are enabled and to offer ad-free or Pro features;</li>
   <li>To process purchases or subscriptions through app store services;</li>
+  <li>To understand aggregated App usage and feature engagement through Google Analytics for Firebase;</li>
   <li>To improve App performance, troubleshoot issues, maintain security, and comply with legal obligations.</li>
 </ul>
 
@@ -95,7 +97,7 @@
   <li><strong>Microphone:</strong> Used when you choose to record audio for a diary entry.</li>
   <li><strong>Biometric or fingerprint access:</strong> Used for optional diary lock features. Biometric verification is handled by your device; we do not receive your fingerprint or face data.</li>
   <li><strong>Notifications:</strong> Used for optional diary reminders and related notification actions.</li>
-  <li><strong>Internet access:</strong> Used for ads, purchases, Google sign-in, Google Drive backup, app store services, and links.</li>
+  <li><strong>Internet access:</strong> Used for ads, analytics, Firebase services, purchases, Google sign-in, Google Drive backup, app store services, and links.</li>
   <li><strong>Receive boot completed / battery optimization related permissions:</strong> Used to keep scheduled reminders working after restart or under device power-management settings where supported.</li>
 </ul>
 <p>
@@ -113,17 +115,28 @@
   Where required, the App uses Google's User Messaging Platform to present privacy choices before requesting ads. Depending on your choices and the ads available, Google may serve personalized, non-personalized, or limited ads. When a privacy-options entry is available in the App's settings, you can use it to review or change your advertising privacy choices.
 </p>
 
-<h3>8.2 Google Sign-In and Google Drive</h3>
+<h3>8.2 Firebase Core and Google Analytics for Firebase</h3>
+<p>
+  The Android version of the App uses Firebase Core and Google Analytics for Firebase, services provided by Google LLC. These services may automatically process a Firebase installation identifier, app-instance information, device and operating-system details, app version, language, approximate geographic information derived from network signals, session information, and events describing how the App is opened and used.
+</p>
+<p>
+  We use this information to measure aggregated usage, understand feature engagement, maintain and improve the App, and evaluate Pro-feature interest. For example, the App may send a generic event when a user opens a Pro upgrade prompt, together with the name of the App feature involved. We do not intentionally send diary titles, diary text, attachments, local passwords, biometric data, profile names, email addresses, exported files, or Google Drive backup contents to Firebase Analytics.
+</p>
+<p>
+  Depending on the device, Google settings, and our Firebase configuration, Analytics data may be associated with identifiers such as a Firebase installation or app-instance identifier and an advertising identifier. Google processes this information under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. More information is available in <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security</a> and <a href="https://firebase.google.com/docs/android/play-data-disclosure" target="_blank" rel="noopener">Firebase's Android data-disclosure documentation</a>.
+</p>
+
+<h3>8.3 Google Sign-In and Google Drive</h3>
 <p>
   If you choose Google Drive backup or restore, the App uses Google Sign-In and Google Drive APIs. Your backup is stored in your Google Drive account, normally in an app-specific storage area. Google's terms and privacy policies apply to those services.
 </p>
 
-<h3>8.3 Google Play Billing and App Stores</h3>
+<h3>8.4 Google Play Billing and App Stores</h3>
 <p>
   Purchases, subscriptions, refunds, app updates, app reviews, and store account information are processed by Google Play or the relevant app store provider under their own terms and privacy policies.
 </p>
 
-<h3>8.4 Device Services</h3>
+<h3>8.5 Device Services</h3>
 <p>
   The App may use your device's notification system, biometric prompt, file picker, sharing menu, camera, microphone, media library, PDF viewer, browser, and other operating-system features. These are provided by your device or selected third-party apps.
 </p>
@@ -135,13 +148,16 @@
 <p>
   Exported files and backups remain wherever you saved them until you delete them. Google Drive backups can be managed from your Google account or by using the App's restore/backup features where available.
 </p>
+<p>
+  Firebase and Google Analytics data is retained according to the retention settings configured for our Firebase and Google Analytics properties and Google's applicable policies. Analytics records may be aggregated or de-identified. Clearing the App's data or uninstalling the App stops future collection from that installation but does not necessarily delete information already processed by Google. You may contact us to make a privacy request concerning information under our control; because analytics identifiers are not intended to identify you by name, we may need information from you to determine whether a record can reasonably be associated with your request.
+</p>
 
 <h2>10. Data Sharing</h2>
 <p>
   We do not sell your diary entries or personal information. We may share or allow processing of information only in limited situations:
 </p>
 <ul>
-  <li>With third-party service providers needed for ads, purchases, Google sign-in, Google Drive backup, app store services, diagnostics, or device features;</li>
+  <li>With third-party service providers needed for analytics, Firebase services, ads, purchases, Google sign-in, Google Drive backup, app store services, diagnostics, or device features;</li>
   <li>When you choose to export, back up, share, or send diary content outside the App;</li>
   <li>When required to comply with law, legal process, app store rules, or to protect rights, safety, and security.</li>
 </ul>
