@@ -8,133 +8,131 @@
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.7; color: #333; }
     h1 { color: #1565C0; border-bottom: 2px solid #1565C0; padding-bottom: 10px; }
     h2 { color: #1565C0; margin-top: 30px; }
+    h3 { color: #333; margin-top: 20px; }
     p, li { margin: 10px 0; }
     ul { padding-left: 20px; }
     .effective { font-style: italic; color: #666; }
-    .disclaimer { background: #fff3e0; border-left: 4px solid #ff9800; padding: 15px; margin: 20px 0; border-radius: 4px; }
+    .notice { background: #e3f2fd; border-left: 4px solid #1565C0; padding: 15px; margin: 20px 0; border-radius: 4px; }
   </style>
 </head>
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="effective">Last updated: May 2026</p>
+<p class="effective">Last updated: August 20, 2026</p>
 
-<h2>1. Introduction</h2>
+<h2>1. Who We Are</h2>
 <p>
-  Welcome to Financial Calculator India ("we," "our," or "us"). We respect your privacy and are committed to protecting any personal information you may share with us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the "App").
-</p>
-<p>
-  By using the App, you agree to the collection and use of information in accordance with this policy.
+  Qunovix Technologies ("Qunovix," "we," "our," or "us") provides the Financial Calculator India mobile application (the "App"). This Privacy Policy explains what information the App and its service providers collect, why it is used, how it is protected, and the choices available to you.
 </p>
 
-<h2>2. Information We Collect</h2>
+<h2>2. Information We Process</h2>
 
-<h3>2.1 Information You Provide</h3>
+<h3>2.1 Calculator and Local App Data</h3>
 <p>
-  The App does not require you to create an account or provide personal information to use its core functionality. You may choose to provide:
+  The App does not require an account, name, email address, or phone number for its core calculator features. Calculator inputs and results are calculated on your device. Saved results, display preferences, language, rates, purchase status, and your Firebase report-sharing choice are stored locally on your device using Hive or the relevant app-store service.
 </p>
+
+<h3>2.2 Optional Firebase Report Data</h3>
+<div class="notice">
+  <strong>Firebase report sharing is optional and off unless you affirmatively allow it.</strong> Before the first upload, the App displays an in-app disclosure describing the data and asks for your permission. You can later turn this setting on or off under Settings &gt; Help improve free reports.
+</div>
+<p>If you allow Firebase report sharing, the App sends the following to Google Firebase Cloud Firestore when you view, save, share, or export a calculator report:</p>
 <ul>
-  <li><strong>Calculation inputs and report results:</strong> Financial figures you enter for calculation purposes (loan amounts, investment values, income, etc.). Core calculations are processed locally on your device. When you view, save, share, or export a free report, report details may be transmitted to Firebase to help us provide, monitor, and improve the free report service.</li>
-  <li><strong>Saved results:</strong> If you choose to save calculation results, they are stored locally on your device using local storage (Hive).</li>
+  <li>The report action: viewed, saved, shared, or PDF exported</li>
+  <li>The calculator type and report labels</li>
+  <li>All values, inputs represented in the report, calculation results, metrics, tables, timelines, and report notes</li>
+  <li>The report creation time and a server-recorded upload time</li>
+  <li>The App package name, version, and build number</li>
+</ul>
+<p>
+  We use this information only to operate, monitor, troubleshoot, and improve the free report service and App features. We do not intentionally send your name, email address, phone number, contacts, or Firebase Authentication account because the App does not request or create such an account.
+</p>
+<p>
+  When Firebase processes a request, Google may also process technical service data such as IP address, Firebase app and project identifiers, installation or device-related identifiers used by the SDK, and operational logs. Google processes this data as described in its service terms and privacy materials.
+</p>
+
+<h3>2.3 Advertising and Google Play Data</h3>
+<p>
+  The App uses Google AdMob to display ads. Depending on your region, consent choices, device settings, and Google's configuration, AdMob may process advertising identifiers, device information, approximate location inferred from an IP address, ad interactions, and diagnostic data to provide, measure, prevent fraud in, and personalize or limit ads.
+</p>
+<p>
+  Google Play Services processes information needed for in-app purchases, purchase restoration, in-app reviews, and app updates. Payment information is handled by Google Play and is not provided directly to us.
+</p>
+
+<h3>2.4 Rate Synchronization</h3>
+<p>
+  When the App synchronizes public bank interest-rate information, it makes an internet request to the configured public data source. The source or hosting provider may receive standard network information such as your IP address and request metadata. Calculator values and saved reports are not included in this request.
+</p>
+
+<h2>3. How We Use Information</h2>
+<ul>
+  <li>Provide calculations, saved results, reports, and requested App features</li>
+  <li>Operate, monitor, secure, troubleshoot, and improve the optional free report service</li>
+  <li>Display and measure advertisements through Google AdMob</li>
+  <li>Process purchases and provide Google Play features</li>
+  <li>Prevent misuse and comply with legal obligations</li>
 </ul>
 
-<h3>2.2 Information Collected Automatically</h3>
-<p>
-  We may collect certain information automatically when you use the App, including:
-</p>
+<h2>4. Service Providers and Disclosure</h2>
+<p>We use service providers to perform specific functions:</p>
 <ul>
-  <li><strong>Device information:</strong> Device model, operating system version, unique device identifiers.</li>
-  <li><strong>Usage data:</strong> App interactions, feature usage frequency, and crash reports.</li>
-  <li><strong>Free report events:</strong> Report actions such as viewed, saved, shared, and PDF exported, along with report metadata and calculation result data.</li>
-  <li><strong>Advertising identifiers:</strong> Google Advertising ID (for serving personalized ads where consent is provided).</li>
+  <li><strong>Google Firebase Cloud Firestore:</strong> optional storage and processing of report events and report contents</li>
+  <li><strong>Google AdMob:</strong> advertising delivery, measurement, and fraud prevention</li>
+  <li><strong>Google Play Services and Google Play:</strong> billing, purchase restoration, reviews, and updates</li>
 </ul>
+<p>
+  These Google services are subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>. Additional Firebase privacy and security information is available from <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase</a>.
+</p>
+<p>
+  We do not sell your personal information. We may disclose information if required by law, to protect users or the App, or as part of a business transfer subject to appropriate safeguards.
+</p>
 
-<h2>3. How We Use Your Information</h2>
-<p>We use the information we collect for the following purposes:</p>
+<h2>5. Consent and Your Choices</h2>
 <ul>
-  <li>To provide, maintain, and improve the App's functionality</li>
-  <li>To display advertisements via Google AdMob</li>
-  <li>To analyze app usage and fix technical issues</li>
-  <li>To operate, monitor, and improve the free report service</li>
-  <li>To comply with legal obligations</li>
+  <li><strong>Firebase report sharing:</strong> Choose "Not now" in the disclosure to prevent report uploads. You can enable or disable future uploads at any time in the App's Settings. Disabling it does not delete reports already uploaded.</li>
+  <li><strong>Advertising:</strong> Use any consent controls shown by the App or Google and your Android advertising privacy settings to manage personalized advertising where available.</li>
+  <li><strong>Local information:</strong> Delete individual saved results in the App or clear the App's storage/uninstall the App to remove locally stored App data.</li>
 </ul>
-
-<h2>4. Third-Party Services</h2>
-<p>The App uses the following third-party services that may collect information:</p>
-
-<h3>4.1 Google AdMob</h3>
-<p>
-  The App displays advertisements using Google AdMob. AdMob may collect and use data about your device and interactions with ads. For more information, see
-  <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
-  AdMob may use the advertising ID for interest-based advertising. You can opt out of interest-based ads through your device settings.
-</p>
-
-<h3>4.2 Google Play Services</h3>
-<p>
-  The App integrates with Google Play Services for in-app reviews and billing. These services are governed by
-  <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
-</p>
-
-<h3>4.3 Firebase</h3>
-<p>
-  The App uses Firebase services, including Cloud Firestore, to record free report events and related report data. Firebase services are provided by Google and are governed by
-  <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
-</p>
-
-<h3>4.4 Hive Local Storage</h3>
-<p>
-  The App uses Hive, a local storage solution, to store your preferences and saved calculation results. This data remains on your device and is not transmitted to us or any third party.
-</p>
-
-<h2>5. Data Storage and Security</h2>
-<p>
-  Saved results are stored locally on your device. Free report events and related report data may be stored in Firebase. We implement reasonable security measures to protect your information, but no method of electronic storage is 100% secure.
-</p>
 
 <h2>6. Data Retention and Deletion</h2>
 <p>
-  Saved results remain on your device until you delete them. Free report events and related report data may be retained in Firebase for service monitoring, analytics, and improvement. You can clear local app data at any time through your device's Application Settings.
+  Local settings and saved results remain on your device until you delete them, clear App storage, or uninstall the App. Optional Firebase reports are retained only for as long as reasonably needed to operate, monitor, troubleshoot, and improve the service, meet legal obligations, and prevent abuse, after which they are deleted or anonymized.
+</p>
+<p>
+  Because Firebase reports are not linked to an App account, the App cannot automatically locate them by account. You may request access to or deletion of Firebase report data by emailing us. To help us locate a report, include the calculator type, approximate date and time, action, App version, and any distinctive report values you are comfortable providing. We may retain information when required by law or for legitimate security and fraud-prevention purposes.
 </p>
 
-<h2>7. Children's Privacy</h2>
+<h2>7. Security and International Processing</h2>
 <p>
-  The App is not directed at children under the age of 13 (or the applicable age of consent in your jurisdiction). We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us so we can delete it.
+  Firebase report data is encrypted in transit and at rest. We use Firebase project permissions, administrative access controls, and Firestore security rules designed to prevent unauthorized client access to report documents. No electronic system can be guaranteed completely secure.
+</p>
+<p>
+  Google and other service providers may process information in countries other than yours. Their processing is governed by their applicable terms, data-protection commitments, and legal safeguards.
 </p>
 
-<h2>8. Permissions</h2>
+<h2>8. Children's Privacy</h2>
 <p>
-  The App may request the following permissions:
-</p>
-<ul>
-  <li><strong>Internet access:</strong> Required for loading advertisements, syncing interest rates, and recording free report events.</li>
-</ul>
-
-<h2>9. Your Rights</h2>
-<p>
-  Depending on your jurisdiction, you may have the right to:
-</p>
-<ul>
-  <li>Access, update, or delete your personal information</li>
-  <li>Opt out of personalized advertising</li>
-  <li>Withdraw consent at any time</li>
-  <li>File a complaint with your local data protection authority</li>
-</ul>
-<p>
-  To exercise these rights, please contact us using the information below.
+  The App is not directed to children under 13 or the minimum digital-consent age in their jurisdiction. We do not knowingly collect personal information from children. If you believe a child has provided report data, contact us so we can investigate and delete it where appropriate.
 </p>
 
-<h2>10. Changes to This Privacy Policy</h2>
+<h2>9. Permissions</h2>
 <p>
-  We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last updated" date. You are advised to review this policy periodically.
+  The App uses internet access to load advertisements, synchronize public rates, access Google Play features, and—only after you opt in—send report data to Firebase.
 </p>
 
-<h2>11. Contact Us</h2>
+<h2>10. Your Privacy Rights</h2>
+<p>Depending on applicable law, you may have rights to request access, correction, deletion, restriction, portability, or objection concerning your personal information, and to withdraw consent. You may also complain to an appropriate data-protection authority. Contact us to make a request.</p>
+
+<h2>11. Changes to This Policy</h2>
 <p>
-  If you have any questions about this Privacy Policy, please contact us at:
+  We may update this Privacy Policy when the App, our providers, or legal requirements change. We will post the revised policy here and update the date above. Where required, we will provide additional notice or request new consent.
 </p>
+
+<h2>12. Contact Us</h2>
 <p>
-  Email: quantivotechnologies@gmail.com<br>
-  Address: Pune
+  Qunovix Technologies<br>
+  Email: <a href="mailto:quantivotechnologies@gmail.com">quantivotechnologies@gmail.com</a><br>
+  Address: Pune, India
 </p>
 
 </body>
