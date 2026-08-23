@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for the LensDesk photographer booking calendar by Qunovix Technologies.">
+  <meta name="theme-color" content="#4f46e5">
+  <title>Privacy Policy | LensDesk</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #f6f7fc;
+      --surface: #ffffff;
+      --text: #20222a;
+      --muted: #626978;
+      --primary: #4f46e5;
+      --primary-strong: #3730a3;
+      --border: #dfe2ec;
+      --notice: #eef2ff;
+      --success: #ecfdf5;
+      --success-border: #059669;
+      --shadow: rgba(31, 35, 48, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 32px auto;
+      padding: clamp(24px, 5vw, 56px);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 14px 38px var(--shadow);
+    }
+
+    h1, h2 { line-height: 1.25; }
+    h1 { margin: 0 0 8px; color: var(--primary-strong); font-size: clamp(2rem, 6vw, 3rem); }
+    h2 { margin: 34px 0 10px; color: var(--primary-strong); font-size: 1.35rem; }
+    p, li { margin: 10px 0; }
+    ul { padding-left: 24px; }
+    a { color: var(--primary-strong); text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+
+    .product {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 6px 12px;
+      color: var(--primary-strong);
+      background: var(--notice);
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .updated { margin: 0 0 24px; color: var(--muted); }
+
+    .summary, .limited-use {
+      margin: 24px 0;
+      padding: 18px 20px;
+      border-radius: 8px;
+    }
+
+    .summary { background: var(--notice); border-left: 4px solid var(--primary); }
+    .limited-use { background: var(--success); border-left: 4px solid var(--success-border); }
+
+    nav {
+      margin: 28px 0;
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    nav strong { display: block; margin-bottom: 8px; }
+    nav ul { margin: 0; columns: 2; }
+    code { padding: 2px 6px; background: var(--notice); border-radius: 5px; }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer a + a { margin-left: 18px; }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #111318;
+        --surface: #191c24;
+        --text: #edf0f7;
+        --muted: #aeb5c4;
+        --primary: #a9a5ff;
+        --primary-strong: #c8c5ff;
+        --border: #343846;
+        --notice: #272744;
+        --success: #17352d;
+        --success-border: #34d399;
+        --shadow: transparent;
+      }
+    }
+
+    @media (max-width: 620px) {
+      main { width: 100%; margin: 0; border: 0; border-radius: 0; }
+      nav ul { columns: 1; }
+      footer a { display: block; margin: 8px 0; }
+      footer a + a { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="product">LensDesk for Android</span>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Effective and last updated: 23 August 2026</p>
+  </header>
+
+  <div class="summary">
+    <strong>Privacy summary:</strong> LensDesk is an offline-first photographer booking calendar. Your live business records are stored in the App's private database on your Android device. Qunovix Technologies does not operate a LensDesk server, does not sell your information, and does not include advertising or analytics SDKs. Google Calendar and Google Drive features are optional and are used only after you connect a Google account.
+  </div>
+
+  <nav aria-label="Policy contents">
+    <strong>Contents</strong>
+    <ul>
+      <li><a href="#scope">Scope and developer</a></li>
+      <li><a href="#information">Information handled</a></li>
+      <li><a href="#google">Google services</a></li>
+      <li><a href="#sharing">Sharing and external apps</a></li>
+      <li><a href="#permissions">Android permissions</a></li>
+      <li><a href="#retention">Retention and deletion</a></li>
+      <li><a href="#choices">Your choices and rights</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ul>
+  </nav>
+
+  <h2 id="scope">1. Scope and Developer</h2>
+  <p>
+    This Privacy Policy explains how LensDesk (the “App”), Android package <code>com.qunovixtechnologies.lensdesk</code>, handles information. The App is provided by Qunovix Technologies (“we,” “us,” or “our”), located in Pune, Maharashtra, India. This Policy applies to LensDesk and not to third-party apps, websites, operating-system features, or services that you choose to access through it.
+  </p>
+
+  <h2 id="information">2. Information You Enter and Store</h2>
+  <p>Depending on how you use LensDesk, the App may store the following information in its private SQLite database on your device:</p>
+  <ul>
+    <li>client names, phone numbers, WhatsApp numbers, email addresses, and client notes;</li>
+    <li>booking dates, start and end times, event types, status, venue, map location or address, package, assigned team members, and booking notes;</li>
+    <li>package values, advances, additional payments, payment dates, payment methods, payment notes, and calculated outstanding balances;</li>
+    <li>reminder titles, schedules, recurrence choices, and completion status;</li>
+    <li>custom event types;</li>
+    <li>your photographer profile name and mobile number;</li>
+    <li>theme, calendar, notification, Google integration, automatic-backup, backup-frequency, and optional app-lock preferences; and</li>
+    <li>technical identifiers created by the App, such as booking IDs, notification IDs, and Google Calendar event IDs.</li>
+  </ul>
+  <p>
+    We do not receive this local database on a Qunovix Technologies server. The information is used to provide the App's booking, client, calendar, payment, reminder, search, revenue, recycle-bin, export, messaging, security, and settings features.
+  </p>
+
+  <h2>3. Information We Do Not Collect</h2>
+  <p>
+    LensDesk does not include advertising, analytics, tracking, or crash-reporting SDKs. It does not request access to your contacts, camera, microphone, photo library, media library, call logs, SMS messages, or precise or approximate device location. It does not collect photography image, video, or audio files. Map locations are text or links that you enter; LensDesk does not read the device's live location.
+  </p>
+
+  <h2 id="google">4. Optional Google Account and API Data</h2>
+  <p>
+    Google integration is optional. If you choose to connect Google, Google Sign-In provides the account identity needed to authorise the requested features. LensDesk displays the connected account's name, email address, and profile image in the Google &amp; backup screen. Authentication tokens and Google account access are managed through Google's sign-in libraries and Android account services; LensDesk does not include them in its business-data backup.
+  </p>
+  <p>LensDesk requests only these Google API scopes:</p>
+  <ul>
+    <li><strong>Google Calendar events:</strong> used for one-way App-to-Calendar synchronisation; and</li>
+    <li><strong>Google Drive app data:</strong> used to create, replace, and restore <code>lensdesk-backup.json</code> in the connected account's hidden application-data folder.</li>
+  </ul>
+
+  <h2>5. Google Calendar Synchronisation</h2>
+  <p>
+    When you enable Calendar sync for a booking, LensDesk may create, update, or delete the corresponding event in your primary Google Calendar. The event may contain the event type, client name, client phone number, package name, booking notes, venue or map location, start and end times, and a private LensDesk booking identifier. LensDesk stores the returned Google Calendar event ID locally so it can update or remove that event later.
+  </p>
+  <p>
+    LensDesk does not import, list, analyse, or display your existing Google Calendar events. A network or Google API failure does not remove the locally stored booking.
+  </p>
+
+  <h2>6. Google Drive Backup and Restore</h2>
+  <p>
+    A manual or enabled automatic backup uploads a JSON copy of the LensDesk database to the connected Google Drive account's hidden app-data folder. The backup can include clients, active and recycle-bin bookings, payments, reminders, event types, photographer profile information, and App preferences. It does not include photography files or device credentials.
+  </p>
+  <p>
+    Restoring downloads the most recent LensDesk backup and, after your confirmation, replaces the current local LensDesk dataset. Automatic backups run only when enabled and when a connected Google session is available, according to the frequency selected in the App.
+  </p>
+  <div class="limited-use">
+    <strong>Google API Limited Use disclosure:</strong> LensDesk's use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use requirements. Google API data is used only to provide the user-facing Calendar synchronisation and Drive backup/restore features. We do not sell Google user data, use it for advertising, use it to determine creditworthiness, or use it to train general-purpose artificial-intelligence or machine-learning models.
+  </div>
+  <p>
+    Google processes account and API information under its own terms and privacy practices. See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>. You can disconnect Google in LensDesk and revoke LensDesk's access from your Google Account security settings. Disconnecting or revoking access stops future API access but may not by itself delete an existing hidden Drive backup; use the applicable Google Drive or Google Account controls to manage Google-held data.
+  </p>
+
+  <h2 id="sharing">7. User-Directed Sharing and External Apps</h2>
+  <p>LensDesk opens another app or Android feature only when you choose the relevant action:</p>
+  <ul>
+    <li><strong>Phone:</strong> sends the selected client number to the device dialler;</li>
+    <li><strong>WhatsApp:</strong> sends the selected number and generated message to WhatsApp's opening interface;</li>
+    <li><strong>Maps:</strong> sends the venue or map text to Google Maps or a compatible browser;</li>
+    <li><strong>Exports:</strong> sends a generated CSV or PDF through the Android share sheet; and</li>
+    <li><strong>Availability:</strong> sends the generated monthly availability text through the Android share sheet.</li>
+  </ul>
+  <p>
+    You select the destination and recipient. Once information is provided to WhatsApp, a dialler, maps provider, browser, cloud-storage provider, messaging app, email app, or another share destination, that provider's terms and privacy policy apply. Review the content and recipient before sharing client or business information.
+  </p>
+
+  <h2 id="permissions">8. Android Permissions and Device Features</h2>
+  <ul>
+    <li><strong>Internet:</strong> used for optional Google sign-in, Calendar, Drive, maps, WhatsApp links, and other online actions you request.</li>
+    <li><strong>Notifications:</strong> used to show local booking reminders after Android grants permission.</li>
+    <li><strong>Receive boot completed:</strong> used by the notification component so scheduled reminders can continue after the device restarts.</li>
+    <li><strong>Biometric and fingerprint capability:</strong> used only when you enable LensDesk app lock.</li>
+  </ul>
+  <p>
+    Optional app lock invokes Android's system authentication screen and uses the PIN, pattern, password, or biometrics already configured on your phone. LensDesk receives only an authentication success, cancellation, or error result. It never reads, stores, backs up, or transmits your PIN, password, pattern, biometric template, or biometric image.
+  </p>
+
+  <h2>9. How Information Is Used and Disclosed</h2>
+  <p>Information is used only to operate features you request, maintain App state, and protect access when app lock is enabled. We do not sell, rent, or monetise client records, business records, profile information, or Google user data. We do not use that information for advertising or profiling.</p>
+  <p>
+    Information is disclosed only when you direct the App to an external service, when needed to operate the optional Google features described above, or if disclosure is required by applicable law or necessary to protect legal rights, safety, or security. Because Qunovix Technologies does not receive the local database, we generally cannot disclose local records that remain solely on your device.
+  </p>
+
+  <h2 id="retention">10. Retention and Deletion</h2>
+  <ul>
+    <li>Active local records remain until you edit or delete them, clear the App's storage, or uninstall LensDesk.</li>
+    <li>A deleted booking and its linked payments and reminders remain in the local recycle bin for up to 30 days unless you permanently delete it sooner. LensDesk purges expired recycle-bin records when the App next performs the applicable cleanup.</li>
+    <li>Deleting an additional payment or reminder through the App removes that local record directly.</li>
+    <li>Clearing LensDesk storage or uninstalling removes the App's local data from that device. Android platform backup is disabled for LensDesk.</li>
+    <li>CSV and PDF exports remain wherever you or the receiving app save them until deleted there.</li>
+    <li>Google Calendar events and Drive backups are retained by Google until changed or deleted through LensDesk or the relevant Google controls, subject to Google's retention practices.</li>
+  </ul>
+  <p>
+    LensDesk does not create a Qunovix Technologies account, so there is no LensDesk server account to delete. If you want to retain local data before clearing storage or uninstalling, create an export or optional Drive backup first.
+  </p>
+
+  <h2>11. Security</h2>
+  <p>
+    LensDesk uses Android private application storage, disables Android's automatic platform backup for the App, supports an optional device-credential app lock, and relies on encrypted connections provided by Google and Android for Google API access. These measures reduce risk but cannot guarantee absolute security. Anyone who can unlock your device or access an export, connected Google account, or share destination may be able to access the corresponding information. Keep your device, Google account, exports, and backups secure and up to date.
+  </p>
+
+  <h2>12. Client Information and Your Responsibilities</h2>
+  <p>
+    LensDesk is a business tool that lets you enter information about your clients and team. You are responsible for having an appropriate lawful basis, permission, or consent to record, use, export, back up, or share that information and for complying with privacy, communications, tax, employment, and other laws that apply to your photography business. Do not enter information that you are not authorised to use.
+  </p>
+
+  <h2>13. Children's Privacy</h2>
+  <p>
+    LensDesk is a business productivity app for photographers and is not directed to children under 13. We do not knowingly operate a service that collects children's information on our servers. A photographer who records information relating to a minor is responsible for obtaining any required permission from the minor's parent or guardian and protecting that information appropriately.
+  </p>
+
+  <h2>14. International Processing</h2>
+  <p>
+    Your local records remain on your device unless you choose an external action. Google and any external app or service you select may process information in countries other than your own under their respective terms, safeguards, and privacy policies.
+  </p>
+
+  <h2 id="choices">15. Your Choices and Privacy Rights</h2>
+  <p>You can:</p>
+  <ul>
+    <li>view, edit, delete, restore, or permanently delete applicable local records in LensDesk;</li>
+    <li>disable notifications, Google Calendar sync, automatic Drive backup, or app lock in Settings;</li>
+    <li>disconnect Google and revoke access through your Google Account;</li>
+    <li>clear all local App data through Android settings or uninstall LensDesk; and</li>
+    <li>delete exports and Google-held data using the controls of the service where they are stored.</li>
+  </ul>
+  <p>
+    Depending on where you live, you may have additional rights concerning personal information processed by us. Since we do not receive the local database or hidden Drive backup, we ordinarily cannot identify, retrieve, correct, or delete those records for you. Use the device and Google controls described above. You may contact us regarding information, if any, that we directly hold.
+  </p>
+
+  <h2>16. Changes to This Policy</h2>
+  <p>
+    We may update this Privacy Policy to reflect changes to LensDesk, third-party services, legal requirements, or our practices. The revised page will display a new effective or last-updated date. Where required, we will provide additional notice or request consent before using information in a materially different way.
+  </p>
+
+  <h2 id="contact">17. Contact Us</h2>
+  <p>
+    For privacy questions or requests, contact:<br>
+    Qunovix Technologies<br>
+    Pune, Maharashtra, India<br>
+    Email: <a href="mailto:qunovixtechnologies@gmail.com">qunovixtechnologies@gmail.com</a>
+  </p>
+
+  <footer>
+    <a href="terms_and_conditions_lensedesk.html">Terms &amp; Conditions</a>
+    <a href="#scope">Back to top</a>
+  </footer>
+</main>
+</body>
+</html>
