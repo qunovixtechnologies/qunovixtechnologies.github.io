@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Diary – Private Journal App by Qunovix Technologies</title>
+  <meta name="description" content="My Diary by Qunovix Technologies is a private Android journal with lock, mood tracking, photos, themes, reminders, and optional backup.">
+  <meta name="theme-color" content="#100d1c">
+  <link rel="canonical" href="https://qunovixtech.com/apps/my-diary/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="My Diary – Private Journal App by Qunovix Technologies">
+  <meta property="og:description" content="A private Android journal for recording thoughts, moods, memories and daily moments.">
+  <meta property="og:url" content="https://qunovixtech.com/apps/my-diary/">
+  <meta property="og:image" content="https://qunovixtech.com/apps/my-diary/assets/screenshot-1.webp">
+  <meta property="og:image:alt" content="My Diary private journal app">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "My Diary - Journal with Lock",
+    "alternateName": "My Diary",
+    "description": "My Diary by Qunovix Technologies is a private Android journal for recording thoughts, moods, memories and daily moments.",
+    "url": "https://qunovixtech.com/apps/my-diary/",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.qunovixtechnologies.mydiary",
+    "installUrl": "https://play.google.com/store/apps/details?id=com.qunovixtechnologies.mydiary",
+    "operatingSystem": "Android",
+    "applicationCategory": "LifestyleApplication",
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR",
+      "url": "https://play.google.com/store/apps/details?id=com.qunovixtechnologies.mydiary"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Qunovix Technologies",
+      "url": "https://qunovixtech.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Qunovix Technologies",
+      "url": "https://qunovixtech.com/"
+    },
+    "image": "https://qunovixtech.com/apps/my-diary/assets/icon.webp",
+    "screenshot": [
+      "https://qunovixtech.com/apps/my-diary/assets/screenshot-2.webp",
+      "https://qunovixtech.com/apps/my-diary/assets/screenshot-3.webp",
+      "https://qunovixtech.com/apps/my-diary/assets/screenshot-4.webp",
+      "https://qunovixtech.com/apps/my-diary/assets/screenshot-5.webp"
+    ],
+    "featureList": [
+      "Password and fingerprint diary lock",
+      "Daily journal entries with photos and media",
+      "Mood tracking and mood statistics",
+      "Themes, colors, emojis and stickers",
+      "Calendar, search, tags and favorites",
+      "Optional Google Drive backup and restore"
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#100d1c;--surface:#181329;--surface-2:#211936;--paper:#fbf9ff;
+      --text:#f9f6ff;--muted:#b9b0ce;--line:rgba(255,255,255,.12);
+      --violet:#8c6cff;--pink:#ff73b8;--blue:#69d6ff;--lime:#d4ff62;
+      --display:'Space Grotesk',ui-sans-serif,system-ui,sans-serif;
+      --serif:'DM Serif Display',Georgia,serif;
+      --body:'Inter',ui-sans-serif,system-ui,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;overflow-x:hidden;background:var(--ink);color:var(--text);font-family:var(--body);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    a:focus-visible{outline:3px solid var(--lime);outline-offset:4px;border-radius:10px}
+    .wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+    .site-header{position:relative;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:24px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700}
+    .brand-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--violet),var(--blue));color:var(--ink)}
+    .back-link{font-size:14px;font-weight:600;color:var(--muted)}
+    .back-link:hover{color:var(--text)}
+    .hero{position:relative;isolation:isolate;padding:74px 0 104px}
+    .hero::before,.hero::after{content:"";position:absolute;z-index:-1;border-radius:50%;filter:blur(100px);pointer-events:none}
+    .hero::before{width:430px;height:430px;left:-180px;top:0;background:rgba(140,108,255,.55)}
+    .hero::after{width:380px;height:380px;right:-160px;top:80px;background:rgba(255,115,184,.4)}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:70px;align-items:center}
+    .product-line{display:flex;align-items:center;gap:17px;margin-bottom:30px}
+    .app-icon{width:86px;height:86px;border-radius:24px;box-shadow:0 24px 55px rgba(140,108,255,.35)}
+    .product-meta{display:flex;flex-direction:column;gap:6px}
+    .eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--pink)}
+    .developer{font-size:14px;color:var(--muted)}
+    h1{max-width:700px;margin:0;font-family:var(--display);font-size:clamp(48px,7vw,86px);line-height:.98;letter-spacing:-.045em}
+    h1 em{font-family:var(--serif);font-weight:400;color:var(--pink)}
+    .intro{max-width:650px;margin:28px 0 34px;color:var(--muted);font-size:18px;line-height:1.75}
+    .actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .play-button{display:inline-flex;align-items:center;gap:12px;padding:15px 22px;border-radius:16px;background:var(--paper);color:var(--ink);font-weight:700;box-shadow:0 18px 42px rgba(0,0,0,.28);transition:transform .2s ease}
+    .play-button:hover{transform:translateY(-3px)}
+    .play-mark{display:grid;place-items:center;width:29px;height:29px;border-radius:9px;background:linear-gradient(135deg,#43d17b,#54b7ff 50%,#ffdd59 72%,#ff5d6c);color:white;font-size:13px}
+    .privacy-link{padding:14px 6px;color:var(--muted);font-size:14px;font-weight:600;border-bottom:1px solid var(--line)}
+    .privacy-link:hover{color:var(--text)}
+    .hero-art{position:relative}
+    .hero-art img{width:100%;border-radius:30px;border:1px solid var(--line);box-shadow:0 36px 90px rgba(0,0,0,.42)}
+    .hero-art::after{content:"Available on Android";position:absolute;left:20px;bottom:20px;padding:9px 13px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(16,13,28,.78);backdrop-filter:blur(10px);font-size:12px;font-weight:700}
+    .trust-strip{border-block:1px solid var(--line);background:rgba(255,255,255,.025)}
+    .trust-items{display:grid;grid-template-columns:repeat(4,1fr)}
+    .trust-item{padding:22px 24px;border-right:1px solid var(--line)}
+    .trust-item:last-child{border-right:0}
+    .trust-item strong{display:block;margin-bottom:5px;font-family:var(--display);font-size:15px}
+    .trust-item span{font-size:13px;color:var(--muted)}
+    .section{padding:110px 0}
+    .section-kicker{margin:0 0 15px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--violet)}
+    .section h2{max-width:760px;margin:0;font-family:var(--display);font-size:clamp(38px,5vw,62px);line-height:1.05;letter-spacing:-.035em}
+    .section-lead{max-width:660px;margin:22px 0 0;color:#625a73;font-size:17px;line-height:1.75}
+    .features-section{background:var(--paper);color:var(--ink)}
+    .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:55px}
+    .feature{min-height:220px;padding:28px;border:1px solid rgba(16,13,28,.11);border-radius:24px;background:#fff}
+    .feature:nth-child(1){background:#eee8ff}.feature:nth-child(2){background:#ffe9f4}.feature:nth-child(3){background:#e7f7ff}
+    .feature-icon{display:grid;place-items:center;width:44px;height:44px;margin-bottom:34px;border-radius:14px;background:var(--ink);color:white;font-size:20px}
+    .feature h3{margin:0 0 10px;font-family:var(--display);font-size:21px}
+    .feature p{margin:0;color:#625a73;font-size:14px;line-height:1.7}
+    .screens-section{background:var(--surface)}
+    .screens-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:45px}
+    .screens-head p{max-width:430px;margin:0;color:var(--muted);line-height:1.7}
+    .screens{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .screen{overflow:hidden;border-radius:24px;border:1px solid var(--line);background:var(--surface-2)}
+    .screen img{width:100%;height:auto;aspect-ratio:9/18;object-fit:cover}
+    .about-section{background:linear-gradient(130deg,#7048ee,#c653ae 58%,#ff7f91)}
+    .about-card{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;padding:56px;border:1px solid rgba(255,255,255,.25);border-radius:32px;background:rgba(16,13,28,.2);backdrop-filter:blur(16px)}
+    .about-card h2{font-family:var(--display);font-size:clamp(38px,5vw,58px);line-height:1.04;letter-spacing:-.035em;margin:0}
+    .about-copy p{margin:0 0 18px;color:rgba(255,255,255,.82);line-height:1.75}
+    .about-copy strong{color:white}
+    .final-cta{text-align:center;background:var(--ink)}
+    .final-cta h2{margin-inline:auto}
+    .final-cta p{max-width:560px;margin:20px auto 32px;color:var(--muted);line-height:1.7}
+    footer{border-top:1px solid var(--line);padding:36px 0 44px;color:var(--muted);font-size:13px}
+    .footer-row{display:flex;justify-content:space-between;gap:30px;align-items:center}
+    .footer-links{display:flex;gap:22px;flex-wrap:wrap}
+    .footer-links a:hover{color:var(--text)}
+    @media(max-width:900px){
+      .hero-grid{grid-template-columns:1fr;gap:54px}.hero-art{max-width:620px}.features-grid{grid-template-columns:1fr 1fr}.screens{grid-template-columns:1fr 1fr}.about-card{grid-template-columns:1fr;gap:28px}.trust-items{grid-template-columns:1fr 1fr}.trust-item:nth-child(2){border-right:0}.trust-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
+    }
+    @media(max-width:600px){
+      .wrap{width:min(100% - 28px,1180px)}.site-header{padding:18px 0}.hero{padding:52px 0 76px}h1{font-size:48px}.intro{font-size:16px}.product-line{align-items:flex-start}.app-icon{width:72px;height:72px}.hero-art img{border-radius:22px}.trust-item{padding:18px 14px}.features-grid{grid-template-columns:1fr}.screens{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px}.screen{flex:0 0 78%;scroll-snap-align:start}.section{padding:78px 0}.screens-head{align-items:flex-start;flex-direction:column}.about-card{padding:28px 22px}.footer-row{align-items:flex-start;flex-direction:column}.back-link{font-size:13px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.play-button{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="wrap site-header">
+    <a class="brand" href="/" aria-label="Qunovix Technologies home"><span class="brand-mark">Q</span><span>Qunovix Technologies</span></a>
+    <a class="back-link" href="/#apps">All apps&nbsp; ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="product-line">
+            <img class="app-icon" src="assets/icon.webp" width="86" height="86" alt="My Diary app icon">
+            <div class="product-meta"><span class="eyebrow">Private Android journal</span><span class="developer">By Qunovix Technologies</span></div>
+          </div>
+          <h1>My Diary –<br><em>Journal with Lock</em></h1>
+          <p class="intro">My Diary by Qunovix Technologies is a private Android journal for recording thoughts, moods, memories and daily moments.</p>
+          <div class="actions">
+            <a class="play-button" href="https://play.google.com/store/apps/details?id=com.qunovixtechnologies.mydiary" target="_blank" rel="noopener"><span class="play-mark">▶</span><span>Get it on Google Play</span></a>
+            <a class="privacy-link" href="/privacy_policy_mydiary.html">Read privacy policy&nbsp; ↗</a>
+          </div>
+        </div>
+        <div class="hero-art"><img src="assets/screenshot-1.webp" width="960" height="470" alt="My Diary app for private journaling and memories"></div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="wrap trust-items">
+        <div class="trust-item"><strong>Private by design</strong><span>Entries stay local by default</span></div>
+        <div class="trust-item"><strong>Works offline</strong><span>Write whenever you want</span></div>
+        <div class="trust-item"><strong>Optional backup</strong><span>Google Drive when you choose</span></div>
+        <div class="trust-item"><strong>Made for Android</strong><span>Available on Google Play</span></div>
+      </div>
+    </div>
+
+    <section class="section features-section">
+      <div class="wrap">
+        <p class="section-kicker">Everything your journal needs</p>
+        <h2>Keep every memory private, personal and easy to revisit.</h2>
+        <p class="section-lead">Write freely, understand your moods and personalize every entry without a complicated setup.</p>
+        <div class="features-grid">
+          <article class="feature"><span class="feature-icon">🔒</span><h3>Lock your diary</h3><p>Protect your private journal with a password and use fingerprint unlock on supported devices.</p></article>
+          <article class="feature"><span class="feature-icon">✍</span><h3>Write your story</h3><p>Create daily entries, add photos and media, format text and capture special moments from any date.</p></article>
+          <article class="feature"><span class="feature-icon">😊</span><h3>Track your moods</h3><p>Add a mood to each entry, review your history and reflect on emotional patterns over time.</p></article>
+          <article class="feature"><span class="feature-icon">✦</span><h3>Make it yours</h3><p>Choose colorful backgrounds, themes, emojis and decorative stickers for a journal that feels personal.</p></article>
+          <article class="feature"><span class="feature-icon">⌕</span><h3>Find every memory</h3><p>Browse entries by calendar, search your journal, organize with tags and mark favorites.</p></article>
+          <article class="feature"><span class="feature-icon">☁</span><h3>Backup and restore</h3><p>Create local backups or optionally use Google Drive to protect and restore your journal.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section screens-section">
+      <div class="wrap">
+        <div class="screens-head"><div><p class="section-kicker">Inside My Diary</p><h2>Designed around your moments.</h2></div><p>Secure your journal, create beautiful entries, draw your own stickers and personalize every page.</p></div>
+        <div class="screens" aria-label="My Diary app screenshots">
+          <figure class="screen"><img src="assets/screenshot-2.webp" width="760" height="1602" loading="lazy" alt="Password, PIN and fingerprint protection in My Diary"></figure>
+          <figure class="screen"><img src="assets/screenshot-3.webp" width="760" height="1595" loading="lazy" alt="Colorful diary backgrounds and journal entries"></figure>
+          <figure class="screen"><img src="assets/screenshot-4.webp" width="760" height="1350" loading="lazy" alt="Drawing and painting tools in My Diary"></figure>
+          <figure class="screen"><img src="assets/screenshot-5.webp" width="760" height="1520" loading="lazy" alt="Stickers and diary customization options"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section">
+      <div class="wrap about-card">
+        <div><p class="section-kicker" style="color:#fff">The developer</p><h2>Created by<br>Qunovix Technologies.</h2></div>
+        <div class="about-copy"><p><strong>Qunovix Technologies</strong> is an independent app studio in Pune, India, building focused Android apps for everyday life.</p><p>My Diary is designed to give you a calm, customizable space for thoughts and memories—with privacy choices that remain easy to understand.</p><a class="privacy-link" href="/">Discover Qunovix Technologies&nbsp; ↗</a></div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="wrap"><p class="section-kicker">Your story, your private space</p><h2>Start your journal today.</h2><p>Capture everyday moments, build a journaling habit and keep the memories that matter close.</p><a class="play-button" href="https://play.google.com/store/apps/details?id=com.qunovixtechnologies.mydiary" target="_blank" rel="noopener"><span class="play-mark">▶</span><span>Download My Diary</span></a></div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-row"><span>© 2026 Qunovix Technologies</span><nav class="footer-links" aria-label="Footer"><a href="/">Home</a><a href="/privacy_policy_mydiary.html">Privacy</a><a href="/terms_and_conditions_mydiary.html">Terms</a><a href="mailto:qunovixtechnologies@gmail.com">Contact</a></nav></div></footer>
+</body>
+</html>
