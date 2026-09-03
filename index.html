@@ -6,6 +6,9 @@
   <title>Qunovix Technologies — Apps for Everyday Life</title>
   <meta name="description" content="Thoughtful Android apps for planning, journaling, health, and personal finance.">
   <meta name="theme-color" content="#0b0a12">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="256x256" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta property="og:title" content="Qunovix Technologies — Small apps. Big everyday energy.">
   <meta property="og:description" content="Thoughtful Android apps for planning, journaling, health, and personal finance.">
   <meta property="og:type" content="website">
@@ -41,7 +44,7 @@
     /* header */
     .site-header{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;width:min(1180px,92%);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px;padding:9px 9px 9px 18px;background:rgba(19,17,32,.68);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:999px}
     .brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:17px;letter-spacing:-.01em}
-    .brand-mark{display:grid;place-items:center;width:32px;height:32px;flex:none;border-radius:30%;background:linear-gradient(135deg,var(--violet),var(--sky));color:var(--ink);font-family:var(--font-display);font-weight:700;font-size:15px}
+    .brand-mark{display:block;width:36px;height:36px;flex:none;border-radius:11px;object-fit:cover;background:#fff;box-shadow:0 7px 18px rgba(0,0,0,.24)}
     .site-header nav{display:flex;justify-content:center;gap:30px;font-size:13px;font-weight:600;color:var(--muted)}
     .site-header nav a:hover{color:var(--paper)}
     .header-cta{justify-self:end;display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:999px;background:var(--paper);color:var(--ink);font-size:12px;font-weight:700;transition:background .2s ease}
@@ -139,7 +142,7 @@
 
     /* footer */
     footer{display:grid;grid-template-columns:1fr 1fr auto;gap:30px;align-items:center;padding:52px clamp(20px,5vw,72px) 28px;background:var(--ink)}
-    .footer-brand .brand-mark{background:linear-gradient(135deg,var(--coral),var(--volt))}
+    .footer-brand .brand-mark{box-shadow:0 7px 18px rgba(0,0,0,.3)}
     footer>p{color:var(--muted);font-size:13px}
     .footer-links{display:flex;gap:24px;font-size:12px;font-weight:600;color:var(--muted)}
     .footer-links a:hover{color:var(--paper)}
@@ -177,7 +180,7 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Qunovix Technologies home"><span class="brand-mark">Q</span><span>Qunovix</span></a>
+    <a class="brand" href="#top" aria-label="Qunovix Technologies home"><img class="brand-mark" src="/favicon.png" width="36" height="36" alt=""><span>Qunovix</span></a>
     <nav aria-label="Main navigation"><a href="#apps">Apps</a><a href="#about">About</a><a href="#next">Next</a></nav>
     <a class="header-cta" href="mailto:qunovixtechnologies@gmail.com">Let&apos;s talk <span>↗</span></a>
   </header>
@@ -231,7 +234,7 @@
     <section class="contact-section"><p class="eyebrow reveal"><b></b>Say hello</p><h2 class="reveal">Have a question,<br>an idea, or <span class="pop">feedback?</span></h2><a class="contact-link reveal" href="mailto:qunovixtechnologies@gmail.com">qunovixtechnologies@gmail.com <span>↗</span></a></section>
   </main>
 
-  <footer><a class="brand footer-brand" href="#top"><span class="brand-mark">Q</span><span>Qunovix Technologies</span></a><p>Thoughtful apps for everyday life.</p><div class="footer-links"><a href="#apps">Apps</a><a href="#about">About</a><a href="mailto:qunovixtechnologies@gmail.com">Contact</a></div><small>© 2026 Qunovix Technologies</small></footer>
+  <footer><a class="brand footer-brand" href="#top" aria-label="Qunovix Technologies home"><img class="brand-mark" src="/favicon.png" width="36" height="36" alt=""><span>Qunovix Technologies</span></a><p>Thoughtful apps for everyday life.</p><div class="footer-links"><a href="#apps">Apps</a><a href="#about">About</a><a href="mailto:qunovixtechnologies@gmail.com">Contact</a></div><small>© 2026 Qunovix Technologies</small></footer>
 
   <script>
     (function(){
