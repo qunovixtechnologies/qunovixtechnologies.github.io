@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for Block Trails, the block puzzle game by Qunovix Technologies.">
+  <meta name="theme-color" content="#7c3aed">
+  <title>Privacy Policy | Block Trails</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #f7f5fd;
+      --surface: #ffffff;
+      --text: #20222a;
+      --muted: #626978;
+      --primary: #7c3aed;
+      --primary-strong: #5b21b6;
+      --border: #e2ddf0;
+      --notice: #f1ecff;
+      --success: #ecfdf5;
+      --success-border: #059669;
+      --shadow: rgba(31, 35, 48, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 32px auto;
+      padding: clamp(24px, 5vw, 56px);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 14px 38px var(--shadow);
+    }
+
+    h1, h2 { line-height: 1.25; }
+    h1 { margin: 0 0 8px; color: var(--primary-strong); font-size: clamp(2rem, 6vw, 3rem); }
+    h2 { margin: 34px 0 10px; color: var(--primary-strong); font-size: 1.35rem; }
+    p, li { margin: 10px 0; }
+    ul { padding-left: 24px; }
+    a { color: var(--primary-strong); text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+
+    .product {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 6px 12px;
+      color: var(--primary-strong);
+      background: var(--notice);
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .updated { margin: 0 0 24px; color: var(--muted); }
+
+    .summary, .highlight {
+      margin: 24px 0;
+      padding: 18px 20px;
+      border-radius: 8px;
+    }
+
+    .summary { background: var(--notice); border-left: 4px solid var(--primary); }
+    .highlight { background: var(--success); border-left: 4px solid var(--success-border); }
+
+    nav {
+      margin: 28px 0;
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    nav strong { display: block; margin-bottom: 8px; }
+    nav ul { margin: 0; columns: 2; }
+    code { padding: 2px 6px; background: var(--notice); border-radius: 5px; overflow-wrap: anywhere; }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer a + a { margin-left: 18px; }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #121019;
+        --surface: #1b1826;
+        --text: #eeedf7;
+        --muted: #b0acc4;
+        --primary: #b79cff;
+        --primary-strong: #d2c2ff;
+        --border: #363046;
+        --notice: #2a2340;
+        --success: #17352d;
+        --success-border: #34d399;
+        --shadow: transparent;
+      }
+    }
+
+    @media (max-width: 620px) {
+      main { width: 100%; margin: 0; border: 0; border-radius: 0; }
+      nav ul { columns: 1; }
+      footer a { display: block; margin: 8px 0; }
+      footer a + a { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="product">Block Trails for Android</span>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Effective and last updated: 28 September 2026</p>
+  </header>
+
+  <div class="summary">
+    <strong>Privacy summary:</strong> Block Trails is an offline-first block puzzle game. Your progress, coins, settings, and purchase records are saved on your Android device. There is no Block Trails account and Qunovix Technologies does not run a game server that receives your save data. The game uses Google Analytics for Firebase and Firebase Crashlytics to understand how the game is played and to fix crashes, shows ads through Google AdMob, and processes in-app purchases through Google Play. These Google services may collect device identifiers, usage data, and diagnostics. You can switch ads to non-personalised in <strong>Settings ▸ Ad privacy</strong>. We do not sell your personal information.
+  </div>
+
+  <nav aria-label="Policy contents">
+    <strong>Contents</strong>
+    <ul>
+      <li><a href="#scope">Scope and developer</a></li>
+      <li><a href="#local">Information stored on your device</a></li>
+      <li><a href="#analytics">Analytics and crash reports</a></li>
+      <li><a href="#ads">Advertising (Google AdMob)</a></li>
+      <li><a href="#consent">Ad privacy and consent</a></li>
+      <li><a href="#purchases">In-app purchases</a></li>
+      <li><a href="#permissions">Android permissions</a></li>
+      <li><a href="#retention">Retention and deletion</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#choices">Your choices and rights</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ul>
+  </nav>
+
+  <h2 id="scope">1. Scope and Developer</h2>
+  <p>
+    This Privacy Policy explains how Block Trails (the “Game”), Android package <code>com.qunovixtechnologies.blocktrails</code>, handles information. The Game is provided by Qunovix Technologies (“we,” “us,” or “our”), located in Pune, Maharashtra, India. This Policy applies to the Game and not to third-party apps, websites, advertisers, or services that you reach through it, including websites opened by tapping an advertisement.
+  </p>
+
+  <h2 id="local">2. Information Stored on Your Device</h2>
+  <p>To save your game, Block Trails keeps a save file (with a backup copy) in the Game's private storage on your device. It may contain:</p>
+  <ul>
+    <li>game progress: Classic best score and any unfinished run, Journey levels and stars, Daily Challenge results and streaks, weekly missions, achievements, and lifetime statistics;</li>
+    <li>in-game balances and items: coins, tokens, boosters, player level and XP, and unlocked themes;</li>
+    <li>settings: music and effects volume, sound, vibration, reduced motion, colour-blind symbols, text size, language, and tutorial status;</li>
+    <li>your ad privacy choice (personalised or non-personalised) and simple counters used to limit how often ads appear, such as the number of sessions played; and</li>
+    <li>a record of purchases made in the Game (product ID and the purchase token or order reference returned by Google Play) so each purchase is granted only once and can be restored.</li>
+  </ul>
+  <p>
+    Block Trails does not ask for your name, email address, phone number, contacts, photos, camera, microphone, or location, and it does not require you to create an account. The save file is not sent to a Qunovix Technologies server.
+  </p>
+
+  <h2 id="analytics">3. Analytics and Crash Reports (Firebase)</h2>
+  <p>
+    Block Trails uses Google Analytics for Firebase and Firebase Crashlytics, services of Google LLC, to understand how the Game is used, balance its difficulty and rewards, and find and fix problems.
+  </p>
+  <ul>
+    <li><strong>Google Analytics for Firebase</strong> records game events, such as starting a session or mode, finishing a level or Daily Challenge, tutorial steps, scores and lines cleared, coins and tokens earned or spent, boosters and themes used, missions completed, ad offers and completions, and purchase results. It also collects the app-instance ID, device model, operating-system version, language, app version, approximate location derived from the IP address, and session information such as first open and engagement time.</li>
+    <li><strong>Firebase Crashlytics</strong> collects crash and error reports when the Game stops working, including stack traces, device model, operating-system version, free memory and storage, device orientation, app version, and a Crashlytics installation identifier.</li>
+  </ul>
+  <p>
+    This information is not used to identify you by name. We use it only in aggregated or diagnostic form to improve the Game. Your ad privacy choice is passed to Google Analytics as consent signals: when ads are non-personalised, Analytics data is not used for ad personalisation. We do not link Analytics data with advertising IDs for our own advertising purposes. Learn more in the <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase privacy information</a>.
+  </p>
+
+  <h2 id="ads">4. Advertising (Google AdMob)</h2>
+  <p>
+    Block Trails is free to play and is supported by ads served by Google AdMob, a service of Google LLC. The Game shows <strong>rewarded ads</strong> only when you choose to watch one (for example, to continue a run, get extra moves, double a reward, or receive a free booster) and a limited number of <strong>interstitial ads</strong> between screens after a game ends, never during play. Buying “Remove Ads” stops interstitial ads; rewarded ads remain optional.
+  </p>
+  <p>When ads are requested and shown, Google and its advertising partners may collect and process information such as:</p>
+  <ul>
+    <li>the device's advertising ID (Android Advertising ID) or, where that is unavailable, other device or app-set identifiers;</li>
+    <li>IP address, from which an approximate location (such as country or city) may be derived;</li>
+    <li>device and app information, such as device model, operating-system version, language, and app version;</li>
+    <li>ad interactions, such as ads shown, clicked, or completed; and</li>
+    <li>diagnostic and performance information related to ad delivery.</li>
+  </ul>
+  <p>
+    Google uses this information to deliver, measure, and improve ads, prevent fraud and abuse, and — when personalised ads are allowed — to show ads based on your interests. We receive only aggregated reports from AdMob (such as the number of ads shown and earnings); we do not receive your advertising ID from Google. Learn more in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use its services</a> and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.
+  </p>
+
+  <h2 id="consent">5. Ad Privacy and Consent</h2>
+  <p>Block Trails uses Google's User Messaging Platform (UMP) to manage ad consent where it is legally required. Open <strong>Settings ▸ Ad privacy</strong> in the Game at any time:</p>
+  <ul>
+    <li><strong>European Economic Area, United Kingdom, and Switzerland:</strong> Google's consent form is shown. No ads are requested until you have made a choice, and you can review or change it later through Google's privacy options form.</li>
+    <li><strong>Other regions:</strong> you can choose between <em>Personalised</em> and <em>Non-personalised</em> ads. Personalised ads are the default. Non-personalised ads are requested with Google's non-personalised ads signal and are based on context, such as the app and approximate location, rather than your interests.</li>
+    <li><strong>When your consent status cannot be determined</strong> (for example, when you are offline), the Game requests only non-personalised ads.</li>
+  </ul>
+  <p>
+    Your choice is stored on your device. Google's consent tools may also store your consent preferences on the device. You can additionally reset or delete your advertising ID, or opt out of ad personalisation, in your Android device's Google or Privacy settings.
+  </p>
+
+  <h2 id="purchases">6. In-App Purchases</h2>
+  <p>
+    Optional purchases, such as Remove Ads, coin packs, the Starter Pack, and themes, are processed by Google Play Billing. Payment details are collected and handled by Google under its own terms and privacy policy; Qunovix Technologies never sees your card number or other payment credentials. Google provides the Game with information needed to confirm and deliver a purchase, such as the product ID, purchase status, and a purchase token. Google Play may also provide us with order and transaction reports through the Play Console. We use this information only to deliver, restore, and support purchases, handle refunds, and meet legal and accounting obligations.
+  </p>
+
+  <h2 id="permissions">7. Android Permissions and Device Features</h2>
+  <ul>
+    <li><strong>Internet and network state:</strong> used to send analytics events and crash reports, load ads, show the consent form, and process purchases. The game itself works without a connection; analytics events are sent later when a connection is available.</li>
+    <li><strong>Advertising ID (<code>AD_ID</code>):</strong> declared by the Google Mobile Ads SDK so ads can be delivered and measured as described above.</li>
+    <li><strong>Vibration:</strong> used for optional haptic feedback. You can turn it off in <strong>Settings ▸ Vibration</strong>.</li>
+    <li><strong>Google Play Billing:</strong> used to offer and process in-app purchases.</li>
+  </ul>
+  <p>Block Trails does not request access to your location, contacts, camera, microphone, photos, files, or phone calls.</p>
+
+  <h2>8. How Information Is Used and Shared</h2>
+  <p>We and the services described above use information to:</p>
+  <ul>
+    <li>save and restore your game progress and settings;</li>
+    <li>understand how the Game is played, balance difficulty and rewards, and find and fix crashes and bugs;</li>
+    <li>serve rewarded and interstitial ads and respect your ad privacy choice;</li>
+    <li>deliver, restore, and support in-app purchases; and</li>
+    <li>keep the Game working, secure, and free from fraud and abuse.</li>
+  </ul>
+  <p>
+    Information is shared only with Google as our analytics, crash-reporting, advertising, and payment provider, as described in this Policy, or where disclosure is required by applicable law or necessary to protect rights, safety, or security. We do not sell or rent personal information. Because your save file stays on your device, we generally cannot view or disclose it.
+  </p>
+
+  <div class="highlight">
+    <strong>No Block Trails servers or account:</strong> Apart from the Google services described in this Policy, Block Trails does not send data to any server. It has no leaderboard or cloud-save service, and Unity Analytics is turned off. If a future version adds services of this kind, we will update this Policy before they are used.
+  </div>
+
+  <h2 id="retention">9. Retention and Deletion</h2>
+  <ul>
+    <li>Your save file remains on your device until you clear the Game's storage or uninstall Block Trails. There is no server account for us to delete.</li>
+    <li>Depending on your Android settings, Android's own device backup may include app data in your Google account backup. Manage this in your device's backup settings.</li>
+    <li>Non-consumable purchases (such as Remove Ads, the Starter Pack, and the theme collection) are linked to your Google Play account and can be restored after reinstalling through <strong>Settings ▸ Restore purchases</strong>. Coins and other progress are not restored unless a device backup restores them.</li>
+    <li>Google Analytics event-level data for Block Trails is kept for the retention period set in our Google Analytics settings (no longer than 14 months) and then deleted automatically. Crashlytics crash reports are kept for up to 90 days.</li>
+    <li>Information collected by Google for ads and purchases is kept according to Google's retention policies.</li>
+  </ul>
+
+  <h2>10. Security</h2>
+  <p>
+    Game data is kept in Android's private app storage, which other apps cannot normally read, and communication with Google's analytics, crash-reporting, ad, and billing services uses encrypted connections. No method of storage or transmission is completely secure, so we cannot guarantee absolute security. Keep your device and Google account secure.
+  </p>
+
+  <h2 id="children">11. Children</h2>
+  <p>
+    Block Trails is a general-audience puzzle game and is not directed to children under 13 (or the minimum age required in your country). We do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has provided information through the Game, contact us and we will help address it, including by explaining how to disable personalised ads and remove the Game's data from the device.
+  </p>
+
+  <h2>12. International Processing</h2>
+  <p>
+    Google and its partners may process information in countries other than your own, including the United States, under their own safeguards and privacy policies. Your save file remains on your device.
+  </p>
+
+  <h2 id="choices">13. Your Choices and Privacy Rights</h2>
+  <p>You can:</p>
+  <ul>
+    <li>switch between personalised and non-personalised ads, or review your consent, in <strong>Settings ▸ Ad privacy</strong>;</li>
+    <li>reset or delete your advertising ID, or opt out of ad personalisation, in your Android device settings;</li>
+    <li>ask us to delete analytics data linked to your device's app-instance ID by contacting us (see below);</li>
+    <li>buy Remove Ads to stop interstitial ads;</li>
+    <li>turn off vibration and sound in the Game's Settings; and</li>
+    <li>delete all game data by clearing the Game's storage in Android settings or uninstalling the Game.</li>
+  </ul>
+  <p>
+    Depending on where you live (for example, under the GDPR, UK GDPR, India's Digital Personal Data Protection Act, or US state privacy laws), you may have rights to access, correct, delete, or object to the processing of your personal information, to withdraw consent, and to complain to a data protection authority. Because we do not hold your save data or ad identifiers, most requests can be fulfilled with the controls above. Analytics and crash data are pseudonymous and cannot be linked to your name, so to help with a request about them we may ask you for details from your device. For information held by Google, use your <a href="https://myaccount.google.com/" target="_blank" rel="noopener noreferrer">Google Account</a> controls. You may also contact us about any information we directly hold, such as purchase records.
+  </p>
+
+  <h2>14. Changes to This Policy</h2>
+  <p>
+    We may update this Privacy Policy to reflect changes to Block Trails, third-party services, legal requirements, or our practices. The revised page will show a new effective or last-updated date. Where required, we will give additional notice or ask for your consent before using information in a materially different way.
+  </p>
+
+  <h2 id="contact">15. Contact Us</h2>
+  <p>
+    For privacy questions or requests, contact:<br>
+    Qunovix Technologies<br>
+    Pune, Maharashtra, India<br>
+    Email: <a href="mailto:qunovixtechnologies@gmail.com">qunovixtechnologies@gmail.com</a>
+  </p>
+
+  <footer>
+    <a href="terms_and_conditions_blocktrails.html">Terms &amp; Conditions</a>
+    <a href="#scope">Back to top</a>
+  </footer>
+</main>
+</body>
+</html>
