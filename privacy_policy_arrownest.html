@@ -133,11 +133,11 @@
       <span class="product">Arrow Nest for Android</span>
     </div>
     <h1>Privacy Policy</h1>
-    <p class="updated">Effective and last updated: 3 October 2026</p>
+    <p class="updated">Effective and last updated: 6 October 2026</p>
   </header>
 
   <div class="summary">
-    <strong>Privacy summary:</strong> Arrow Nest is an offline-first arrow puzzle game. Your progress, hints, settings, and purchase records are saved on your Android device. There is no Arrow Nest account, and Qunovix Technologies does not run a game server that receives your save data. The Game does not use analytics or crash-reporting services. It shows ads through Google AdMob and processes in-app purchases through Google Play, and these Google services may collect device identifiers and usage data. If you choose to sign in with Google to back up your progress, your save file is stored in a private app folder in <em>your own</em> Google Drive. Where the law requires it, you can review your ad choices in <strong>Settings ▸ Privacy Choices</strong>. We do not sell your personal information.
+    <strong>Privacy summary:</strong> Arrow Nest is an offline-first arrow puzzle game. Your progress, hints, settings, and purchase records are saved on your Android device. There is no Arrow Nest account, and Qunovix Technologies does not run a game server that receives your save data. The Game uses Google Analytics for Firebase and Firebase Crashlytics to understand how the Game is played and to fix crashes; you can turn both off in <strong>Settings ▸ Share Usage &amp; Crash Data</strong>. It shows ads through Google AdMob and processes in-app purchases through Google Play, and these Google services may collect device identifiers and usage data. If you choose to sign in with Google to back up your progress, your save file is stored in a private app folder in <em>your own</em> Google Drive. Where the law requires it, you can review your ad choices in <strong>Settings ▸ Privacy Choices</strong>. We do not sell your personal information.
   </div>
 
   <nav aria-label="Policy contents">
@@ -147,7 +147,7 @@
       <li><a href="#local">Information stored on your device</a></li>
       <li><a href="#cloud">Optional Google sign-in and cloud backup</a></li>
       <li><a href="#league">Weekly League and events</a></li>
-      <li><a href="#analytics">No analytics or crash reporting</a></li>
+      <li><a href="#analytics">Analytics and crash reporting</a></li>
       <li><a href="#ads">Advertising (Google AdMob)</a></li>
       <li><a href="#consent">Ad privacy and consent</a></li>
       <li><a href="#purchases">In-app purchases</a></li>
@@ -198,9 +198,16 @@
     The Weekly League and the Koi Pond Rush event run entirely on your device. The other players in your league are computer-simulated rivals, and the Game says so; your name, avatar, and scores are not sent to other players, a leaderboard, or any server. Arrow Nest has no chat, multiplayer, or user-generated content.
   </p>
 
-  <h2 id="analytics">5. No Analytics or Crash Reporting</h2>
+  <h2 id="analytics">5. Analytics and Crash Reporting (Google Firebase)</h2>
   <p>
-    Arrow Nest does not include Google Analytics for Firebase, Firebase Crashlytics, Unity Analytics, or any other analytics or crash-reporting service, and it does not send gameplay events or crash reports to us. If a future version adds such a service, we will update this Policy before it is used.
+    Arrow Nest uses two Firebase services provided by Google LLC to see how the Game is played and to find and fix problems:
+  </p>
+  <ul>
+    <li><strong>Google Analytics for Firebase</strong> receives gameplay events — for example levels started, completed or failed (with level number, mode, score, mistakes and hints used), hints and rewarded videos requested, screens viewed, theme changes, reminder and cloud-backup choices — together with a Firebase app-instance ID, device model, Android version, language, app version, approximate location derived from IP address, and session information. If you allow it, Analytics may also use the Android advertising ID; your ad consent choices from Google's consent form are passed to Analytics as well.</li>
+    <li><strong>Firebase Crashlytics</strong> receives crash and error reports, which contain the stack trace, device model and state (such as free memory and orientation), Android and app version, a Crashlytics installation ID, and a short log of recent game events and the screen and level you were on.</li>
+  </ul>
+  <p>
+    These reports do not include your name, email address, Google account, or the contents of your save file. We use them only in aggregate to improve levels and difficulty and to fix crashes, and Google processes them under the <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase privacy and security terms</a>. You can turn off both services at any time in <strong>Settings ▸ Share Usage &amp; Crash Data</strong>; from then on no analytics events or crash reports are sent. Google Analytics data is kept for 14 months and Crashlytics crash reports for 90 days.
   </p>
 
   <h2 id="ads">6. Advertising (Google AdMob)</h2>
@@ -241,7 +248,7 @@
 
   <h2 id="permissions">10. Android Permissions and Device Features</h2>
   <ul>
-    <li><strong>Internet and network state:</strong> used to load ads, show the consent form, process purchases, and, if you turn it on, back up your progress to Google Drive. The puzzles themselves work without a connection.</li>
+    <li><strong>Internet and network state:</strong> used to send analytics events and crash reports, load ads, show the consent form, process purchases, and, if you turn it on, back up your progress to Google Drive. The puzzles themselves work without a connection.</li>
     <li><strong>Advertising ID (<code>AD_ID</code>) and Android ad services:</strong> declared by the Google Mobile Ads SDK so ads can be delivered and measured as described above.</li>
     <li><strong>Google Play Billing:</strong> used to offer and process in-app purchases.</li>
     <li><strong>Vibration:</strong> used for optional haptic feedback. You can turn it off in <strong>Settings ▸ Vibration</strong>.</li>
@@ -253,17 +260,18 @@
   <p>We and the services described above use information to:</p>
   <ul>
     <li>save and restore your game progress and settings, including through the optional Google Drive backup;</li>
+    <li>understand how the Game is played, balance level difficulty, and find and fix crashes (Google Analytics for Firebase and Firebase Crashlytics, unless you turn them off);</li>
     <li>serve rewarded and interstitial ads and respect your ad privacy choices;</li>
     <li>deliver, restore, and support in-app purchases;</li>
     <li>answer support requests; and</li>
     <li>keep the Game working, secure, and free from fraud and abuse.</li>
   </ul>
   <p>
-    Information is shared only with Google as our advertising, payment, sign-in, and storage provider, as described in this Policy, or where disclosure is required by applicable law or necessary to protect rights, safety, or security. We do not sell or rent personal information. Because your save file stays on your device or in your own Google Drive, we cannot view or disclose it.
+    Information is shared only with Google as our analytics, crash-reporting, advertising, payment, sign-in, and storage provider, as described in this Policy, or where disclosure is required by applicable law or necessary to protect rights, safety, or security. We do not sell or rent personal information. Because your save file stays on your device or in your own Google Drive, we cannot view or disclose it.
   </p>
 
   <div class="highlight">
-    <strong>No Arrow Nest servers or account:</strong> Apart from the Google services described in this Policy, Arrow Nest does not send data to any server. It has no online leaderboard, and Unity's analytics and diagnostics services are turned off. If a future version adds services of this kind, we will update this Policy before they are used.
+    <strong>No Arrow Nest servers or account:</strong> Apart from the Google services described in this Policy, Arrow Nest does not send data to any server. It has no online leaderboard, and Unity's own analytics and diagnostics services are turned off.
   </div>
 
   <h2 id="retention">12. Retention and Deletion</h2>
@@ -273,12 +281,13 @@
     <li>Depending on your Android settings, Android's own device backup may also include app data in your Google account backup. Manage this in your device's backup settings.</li>
     <li>Remove Ads is linked to your Google Play account and can be restored after reinstalling through <strong>Settings ▸ Restore Purchases</strong>. Hints and progress are restored only from a cloud or device backup.</li>
     <li>Support emails are kept only as long as needed to resolve your request.</li>
+    <li>Google Analytics for Firebase event data is kept for 14 months and Crashlytics crash reports for 90 days, after which they are deleted.</li>
     <li>Information collected by Google for ads, sign-in, and purchases is kept according to Google's retention policies.</li>
   </ul>
 
   <h2>13. Security</h2>
   <p>
-    Game data is kept in Android's private app storage, which other apps cannot normally read, and communication with Google's ad, billing, sign-in, and Drive services uses encrypted connections. No method of storage or transmission is completely secure, so we cannot guarantee absolute security. Keep your device and Google account secure.
+    Game data is kept in Android's private app storage, which other apps cannot normally read, and communication with Google's analytics, crash-reporting, ad, billing, sign-in, and Drive services uses encrypted connections. No method of storage or transmission is completely secure, so we cannot guarantee absolute security. Keep your device and Google account secure.
   </p>
 
   <h2 id="children">14. Children</h2>
@@ -298,6 +307,7 @@
     <li>reset or delete your advertising ID, or opt out of ad personalisation, in your Android device settings;</li>
     <li>buy Remove Ads to stop interstitial ads;</li>
     <li>choose whether to sign in with Google, and sign out or delete your cloud backup at any time;</li>
+    <li>turn off analytics and crash reporting in <strong>Settings ▸ Share Usage &amp; Crash Data</strong>;</li>
     <li>turn off vibration, sound, music, and voice in the Game's Settings; and</li>
     <li>delete your game data with <strong>Settings ▸ Reset Progress</strong>, by clearing the Game's storage in Android settings, or by uninstalling the Game.</li>
   </ul>
