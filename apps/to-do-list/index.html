@@ -1,74 +1,228 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>To Do List – Task Planner App by Qunovix Technologies</title>
-  <meta name="description" content="To Do List by Qunovix Technologies is an Android task planner for lists, reminders, birthdays, productivity tracking and secure backup.">
-  <meta name="theme-color" content="#0c1025">
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="256x256" href="/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="canonical" href="https://qunovixtech.com/apps/to-do-list/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="To Do List – Task Planner App by Qunovix Technologies">
-  <meta property="og:description" content="Plan tasks, lists, birthdays and reminders in one simple Android planner.">
-  <meta property="og:url" content="https://qunovixtech.com/apps/to-do-list/">
-  <meta property="og:image" content="https://qunovixtech.com/apps/to-do-list/assets/shot-1.webp">
-  <meta property="og:image:alt" content="To Do List tasks and reminders app">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"SoftwareApplication",
-    "name":"To Do List: Tasks & Reminders",
-    "description":"To Do List by Qunovix Technologies is an Android task planner for lists, reminders, birthdays, productivity tracking and secure backup.",
-    "url":"https://qunovixtech.com/apps/to-do-list/",
-    "downloadUrl":"https://play.google.com/store/apps/details?id=com.qunovixtechnologies.todolist",
-    "installUrl":"https://play.google.com/store/apps/details?id=com.qunovixtechnologies.todolist",
-    "operatingSystem":"Android",
-    "applicationCategory":"UtilitiesApplication",
-    "isAccessibleForFree":true,
-    "offers":{"@type":"Offer","price":"0","priceCurrency":"INR","url":"https://play.google.com/store/apps/details?id=com.qunovixtechnologies.todolist"},
-    "author":{"@type":"Organization","name":"Qunovix Technologies","url":"https://qunovixtech.com/"},
-    "publisher":{"@type":"Organization","name":"Qunovix Technologies","url":"https://qunovixtech.com/"},
-    "image":"https://qunovixtech.com/apps/to-do-list/assets/icon.webp",
-    "screenshot":[
-      "https://qunovixtech.com/apps/to-do-list/assets/shot-1.webp",
-      "https://qunovixtech.com/apps/to-do-list/assets/shot-2.webp",
-      "https://qunovixtech.com/apps/to-do-list/assets/shot-3.webp",
-      "https://qunovixtech.com/apps/to-do-list/assets/shot-4.webp",
-      "https://qunovixtech.com/apps/to-do-list/assets/shot-5.webp"
-    ],
-    "featureList":["Task lists","Custom reminders","Birthday reminders","Productivity statistics","Multiple languages","Local and Google Drive backup"]
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>To Do List — Tasks &amp; Reminders | Qunovix Technologies</title>
+<meta name="description" content="To Do List by Qunovix Technologies is a simple Android task manager with lists, voice reminders, birthday reminders, a 15-day recycle bin, themes and backup.">
+<meta name="theme-color" content="#F3EEE4">
+<link rel="canonical" href="https://qunovixtech.com/apps/to-do-list/">
+<link rel="icon" type="image/png" href="../../assets/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="To Do List — Tasks &amp; Reminders">
+<meta property="og:description" content="Plan the day, get the nudge, tick it off.">
+<meta property="og:url" content="https://qunovixtech.com/apps/to-do-list/">
+<meta property="og:image" content="https://qunovixtech.com/assets/apps/todo-icon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "To Do List: Tasks & Reminders",
+  "alternateName": "To Do List",
+  "description": "To Do List by Qunovix Technologies is a simple Android task manager with lists, voice reminders, birthday reminders, a 15-day recycle bin, themes and backup.",
+  "url": "https://qunovixtech.com/apps/to-do-list/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.qunovixtechnologies.todolist",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.qunovixtechnologies.todolist",
+  "operatingSystem": "Android",
+  "applicationCategory": "UtilitiesApplication",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR",
+    "url": "https://play.google.com/store/apps/details?id=com.qunovixtechnologies.todolist"
+  },
+  "image": "https://qunovixtech.com/assets/apps/todo-icon.webp",
+  "screenshot": [
+    "https://qunovixtech.com/assets/apps/to-do-list/shot-1.webp",
+    "https://qunovixtech.com/assets/apps/to-do-list/shot-2.webp",
+    "https://qunovixtech.com/assets/apps/to-do-list/shot-3.webp",
+    "https://qunovixtech.com/assets/apps/to-do-list/shot-4.webp",
+    "https://qunovixtech.com/assets/apps/to-do-list/shot-5.webp"
+  ],
+  "featureList": [
+    "Tasks & lists",
+    "Reminders your way",
+    "Birthday reminders",
+    "See your progress",
+    "Make it yours",
+    "Safe & backed up"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Qunovix Technologies",
+    "url": "https://qunovixtech.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Qunovix Technologies",
+    "url": "https://qunovixtech.com/"
   }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../app-page.css">
+}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is To Do List free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, it's free to download. An optional one-time Premium purchase removes advertisements."}}, {"@type": "Question", "name": "Can reminders speak to me?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Reminders can use a custom sound, a voice or vibration."}}, {"@type": "Question", "name": "Can I get deleted tasks back?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Deleted records stay in the Recycle Bin for 15 days so you can restore them."}}, {"@type": "Question", "name": "Is there a dark mode?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can switch between light and dark themes."}}, {"@type": "Question", "name": "Can I back up my tasks?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can use local backup or Google Drive backup."}}]}
+</script>
 </head>
-<body class="theme-todo">
-  <header class="wrap site-header"><a class="brand" href="/" aria-label="Qunovix Technologies home"><img class="brand-mark" src="/favicon.png" width="36" height="36" alt=""><span>Qunovix Technologies</span></a><a class="back-link" href="/#apps">All apps&nbsp; ↗</a></header>
-  <main>
-    <section class="hero"><div class="wrap hero-grid">
-      <div><div class="product-line"><img class="app-icon" src="assets/icon.webp" width="86" height="86" alt="To Do List app icon"><div class="product-meta"><span class="eyebrow">Android task planner</span><span class="developer">By Qunovix Technologies</span></div></div><h1>To Do List –<br><em>Tasks &amp; Reminders</em></h1><p class="intro">To Do List by Qunovix Technologies is a simple Android planner for organizing daily tasks, lists, birthdays and important reminders.</p><div class="actions"><a class="play-button" href="https://play.google.com/store/apps/details?id=com.qunovixtechnologies.todolist" target="_blank" rel="noopener" aria-label="Get To Do List on Google Play"><img class="google-play-badge" src="/assets/google-play-badge.png" width="274" height="114" alt="Get it on Google Play"></a><a class="privacy-link" href="/privacy_policy_todolist.html">Read privacy policy&nbsp; ↗</a></div></div>
-      <div class="hero-visual"><img src="assets/shot-1.webp" width="760" height="1350" alt="Birthday reminders in To Do List"><span class="hero-badge">Plan simply. Finish confidently.</span></div>
-    </div></section>
-    <div class="trust-strip"><div class="wrap trust-items"><div class="trust-item"><strong>Quick task capture</strong><span>Add and complete tasks easily</span></div><div class="trust-item"><strong>Helpful reminders</strong><span>Sound, voice and vibration options</span></div><div class="trust-item"><strong>Backup choices</strong><span>Local and Google Drive options</span></div><div class="trust-item"><strong>Made for Android</strong><span>Available on Google Play</span></div></div></div>
-    <section class="section features-section"><div class="wrap"><p class="section-kicker">Plan with less effort</p><h2>Keep tasks, lists and important dates in one organized place.</h2><p class="section-lead">From everyday errands to work priorities, To Do List keeps your plans clear and easy to act on.</p><div class="features-grid">
-      <article class="feature"><span class="feature-icon">✓</span><h3>Create tasks quickly</h3><p>Add the details you need, organize your day and mark work complete when it is done.</p></article>
-      <article class="feature"><span class="feature-icon">☰</span><h3>Organize with lists</h3><p>Keep work, personal plans, shopping lists and wishlists neatly separated.</p></article>
-      <article class="feature"><span class="feature-icon">⏰</span><h3>Never miss a reminder</h3><p>Set task and birthday reminders with customizable notification options.</p></article>
-      <article class="feature"><span class="feature-icon">↗</span><h3>See your productivity</h3><p>Review completed and pending tasks with useful statistics and progress insights.</p></article>
-      <article class="feature"><span class="feature-icon">文</span><h3>Use your language</h3><p>Switch among supported languages and choose your preferred time and week settings.</p></article>
-      <article class="feature"><span class="feature-icon">↻</span><h3>Recover and restore</h3><p>Restore deleted items from the 15-day recycle bin and protect data with backup options.</p></article>
-    </div></div></section>
-    <section class="section screens-section"><div class="wrap"><div class="screens-head"><div><p class="section-kicker">Inside To Do List</p><h2>Simple, beautiful and organized.</h2></div><p>Manage every task, visualize progress, use dark mode and switch languages without a complicated setup.</p></div><div class="screens" aria-label="To Do List app screenshots">
-      <figure class="screen"><img src="assets/shot-2.webp" width="760" height="1350" loading="lazy" alt="Task lists and weekly planning"></figure><figure class="screen"><img src="assets/shot-3.webp" width="760" height="1350" loading="lazy" alt="Productivity statistics and charts"></figure><figure class="screen"><img src="assets/shot-4.webp" width="760" height="1350" loading="lazy" alt="Dark mode productivity tracking"></figure><figure class="screen"><img src="assets/shot-5.webp" width="760" height="1350" loading="lazy" alt="Multiple language support"></figure>
-    </div></div></section>
-    <section class="section about-section"><div class="wrap about-card"><div><p class="section-kicker" style="color:#fff">The developer</p><h2>Created by<br>Qunovix Technologies.</h2></div><div class="about-copy"><p><strong>Qunovix Technologies</strong> is an independent app studio in Pune, India, building focused Android apps for everyday life.</p><p>To Do List is designed to make daily planning practical, flexible and easy to understand.</p><a class="privacy-link" href="/">Discover Qunovix Technologies&nbsp; ↗</a></div></div></section>
-    <section class="section final-cta"><div class="wrap"><p class="section-kicker">Turn plans into progress</p><h2>Organize your day today.</h2><p>Create tasks, remember important dates and see your progress in one convenient planner.</p><a class="play-button" href="https://play.google.com/store/apps/details?id=com.qunovixtechnologies.todolist" target="_blank" rel="noopener" aria-label="Get To Do List on Google Play"><img class="google-play-badge" src="/assets/google-play-badge.png" width="274" height="114" alt="Get it on Google Play"></a></div></section>
-  </main>
-  <footer><div class="wrap footer-row"><span>© 2026 Qunovix Technologies</span><nav class="footer-links" aria-label="Footer"><a href="/">Home</a><a href="/privacy_policy_todolist.html">Privacy</a><a href="/terms_and_conditions_todolist.html">Terms</a><a href="mailto:qunovixtechnologies@gmail.com">Contact</a></nav></div></footer>
+<body style="--app:#FFE0C7;--app-deep:#E8641B">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="../../" aria-label="Qunovix Technologies home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#17140F"/><circle cx="15" cy="15" r="7.2" fill="none" stroke="#F3EEE4" stroke-width="2.6"/><path d="M18.6 18.6 24 24" stroke="#FF4F1F" stroke-width="3" stroke-linecap="round"/></svg>Qunovix</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../../#apps">All apps</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#screens">Screenshots</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-ink btn-sm nav-cta" href="https://play.google.com/store/apps/details?id=com.qunovixtechnologies.todolist" target="_blank" rel="noopener">Get To Do List <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.6"/></svg></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="d-hero">
+  <div class="wrap d-hero-grid">
+    <div>
+      <nav class="crumbs mono rv" aria-label="Breadcrumb"><a href="../../">Home</a><span>/</span><a href="../../#apps">Apps</a><span>/</span><span aria-current="page">To Do List</span></nav>
+      <div class="d-title rv d1">
+        <img class="d-icon" src="../../assets/apps/todo-icon.webp" alt="To Do List app icon" width="104" height="104">
+        <h1>To Do List<small>Tasks &amp; Reminders</small></h1>
+      </div>
+      <p class="pitch rv d1">Plan the day, get the nudge, tick it off.</p>
+      <p class="lede rv d2">A simple, practical task manager for work, home, shopping and the dates you can&#x27;t forget. Everything stays organised in one convenient place.</p>
+      <div class="chapter-ctas rv d3">
+        <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.qunovixtechnologies.todolist" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.2 13.4 12l-9.8 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1Z" fill="#00D7FE"/><path d="m16.8 8.6-3.4 3.4-9.8-9.8c.3-.2.8-.2 1.2 0l12 6.4Z" fill="#00F076"/><path d="m16.8 15.4-12 6.4c-.4.2-.9.2-1.2 0l9.8-9.8 3.4 3.4Z" fill="#FF3A44"/><path d="m20.4 13.3-3.6 2.1-3.4-3.4 3.4-3.4 3.6 2.1c.9.6.9 2 0 2.6Z" fill="#FFD500"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
+        <span class="rating"><b>4.2</b> ★ on Google Play</span>
+        <a class="text-link" href="/privacy_policy_todolist.html">Privacy policy</a>
+      </div>
+      <dl class="facts rv d3"><div><dt>Category</dt><dd>Productivity</dd></div><div><dt>Rating</dt><dd>4.2 ★</dd></div><div><dt>Price</dt><dd>Free</dd></div><div><dt>Premium</dt><dd>One-time, no ads</dd></div></dl>
+    </div>
+    <div class="poster rv d1" data-no="02">
+      <img class="badge-icon" src="../../assets/apps/todo-icon.webp" alt="" width="74" height="74">
+      <div class="shot"><img src="../../assets/apps/to-do-list/shot-1.webp" alt="Never miss birthdays with the calendar and reminders"></div>
+    </div>
+  </div>
+</section>
+
+<div class="trust"><div class="wrap"><div class="trust-item"><b>Quick to use</b><span>Add a task in seconds</span></div><div class="trust-item"><b>Never forget</b><span>Reminders &amp; birthdays</span></div><div class="trust-item"><b>Safety net</b><span>15-day Recycle Bin</span></div><div class="trust-item"><b>Your language</b><span>Multiple languages</span></div></div></div>
+
+<section class="sec" id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num rv">(01) — Features</div>
+      <h2 class="rv d1">What's <em>inside.</em></h2>
+      <p class="rv d2">Everything To Do List does, without the clutter.</p>
+    </div>
+    <div class="fgrid"><div class="fcard rv"><div class="fno"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7h11M9 12h11M9 17h11"/><path d="M4.5 7h.01M4.5 12h.01M4.5 17h.01" stroke-width="2.6"/></svg></i><span class="mono">01</span></div><h3>Tasks &amp; lists</h3><p>Add tasks with the details you need, keep them in separate lists and tick them off when you&#x27;re done.</p><ul><li>Personal &amp; work</li><li>Shopping &amp; wishlists</li><li>Flexible sorting</li></ul></div><div class="fcard rv d1"><div class="fno"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15L6 16.5Z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg></i><span class="mono">02</span></div><h3>Reminders your way</h3><p>Get reminded with the sound, voice or vibration you prefer.</p><ul><li>Custom sounds</li><li>Voice reminders</li><li>Vibration options</li></ul></div><div class="fcard rv d2"><div class="fno"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 20.5h15v-7a2 2 0 0 0-2-2h-11a2 2 0 0 0-2 2v7Z"/><path d="M4.5 15.5c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 1.5-.7 1.5-.7"/><path d="M12 11.5V8.5M12 5.5c.8 0 1.2-.6 1.2-1.2S12 2.5 12 2.5s-1.2 1.2-1.2 1.8.4 1.2 1.2 1.2Z"/></svg></i><span class="mono">03</span></div><h3>Birthday reminders</h3><p>Save birthdays and get a reminder before the special day.</p><ul><li>Birthday calendar</li><li>Month &amp; week view</li><li>Reminders in advance</li></ul></div><div class="fcard rv"><div class="fno"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M7 16.5v-5M12 16.5V7M17 16.5v-8"/></svg></i><span class="mono">04</span></div><h3>See your progress</h3><p>Stats and graphs show what you&#x27;ve finished and what&#x27;s still waiting.</p><ul><li>Completion stats</li><li>Weekly graphs</li><li>Productivity insights</li></ul></div><div class="fcard rv d1"><div class="fno"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 1 0 0 17c1.2 0 1.8-.8 1.8-1.7 0-1.3-1-1.5-1-2.6 0-1 .8-1.7 1.8-1.7h2.2a3.7 3.7 0 0 0 3.7-3.7C20.5 6.7 16.7 3.5 12 3.5Z"/><path d="M7.5 11h.01M10 7.5h.01M14.5 7.5h.01" stroke-width="2.4"/></svg></i><span class="mono">05</span></div><h3>Make it yours</h3><p>Pick your theme, your language, your time format and the first day of your week.</p><ul><li>Light &amp; dark themes</li><li>Multiple languages</li><li>Custom time &amp; week settings</li></ul></div><div class="fcard rv d2"><div class="fno"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 8.5a4 4 0 0 1-.5 9.5H7Z"/><path d="M12 11v5M9.8 13.2 12 11l2.2 2.2"/></svg></i><span class="mono">06</span></div><h3>Safe &amp; backed up</h3><p>Deleted items wait in the Recycle Bin for 15 days, and you can back up everything.</p><ul><li>15-day Recycle Bin</li><li>Local backup</li><li>Google Drive backup</li></ul></div></div>
+  </div>
+</section>
+
+<section class="sec gallery-sec" id="screens">
+  <div class="wrap">
+    <div class="gallery-head">
+      <div>
+        <div class="sec-num rv">(02) — Screenshots</div>
+        <h2 class="rv d1">Take a <em>look.</em></h2>
+      </div>
+      <div class="g-ctrl rv d2">
+        <button type="button" id="gPrev" aria-label="Previous screenshots"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <button type="button" id="gNext" aria-label="Next screenshots"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      </div>
+    </div>
+    <div class="g-track" id="galleryTrack"><button class="g-item" type="button" aria-label="View screenshot 1: Never miss birthdays with the calendar and reminders"><img src="../../assets/apps/to-do-list/shot-1.webp" alt="Never miss birthdays with the calendar and reminders" loading="lazy" width="760" height="1350"></button><button class="g-item" type="button" aria-label="View screenshot 2: Stay on top of every task"><img src="../../assets/apps/to-do-list/shot-2.webp" alt="Stay on top of every task" loading="lazy" width="760" height="1350"></button><button class="g-item" type="button" aria-label="View screenshot 3: Visualise your productivity with stats"><img src="../../assets/apps/to-do-list/shot-3.webp" alt="Visualise your productivity with stats" loading="lazy" width="760" height="1350"></button><button class="g-item" type="button" aria-label="View screenshot 4: Track your productivity in dark mode"><img src="../../assets/apps/to-do-list/shot-4.webp" alt="Track your productivity in dark mode" loading="lazy" width="760" height="1350"></button><button class="g-item" type="button" aria-label="View screenshot 5: Use the app in your language"><img src="../../assets/apps/to-do-list/shot-5.webp" alt="Use the app in your language" loading="lazy" width="760" height="1350"></button></div>
+  </div>
+</section>
+
+<section class="sec" id="uses">
+  <div class="wrap split">
+    <div>
+      <div class="sec-num rv">(03) — Made for</div>
+      <h2 class="rv d1">Ideal for <em>everyday</em> plans.</h2>
+      <p class="note rv d2">Want a cleaner experience? Premium is a one-time purchase that removes advertisements.</p>
+    </div>
+    <div class="chips rv d1"><span>Daily planning</span><span>Personal tasks</span><span>Work tasks</span><span>Shopping lists</span><span>Wishlists</span><span>Reminders</span><span>Important dates</span><span>Productive routines</span></div>
+  </div>
+</section>
+<section class="sec promise d-privacy" id="privacy">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num rv">(04) — Privacy</div>
+      <h2 class="rv d1">Your data <em>stays yours.</em></h2>
+      <p class="rv d2">How To Do List handles your information, in plain words.</p>
+    </div>
+    <div class="priv-grid"><div class="priv rv"><div class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 5 6.5v5c0 4.4 3 7.8 7 9 4-1.2 7-4.6 7-9v-5l-7-3Z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></div><h3>Under your control</h3><p>Your task information stays under your control.</p></div><div class="priv rv d1"><div class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 8.5a4 4 0 0 1-.5 9.5H7Z"/><path d="M12 11v5M9.8 13.2 12 11l2.2 2.2"/></svg></div><h3>Backups on your terms</h3><p>Use local backup, Google Drive backup, or neither.</p></div><div class="priv rv d2"><div class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8l4 4V20a.5.5 0 0 1-.5.5h-11A.5.5 0 0 1 6 20V3.5Z"/><path d="M14 3.5V8h4M9 13h6M9 16.5h6"/></svg></div><h3>Policies in the app</h3><p>The Privacy Policy and Terms are available right inside the app.</p></div></div>
+    <div class="priv-links rv"><a href="/privacy_policy_todolist.html">Read the privacy policy</a><a href="/terms_and_conditions_todolist.html">Terms &amp; conditions</a></div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num rv">(05) — FAQ</div>
+      <h2 class="rv d1">Good <em>questions.</em></h2>
+      <p class="rv d2">Can't find your answer? Email <a class="text-link" href="mailto:qunovixtechnologies@gmail.com?subject=To Do List">qunovixtechnologies@gmail.com</a>.</p>
+    </div>
+    <div class="faq"><details class="rv"><summary>Is To Do List free?</summary><p>Yes, it&#x27;s free to download. An optional one-time Premium purchase removes advertisements.</p></details><details class="rv"><summary>Can reminders speak to me?</summary><p>Yes. Reminders can use a custom sound, a voice or vibration.</p></details><details class="rv"><summary>Can I get deleted tasks back?</summary><p>Yes. Deleted records stay in the Recycle Bin for 15 days so you can restore them.</p></details><details class="rv"><summary>Is there a dark mode?</summary><p>Yes. You can switch between light and dark themes.</p></details><details class="rv"><summary>Can I back up my tasks?</summary><p>Yes. You can use local backup or Google Drive backup.</p></details></div>
+    
+  </div>
+</section>
+
+<section class="d-cta">
+  <div class="wrap">
+    <img class="rv" src="../../assets/apps/todo-icon.webp" alt="" width="96" height="96" loading="lazy">
+    <h2 class="rv d1">Turn your plans into <em>progress.</em></h2>
+    <p class="rv d2">Start organising your tasks today. It only takes a minute to set up.</p>
+    <div class="rv d3"><a class="play-btn" href="https://play.google.com/store/apps/details?id=com.qunovixtechnologies.todolist" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.2 13.4 12l-9.8 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1Z" fill="#00D7FE"/><path d="m16.8 8.6-3.4 3.4-9.8-9.8c.3-.2.8-.2 1.2 0l12 6.4Z" fill="#00F076"/><path d="m16.8 15.4-12 6.4c-.4.2-.9.2-1.2 0l9.8-9.8 3.4 3.4Z" fill="#FF3A44"/><path d="m20.4 13.3-3.6 2.1-3.4-3.4 3.4-3.4 3.6 2.1c.9.6.9 2 0 2.6Z" fill="#FFD500"/></svg><span><small>Get it on</small><b>Google Play</b></span></a></div>
+  </div>
+</section>
+
+<section class="sec" id="more">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num rv">More from Qunovix</div>
+      <h2 class="rv d1">You might <em>also like.</em></h2>
+    </div>
+    <div class="more-grid"><a class="more-card rv" href="../../apps/my-diary/" style="--m:#EBD9F7"><img src="../../assets/apps/diary-icon.webp" alt="" width="64" height="64" loading="lazy"><div><b>My Diary</b><span>A private journal with fingerprint lock and mood tracking.</span></div><div class="go mono">Lifestyle<span><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></span></div></a><a class="more-card rv d1" href="../../apps/weighttrack/" style="--m:#D6EDC8"><img src="../../assets/apps/weight-icon.webp" alt="" width="64" height="64" loading="lazy"><div><b>WeightTrack</b><span>Weigh-ins, trends, progress photos and streaks.</span></div><div class="go mono">Health &amp; Fitness<span><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></span></div></a><a class="more-card rv d2" href="../../apps/bmi-calculator/" style="--m:#C9EEE2"><img src="../../assets/apps/bmi-icon.webp" alt="" width="64" height="64" loading="lazy"><div><b>BMI Calculator</b><span>Instant BMI on a gauge, using WHO or DGE standards.</span></div><div class="go mono">Health &amp; Fitness<span><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></span></div></a><a class="more-card rv d3" href="../../apps/financial-calculator-india/" style="--m:#D3E2F5"><img src="../../assets/apps/fincalc-icon.webp" alt="" width="64" height="64" loading="lazy"><div><b>FinCalc India</b><span>EMI, SIP, FD, PPF, tax, retirement and more, built for India.</span></div><div class="go mono">Finance<span><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></span></div></a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="../../"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#17140F"/><circle cx="15" cy="15" r="7.2" fill="none" stroke="#F3EEE4" stroke-width="2.6"/><path d="M18.6 18.6 24 24" stroke="#FF4F1F" stroke-width="3" stroke-linecap="round"/></svg>Qunovix Technologies</a>
+        <p class="foot-about">An independent studio in Pune, India, making useful Android apps for everyday life.</p>
+      </div>
+      <div><h5>Apps</h5><ul><li><a href="../../apps/my-diary/">My Diary</a></li><li><a href="../../apps/to-do-list/">To Do List</a></li><li><a href="../../apps/weighttrack/">WeightTrack</a></li><li><a href="../../apps/bmi-calculator/">BMI Calculator</a></li><li><a href="../../apps/financial-calculator-india/">FinCalc India</a></li></ul></div>
+      <div><h5>Privacy policies</h5><ul><li><a href="/privacy_policy_mydiary.html">My Diary</a></li><li><a href="/privacy_policy_todolist.html">To Do List</a></li><li><a href="/privacy_policy_weightrack.html">WeightTrack</a></li><li><a href="/privacy_policy_bmi_calculator.html">BMI Calculator</a></li><li><a href="/privacy_policy.html">FinCalc India</a></li></ul></div>
+      <div><h5>Terms</h5><ul><li><a href="/terms_and_conditions_mydiary.html">My Diary</a></li><li><a href="/terms_and_conditions_todolist.html">To Do List</a></li><li><a href="/terms_and_conditions_weightrack.html">WeightTrack</a></li><li><a href="/terms_and_conditions_bmi_calculator.html">BMI Calculator</a></li><li><a href="/terms_and_conditions.html">FinCalc India</a></li></ul></div>
+    </div>
+    <div class="wordmark" aria-hidden="true">Qunovix</div>
+    <div class="foot-bottom">
+      <span>© <span id="yr">2026</span> Qunovix Technologies. Made in Pune, India.</span>
+      <span>Android and Google Play are trademarks of Google LLC.</span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Screenshot viewer">
+  <div class="lb-inner">
+    <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Previous screenshot"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4" stroke="currentColor" stroke-width="1.6"/></svg></button>
+    <img id="lbImg" src="" alt="">
+    <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Next screenshot"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></button>
+  </div>
+  <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Close">×</button>
+  <span class="lb-count mono" id="lbCount"></span>
+</dialog>
+
+<script src="../../assets/js/site.js" defer></script>
 </body>
 </html>
