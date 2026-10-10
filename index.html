@@ -1,260 +1,492 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Qunovix Technologies — Apps for Everyday Life</title>
-  <meta name="description" content="Thoughtful Android apps for planning, journaling, health, and personal finance.">
-  <meta name="theme-color" content="#0b0a12">
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="256x256" href="/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <meta property="og:title" content="Qunovix Technologies — Small apps. Big everyday energy.">
-  <meta property="og:description" content="Thoughtful Android apps for planning, journaling, health, and personal finance.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://qunovixtech.com/">
-  <link rel="canonical" href="https://qunovixtech.com/">
-  <script>document.documentElement.classList.add('js');</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --ink:#0b0a12;--surface:#131120;--surface-2:#17142a;
-      --paper:#f6f4ff;--paper-soft:#efe9ff;
-      --muted:#a79fc4;--muted-dark:#6f6a86;
-      --violet:#7c5cff;--volt:#c6ff3d;--coral:#ff5d7a;--sky:#3fcbff;
-      --line:rgba(246,244,255,.12);--line-dark:rgba(11,10,18,.12);
-      --font-display:'Space Grotesk',ui-sans-serif,system-ui,sans-serif;
-      --font-body:'Inter',ui-sans-serif,system-ui,sans-serif;
-      --font-mono:'Space Mono',ui-monospace,SFMono-Regular,monospace;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;overflow-x:hidden;background:var(--ink);color:var(--paper);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    section[id]{scroll-margin-top:100px}
-    a:focus-visible{outline:3px solid var(--volt);outline-offset:4px;border-radius:8px}
-    .grad-text{background:linear-gradient(100deg,var(--violet),var(--coral) 60%,var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .reveal{opacity:1;transform:none}
-    .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;transition-delay:var(--delay,0s)}
-    .js .reveal.in-view{opacity:1;transform:none}
-
-    /* header */
-    .site-header{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;width:min(1180px,92%);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px;padding:9px 9px 9px 18px;background:rgba(19,17,32,.68);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:999px}
-    .brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:17px;letter-spacing:-.01em}
-    .brand-mark{display:block;width:36px;height:36px;flex:none;border-radius:11px;object-fit:cover;background:#fff;box-shadow:0 7px 18px rgba(0,0,0,.24)}
-    .site-header nav{display:flex;justify-content:center;gap:30px;font-size:13px;font-weight:600;color:var(--muted)}
-    .site-header nav a:hover{color:var(--paper)}
-    .header-cta{justify-self:end;display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:999px;background:var(--paper);color:var(--ink);font-size:12px;font-weight:700;transition:background .2s ease}
-    .header-cta:hover{background:var(--volt)}
-
-    /* hero */
-    .hero{position:relative;overflow:hidden;min-height:860px;padding:170px 24px 130px;display:flex;flex-direction:column;align-items:center;text-align:center}
-    .hero-field{position:absolute;inset:0;z-index:0;pointer-events:none}
-    .blob{position:absolute;border-radius:50%;filter:blur(80px)}
-    .blob-a{width:520px;height:520px;left:-160px;top:-140px;background:var(--violet);opacity:.5}
-    .blob-b{width:460px;height:460px;right:-180px;top:40px;background:var(--coral);opacity:.35}
-    .blob-c{width:420px;height:420px;left:34%;bottom:-220px;background:var(--sky);opacity:.3}
-    .float-icon{position:absolute;z-index:1;border-radius:26%;animation:float 6.5s ease-in-out infinite;animation-delay:var(--d,0s);box-shadow:0 24px 50px -16px var(--glow,rgba(0,0,0,.5))}
-    .fi-1{width:88px;height:88px;left:7%;top:200px;--r:-9deg;--d:0s;--glow:rgba(124,92,255,.55)}
-    .fi-2{width:68px;height:68px;right:9%;top:160px;--r:8deg;--d:1.2s;--glow:rgba(63,203,255,.55)}
-    .fi-3{width:76px;height:76px;left:13%;bottom:130px;--r:6deg;--d:2.1s;--glow:rgba(198,255,61,.4)}
-    .fi-4{width:64px;height:64px;right:13%;bottom:180px;--r:-6deg;--d:.6s;--glow:rgba(255,93,122,.5)}
-    @keyframes float{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-16px) rotate(var(--r,0deg))}}
-    .eyebrow-chip{position:relative;z-index:2;display:inline-flex;align-items:center;gap:9px;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 32px}
-    .eyebrow-chip b{width:7px;height:7px;flex:none;border-radius:50%;background:var(--volt);animation:pulse 2s infinite}
-    @keyframes pulse{50%{opacity:.3}}
-    .hero h1{position:relative;z-index:2;margin:0;max-width:920px;font-family:var(--font-display);font-weight:700;font-size:clamp(46px,8vw,102px);line-height:.98;letter-spacing:-.03em}
-    .hero-copy{position:relative;z-index:2;max-width:540px;margin:28px auto 38px;color:var(--muted);font-size:clamp(16px,1.6vw,18px);line-height:1.65}
-    .btn-primary{position:relative;z-index:2;display:inline-flex;align-items:center;gap:8px;padding:16px 24px;border-radius:999px;background:linear-gradient(100deg,#5b3de0,var(--coral));color:#fff;font-weight:700;font-size:14px;box-shadow:0 20px 40px -14px rgba(124,92,255,.55);transition:transform .25s ease,box-shadow .25s ease}
-    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 26px 48px -14px rgba(255,93,122,.55)}
-    .hero-stat{position:relative;z-index:2;margin-top:64px;display:inline-flex;align-items:center;gap:14px;padding:16px 22px;border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.04);backdrop-filter:blur(10px)}
-    .hero-stat strong{font-family:var(--font-display);font-size:32px;color:var(--volt)}
-    .hero-stat span{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);text-align:left;line-height:1.5}
-
-    /* shared section bits */
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 18px}
-    .eyebrow b{width:6px;height:6px;flex:none;border-radius:50%;background:var(--volt)}
-
-    /* apps / bento */
-    .apps-section{position:relative;padding:130px clamp(20px,5vw,72px) 120px;background:var(--surface)}
-    .section-head{max-width:640px;margin:0 0 56px}
-    .section-head h2{margin:0 0 16px;font-family:var(--font-display);font-weight:700;font-size:clamp(36px,5.5vw,62px);line-height:1.03;letter-spacing:-.02em}
-    .section-head p{margin:0;color:var(--muted);font-size:15px;line-height:1.7;max-width:480px}
-    .apps-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,minmax(230px,auto));grid-template-areas:"diary diary todo todo" "diary diary weight fin";gap:16px}
-    .card-diary{grid-area:diary}.card-todo{grid-area:todo}.card-weight{grid-area:weight}.card-fin{grid-area:fin}
-    .app-card{position:relative;min-width:0;overflow:hidden;display:flex;flex-direction:column;padding:26px;border-radius:26px;background:var(--surface-2);border:1px solid var(--line);transition:transform .3s ease,border-color .3s ease}
-    .app-card:hover{transform:translateY(-6px);border-color:var(--tint)}
-    .card-blob{position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:var(--tint);filter:blur(60px);opacity:.32;pointer-events:none}
-    .card-diary .card-blob{width:320px;height:320px}
-    .feature-flag{position:absolute;top:22px;right:22px;z-index:1;padding:6px 12px;border-radius:999px;background:var(--volt);color:var(--ink);font-family:var(--font-mono);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
-    .card-top{position:relative;z-index:1;display:flex;align-items:center;gap:14px;margin-bottom:auto}
-    .app-icon{width:62px;height:62px;flex:none;border-radius:26%;box-shadow:0 14px 30px -10px rgba(0,0,0,.55)}
-    .card-diary .app-icon{width:84px;height:84px}
-    .app-tag{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--tint)}
-    .app-card h3{position:relative;z-index:1;margin:24px 0 10px;font-family:var(--font-display);font-weight:700;font-size:25px;letter-spacing:-.01em}
-    .card-diary h3{font-size:33px}
-    .app-description{position:relative;z-index:1;margin:0 0 22px;color:var(--muted);font-size:14px;line-height:1.6}
-    .app-link{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid var(--line);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-top:auto}
-    .app-link span{color:var(--tint);display:inline-block;transition:transform .25s ease}
-    .app-link:hover span{transform:translate(3px,-3px)}
-
-    /* about / principles */
-    .about-section{padding:140px clamp(20px,6vw,100px);background:var(--paper);color:var(--ink)}
-    .about-section .eyebrow{color:var(--muted-dark)}
-    .about-section .eyebrow b{background:var(--violet)}
-    .about-intro{display:grid;grid-template-columns:1fr 2.4fr;gap:40px;padding-bottom:90px;align-items:end}
-    .quote{margin:0;font-family:var(--font-display);font-weight:700;font-size:clamp(32px,5.2vw,62px);line-height:1.1;letter-spacing:-.02em}
-    .principles-list{border-top:1px solid var(--line-dark)}
-    .principles-list article{display:grid;grid-template-columns:56px 1.1fr 1fr;gap:26px;align-items:baseline;padding:30px 0;border-bottom:1px solid var(--line-dark)}
-    .principles-list article>span{font-family:var(--font-mono);font-size:12px;color:var(--violet)}
-    .principles-list h3{margin:0;font-family:var(--font-display);font-size:clamp(19px,2vw,25px);font-weight:700;letter-spacing:-.01em}
-    .principles-list p{margin:0;color:var(--muted-dark);font-size:14px;line-height:1.7;max-width:400px}
-
-    /* roadmap */
-    .next-section{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(50px,7vw,110px);padding:130px clamp(20px,6vw,90px);background:var(--paper-soft);color:var(--ink)}
-    .next-section .eyebrow{color:var(--muted-dark)}
-    .next-section .eyebrow b{background:var(--coral)}
-    .next-heading{position:sticky;top:110px;align-self:start}
-    .next-heading h2{margin:0;font-family:var(--font-display);font-weight:700;font-size:clamp(36px,5.2vw,56px);line-height:1.06;letter-spacing:-.02em}
-    .next-heading p{max-width:440px;margin:26px 0 0;color:var(--muted-dark);line-height:1.7}
-    .pipeline{border-top:1px solid var(--line-dark)}
-    .pipeline-row{display:grid;grid-template-columns:38px 60px 1fr auto;gap:18px;align-items:center;min-height:110px;border-bottom:1px solid var(--line-dark)}
-    .pipeline-index{font-family:var(--font-mono);font-size:12px;color:var(--muted-dark)}
-    .pipeline-icon{display:grid;place-items:center;width:54px;height:54px;border-radius:28%;font-family:var(--font-display);font-weight:700;font-size:19px}
-    .pipeline-name{display:flex;flex-direction:column;gap:4px}
-    .pipeline-name strong{font-family:var(--font-display);font-weight:700;font-size:18px;letter-spacing:-.01em;text-transform:capitalize}
-    .pipeline-name small{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted-dark)}
-    .pipeline-status{display:flex;align-items:center;gap:8px;white-space:nowrap;font-family:var(--font-mono);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted-dark)}
-    .pipeline-status i{width:7px;height:7px;flex:none;border-radius:50%;background:var(--volt);animation:pulse 2s infinite}
-    .future-row{opacity:.55}
-    .future-row .pipeline-icon{background:transparent!important;border:1px dashed var(--muted-dark);color:var(--muted-dark)}
-
-    /* contact */
-    .contact-section{position:relative;overflow:hidden;min-height:560px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:110px 24px;text-align:center;background:linear-gradient(120deg,var(--violet),var(--coral) 62%,#ff8a5c);color:#fff}
-    .contact-section .eyebrow{color:rgba(255,255,255,.85)}
-    .contact-section .eyebrow b{background:var(--ink)}
-    .contact-section h2{margin:14px 0 44px;max-width:960px;font-family:var(--font-display);font-weight:700;font-size:clamp(36px,6.4vw,82px);line-height:1.04;letter-spacing:-.02em}
-    .contact-section h2 .pop{color:var(--ink)}
-    .contact-link{display:inline-flex;align-items:center;gap:8px;padding-bottom:8px;border-bottom:2px solid rgba(255,255,255,.75);font-size:clamp(14px,1.6vw,20px);font-weight:700;overflow-wrap:anywhere}
-
-    /* footer */
-    footer{display:grid;grid-template-columns:1fr 1fr auto;gap:30px;align-items:center;padding:52px clamp(20px,5vw,72px) 28px;background:var(--ink)}
-    .footer-brand .brand-mark{box-shadow:0 7px 18px rgba(0,0,0,.3)}
-    footer>p{color:var(--muted);font-size:13px}
-    .footer-links{display:flex;gap:24px;font-size:12px;font-weight:600;color:var(--muted)}
-    .footer-links a:hover{color:var(--paper)}
-    footer small{grid-column:1/-1;padding-top:24px;border-top:1px solid var(--line);color:var(--muted-dark);font-size:10px;text-transform:uppercase;letter-spacing:.08em}
-
-    @media(max-width:1000px){
-      .apps-grid{grid-template-columns:repeat(2,1fr);grid-template-rows:auto;grid-template-areas:"diary diary" "todo todo" "weight fin"}
-      .about-intro{grid-template-columns:1fr;gap:22px}
-      .next-section{grid-template-columns:1fr}
-      .next-heading{position:static}
-    }
-    @media(max-width:760px){
-      .site-header{width:94%;grid-template-columns:auto auto}
-      .site-header nav{display:none}
-      .hero{min-height:auto;padding:150px 20px 90px}
-      .float-icon{display:none}
-      .hero-stat{margin-top:46px}
-      .apps-grid{grid-template-columns:1fr;grid-template-areas:"diary" "todo" "weight" "fin"}
-      .card-diary .app-icon{width:70px;height:70px}
-      .card-diary h3{font-size:28px}
-      .principles-list article{grid-template-columns:32px 1fr;gap:14px}
-      .principles-list article p{grid-column:2}
-      .pipeline-row{grid-template-columns:24px 50px 1fr;gap:12px}
-      .pipeline-status{grid-column:3;margin-top:-14px}
-      footer{grid-template-columns:1fr}
-      footer>p{display:none}
-      .footer-links{flex-wrap:wrap}
-    }
-    @media(prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      *{animation:none!important;transition:none!important}
-      .js .reveal{opacity:1;transform:none}
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qunovix Technologies — Useful little apps for ordinary days</title>
+<meta name="description" content="Qunovix Technologies is an independent app studio in Pune, India. We make focused, local-first Android apps: My Diary, To Do List, WeightTrack, BMI Calculator and Finance Calculator India.">
+<meta name="theme-color" content="#F3EEE4">
+<link rel="canonical" href="https://qunovixtech.com/">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Qunovix Technologies — Useful little apps for ordinary days">
+<meta property="og:description" content="Five focused Android apps for journaling, planning, health and money. Made in Pune, India.">
+<meta property="og:url" content="https://qunovixtech.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Qunovix Technologies",
+  "url": "https://qunovixtech.com/",
+  "logo": "https://qunovixtech.com/favicon.png",
+  "email": "qunovixtechnologies@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Pune", "addressCountry": "IN" },
+  "sameAs": ["https://play.google.com/store/apps/dev?id=5468107790361250261"]
+}
+</script>
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Qunovix Technologies home"><img class="brand-mark" src="/favicon.png" width="36" height="36" alt=""><span>Qunovix</span></a>
-    <nav aria-label="Main navigation"><a href="#apps">Apps</a><a href="#about">About</a><a href="#next">Next</a></nav>
-    <a class="header-cta" href="mailto:qunovixtechnologies@gmail.com">Let&apos;s talk <span>↗</span></a>
-  </header>
+<a class="skip" href="#main">Skip to content</a>
 
-  <main>
-    <section class="hero" id="top">
-      <div class="hero-field" aria-hidden="true">
-        <div class="blob blob-a"></div><div class="blob blob-b"></div><div class="blob blob-c"></div>
+<!-- ───── Nav ───── -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Qunovix Technologies home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="15" fill="#17140F"/>
+        <circle cx="15" cy="15" r="7.2" fill="none" stroke="#F3EEE4" stroke-width="2.6"/>
+        <path d="M18.6 18.6 24 24" stroke="#FF4F1F" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      Qunovix
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#apps">Apps</a></li>
+      <li><a href="#diary">Showcase</a></li>
+      <li><a href="#promise">Promise</a></li>
+      <li><a href="#next">Workbench</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-ink btn-sm nav-cta" href="https://play.google.com/store/apps/dev?id=5468107790361250261" target="_blank" rel="noopener">
+      All apps on Google Play
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.6"/></svg>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<!-- ───── Hero ───── -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow mono rv"><span class="dot"></span>Independent app studio · Pune, India</div>
+      <h1 class="rv d1">Useful little apps for the <em>ordinary</em> <span class="u">days.<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14 C 50 4, 120 4, 197 11"/></svg></span></h1>
+      <p class="lede rv d2">Qunovix makes focused Android apps for journaling, planning, health and money. They open fast, stay out of your way, and keep your data on your phone.</p>
+      <div class="hero-ctas rv d3">
+        <a class="btn btn-ink" href="#apps">Browse the apps
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M3.5 8.5 8 13l4.5-4.5" stroke="currentColor" stroke-width="1.6"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#try">Try a calculator</a>
       </div>
-      <img class="float-icon fi-1" alt="" aria-hidden="true" src="/apps/my-diary/assets/icon.webp">
-      <img class="float-icon fi-2" alt="" aria-hidden="true" src="/apps/to-do-list/assets/icon.webp">
-      <img class="float-icon fi-3" alt="" aria-hidden="true" src="/apps/weighttrack/assets/icon.webp">
-      <img class="float-icon fi-4" alt="" aria-hidden="true" src="/apps/financial-calculator-india/assets/icon.webp">
-      <p class="eyebrow-chip"><b></b>Independent app studio · Pune, India</p>
-      <h1>Small apps.<br><span class="grad-text">Big everyday energy.</span></h1>
-      <p class="hero-copy">We build fast, focused Android apps for journaling, planning, health, and money — made to fit real life, not slow it down.</p>
-      <a class="btn-primary" href="#apps">Explore the apps <span>↓</span></a>
-      <div class="hero-stat"><strong>04</strong><span>live apps<br>and growing</span></div>
-    </section>
-
-    <section class="apps-section" id="apps">
-      <div class="section-head reveal"><p class="eyebrow"><b></b>Our work</p><h2>Made for real life.</h2><p>Useful by design, easy by default. Meet the Qunovix apps already helping people every day.</p></div>
-      <div class="apps-grid">
-        <!-- To add another live app, duplicate one complete <article> block below and change its text, icon URL, tint colour, and Google Play URL. -->
-        <article class="app-card card-diary reveal" style="--tint:#9c85ff" data-delay="0"><span class="feature-flag">Flagship app</span><div class="card-blob" aria-hidden="true"></div><div class="card-top"><img class="app-icon" src="/apps/my-diary/assets/icon.webp" width="84" height="84" alt="My Diary app icon"></div><p class="app-tag">Journal with lock</p><h3>My Diary</h3><p class="app-description">A private place for thoughts, moods, memories, and the moments worth keeping.</p><a class="app-link" href="/apps/my-diary/">Explore My Diary <span>↗</span></a></article>
-        <article class="app-card card-todo reveal" style="--tint:#3fcbff" data-delay=".05"><div class="card-blob" aria-hidden="true"></div><div class="card-top"><img class="app-icon" src="/apps/to-do-list/assets/icon.webp" width="62" height="62" alt="To Do List app icon"></div><p class="app-tag">Daily planner</p><h3>To Do List</h3><p class="app-description">Plan tasks, set reminders, and move through every day with a little more clarity.</p><a class="app-link" href="/apps/to-do-list/">Explore To Do List <span>↗</span></a></article>
-        <article class="app-card card-weight reveal" style="--tint:#c6ff3d" data-delay=".1"><div class="card-blob" aria-hidden="true"></div><div class="card-top"><img class="app-icon" src="/apps/weighttrack/assets/icon.webp" width="62" height="62" alt="WeightTrack app icon"></div><p class="app-tag">Health &amp; fitness</p><h3>WeightTrack</h3><p class="app-description">See weight, BMI, goals, and progress in one simple, motivating view.</p><a class="app-link" href="/apps/weighttrack/">Explore WeightTrack <span>↗</span></a></article>
-        <article class="app-card card-fin reveal" style="--tint:#ff5d7a" data-delay=".15"><div class="card-blob" aria-hidden="true"></div><div class="card-top"><img class="app-icon" src="/apps/financial-calculator-india/assets/icon.webp" width="62" height="62" alt="Financial Calculator India app icon"></div><p class="app-tag">Finance toolkit</p><h3>FinCalc India</h3><p class="app-description">Practical calculators for EMI, SIP, tax, retirement, bonds, and everyday decisions.</p><a class="app-link" href="/apps/financial-calculator-india/">Explore FinCalc India <span>↗</span></a></article>
+      <div class="hero-meta rv d3">
+        <div><b>05</b><span class="mono">Apps live</span></div>
+        <div><b>40+</b><span class="mono">Calculators inside</span></div>
+        <div><b>100%</b><span class="mono">Local-first</span></div>
       </div>
-    </section>
+    </div>
 
-    <section class="about-section" id="about">
-      <div class="about-intro"><p class="eyebrow reveal"><b></b>Our approach</p><p class="quote reveal">The best app is the one that <span class="grad-text">gets out of your way.</span></p></div>
-      <div class="principles-list">
-        <article class="reveal"><span>01</span><h3>Useful from day one</h3><p>No long setup. No learning curve. Just focused tools that help from the first tap.</p></article>
-        <article class="reveal" style="--delay:.05s"><span>02</span><h3>Calm by design</h3><p>Clear interfaces, thoughtful details, and fewer distractions make everyday habits easier.</p></article>
-        <article class="reveal" style="--delay:.1s"><span>03</span><h3>Built to keep improving</h3><p>We listen, refine, and release often — so every app grows more helpful over time.</p></article>
+    <div class="fan" id="fan" aria-label="Qunovix app icons">
+      <a class="fan-card" href="#diary"><img src="assets/apps/diary-icon.webp" alt="My Diary icon" width="170" height="170"></a>
+      <a class="fan-card" href="#todo"><img src="assets/apps/todo-icon.webp" alt="To Do List icon" width="170" height="170"></a>
+      <a class="fan-card" href="#weight"><img src="assets/apps/weight-icon.webp" alt="WeightTrack icon" width="170" height="170"></a>
+      <a class="fan-card" href="#fincalc"><img src="assets/apps/fincalc-icon.webp" alt="Finance Calculator India icon" width="170" height="170"></a>
+      <a class="fan-card" href="#bmi"><img src="assets/apps/bmi-icon.webp" alt="BMI Calculator icon" width="170" height="170"></a>
+      <svg class="stamp" viewBox="0 0 128 128" aria-hidden="true">
+        <defs><path id="circ" d="M64,64 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/></defs>
+        <text><textPath href="#circ" textLength="308" lengthAdjust="spacing">MADE IN PUNE ✦ LOCAL-FIRST ✦ ANDROID ✦</textPath></text>
+      </svg>
+      <div class="stamp-core" aria-hidden="true">Q</div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-wrap"><div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Write it down</span><span>Tick it off</span><span>Step on the scale</span><span>Know your number</span><span>Plan the EMI</span><span>Lock your diary</span><span>Never miss a birthday</span>
+    <span>Write it down</span><span>Tick it off</span><span>Step on the scale</span><span>Know your number</span><span>Plan the EMI</span><span>Lock your diary</span><span>Never miss a birthday</span>
+  </div>
+</div></div>
+
+<!-- ───── Index ───── -->
+<section class="sec" id="apps">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num rv">(01) — The Index</div>
+      <h2 class="rv d1">Five apps. <em>One job each.</em></h2>
+      <p class="rv d2">Every Qunovix app does one thing and does it well. Hover a row to see it, or tap to read more.</p>
+    </div>
+
+    <ol class="index" id="index">
+      <li class="rv"><a href="#diary" data-peek="diary" style="--app:#EBD9F7">
+        <span class="ix-no">No.01</span>
+        <img class="ix-icon" src="assets/apps/diary-icon.webp" alt="" width="56" height="56" loading="lazy">
+        <span class="ix-name">My Diary</span>
+        <span class="ix-cat mono">Lifestyle</span>
+        <span class="ix-desc">A private journal with fingerprint lock and mood tracking.</span>
+        <span class="ix-arrow"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></span>
+      </a></li>
+      <li class="rv"><a href="#todo" data-peek="todo" style="--app:#FFE0C7">
+        <span class="ix-no">No.02</span>
+        <img class="ix-icon" src="assets/apps/todo-icon.webp" alt="" width="56" height="56" loading="lazy">
+        <span class="ix-name">To Do List</span>
+        <span class="ix-cat mono">Productivity</span>
+        <span class="ix-desc">Tasks, lists, reminders and birthdays in one place.</span>
+        <span class="ix-arrow"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></span>
+      </a></li>
+      <li class="rv"><a href="#weight" data-peek="weight" style="--app:#D6EDC8">
+        <span class="ix-no">No.03</span>
+        <img class="ix-icon" src="assets/apps/weight-icon.webp" alt="" width="56" height="56" loading="lazy">
+        <span class="ix-name">WeightTrack</span>
+        <span class="ix-cat mono">Health &amp; Fitness</span>
+        <span class="ix-desc">Weigh-ins, trends, progress photos and streaks.</span>
+        <span class="ix-arrow"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></span>
+      </a></li>
+      <li class="rv"><a href="#bmi" data-peek="bmi" style="--app:#C9EEE2">
+        <span class="ix-no">No.04</span>
+        <img class="ix-icon" src="assets/apps/bmi-icon.webp" alt="" width="56" height="56" loading="lazy">
+        <span class="ix-name">BMI Calculator</span>
+        <span class="ix-cat mono">Health &amp; Fitness</span>
+        <span class="ix-desc">Instant BMI on a gauge, using WHO or DGE standards.</span>
+        <span class="ix-arrow"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></span>
+      </a></li>
+      <li class="rv"><a href="#fincalc" data-peek="fincalc" style="--app:#D3E2F5">
+        <span class="ix-no">No.05</span>
+        <img class="ix-icon" src="assets/apps/fincalc-icon.webp" alt="" width="56" height="56" loading="lazy">
+        <span class="ix-name">FinCalc India</span>
+        <span class="ix-cat mono">Finance</span>
+        <span class="ix-desc">EMI, SIP, FD, PPF, tax, retirement and more, built for India.</span>
+        <span class="ix-arrow"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></span>
+      </a></li>
+    </ol>
+  </div>
+  <div class="peek" id="peek" aria-hidden="true">
+    <img data-k="diary" src="assets/apps/my-diary/shot-2.webp" alt="" loading="lazy">
+    <img data-k="todo" src="assets/apps/to-do-list/shot-1.webp" alt="" loading="lazy">
+    <img data-k="weight" src="assets/apps/weighttrack/shot-2.webp" alt="" loading="lazy">
+    <img data-k="bmi" src="assets/apps/bmi-calculator/shot-2.webp" alt="" loading="lazy">
+    <img data-k="fincalc" src="assets/apps/financial-calculator-india/shot-1.webp" alt="" loading="lazy">
+  </div>
+</section>
+
+<!-- ───── Chapters ───── -->
+<article class="chapter" id="diary" style="--app:#EBD9F7;--app-deep:#9B5DE5">
+  <div class="wrap chapter-grid">
+    <div class="poster rv" data-no="01">
+      <img class="badge-icon" src="assets/apps/diary-icon.webp" alt="" width="74" height="74" loading="lazy">
+      <div class="shot"><img src="assets/apps/my-diary/shot-2.webp" alt="My Diary lock screen with PIN, pattern and fingerprint options" loading="lazy"></div>
+    </div>
+    <div>
+      <span class="tag rv"><i></i>Flagship · Lifestyle</span>
+      <h3 class="rv d1">My Diary<small>Journal with Lock</small></h3>
+      <p class="pitch rv d1">A private place for thoughts, moods and the moments worth keeping.</p>
+      <p class="body rv d2">Write about today, or any day. Lock it with a PIN, a pattern or your fingerprint. Add a mood to each entry and look back at how your weeks felt. Entries stay on your device, and you can write offline.</p>
+      <ul class="feats rv d2">
+        <li>PIN, pattern &amp; fingerprint lock</li>
+        <li>Mood tracking &amp; statistics</li>
+        <li>Works fully offline</li>
+        <li>Write for any past date</li>
+        <li>Stored locally by default</li>
+        <li>Optional Google Drive backup</li>
+      </ul>
+      <div class="chapter-ctas rv d3">
+        <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.qunovixtechnologies.mydiary" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.2 13.4 12l-9.8 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1Z" fill="#00D7FE"/><path d="m16.8 8.6-3.4 3.4-9.8-9.8c.3-.2.8-.2 1.2 0l12 6.4Z" fill="#00F076"/><path d="m16.8 15.4-12 6.4c-.4.2-.9.2-1.2 0l9.8-9.8 3.4 3.4Z" fill="#FF3A44"/><path d="m20.4 13.3-3.6 2.1-3.4-3.4 3.4-3.4 3.6 2.1c.9.6.9 2 0 2.6Z" fill="#FFD500"/></svg>
+          <span><small>Get it on</small><b>Google Play</b></span>
+        </a>
+        <a class="text-link" href="apps/my-diary/">App details</a>
       </div>
-    </section>
+    </div>
+  </div>
+</article>
 
-    <section class="next-section" id="next">
-      <div class="next-heading"><p class="eyebrow reveal"><b></b>In the works</p><h2 class="reveal">And we&apos;re just<br><span class="grad-text">getting started.</span></h2><p class="reveal" style="--delay:.05s">New ideas are moving from sketches to screens. This flexible app shelf is ready to grow with every Qunovix launch.</p></div>
-      <div class="pipeline" aria-label="Upcoming app concepts">
-        <div class="pipeline-row reveal"><span class="pipeline-index">05</span><span class="pipeline-icon" style="background:linear-gradient(135deg,#ff5d7a,#ff8a5c);color:#fff">H</span><span class="pipeline-name"><strong>Habit builder</strong><small>Wellbeing</small></span><span class="pipeline-status"><i></i>In development</span></div>
-        <div class="pipeline-row reveal" style="--delay:.05s"><span class="pipeline-index">06</span><span class="pipeline-icon" style="background:#c6ff3d;color:#0b0a12">₹</span><span class="pipeline-name"><strong>Expense companion</strong><small>Finance</small></span><span class="pipeline-status"><i></i>In development</span></div>
-        <div class="pipeline-row reveal" style="--delay:.1s"><span class="pipeline-index">07</span><span class="pipeline-icon" style="background:linear-gradient(135deg,#7c5cff,#3fcbff);color:#fff">F</span><span class="pipeline-name"><strong>Focus timer</strong><small>Productivity</small></span><span class="pipeline-status"><i></i>In development</span></div>
-        <div class="pipeline-row future-row reveal" style="--delay:.15s"><span class="pipeline-index">08+</span><span class="pipeline-icon">+</span><span class="pipeline-name"><strong>More useful ideas</strong><small>The next chapter</small></span><span class="pipeline-status">Coming next</span></div>
+<article class="chapter flip" id="todo" style="--app:#FFE0C7;--app-deep:#E8641B">
+  <div class="wrap chapter-grid">
+    <div class="poster rv" data-no="02">
+      <img class="badge-icon" src="assets/apps/todo-icon.webp" alt="" width="74" height="74" loading="lazy">
+      <div class="shot"><img src="assets/apps/to-do-list/shot-1.webp" alt="To Do List calendar with birthday reminders" loading="lazy"></div>
+    </div>
+    <div>
+      <span class="tag rv"><i></i>Productivity</span>
+      <h3 class="rv d1">To Do List<small>Tasks &amp; Reminders</small></h3>
+      <p class="pitch rv d1">Plan the day, get the nudge, tick it off.</p>
+      <p class="body rv d2">Keep work, home, shopping and wishlists in separate lists. Set reminders with the sound, voice or vibration you like. Save birthdays so you don't forget them. Deleted something by mistake? It stays in the Recycle Bin for 15 days.</p>
+      <ul class="feats rv d2">
+        <li>Lists for every part of life</li>
+        <li>Voice, sound &amp; vibration reminders</li>
+        <li>Birthday reminders</li>
+        <li>15-day Recycle Bin</li>
+        <li>Light &amp; dark themes</li>
+        <li>Local &amp; Google Drive backup</li>
+      </ul>
+      <div class="chapter-ctas rv d3">
+        <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.qunovixtechnologies.todolist" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.2 13.4 12l-9.8 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1Z" fill="#00D7FE"/><path d="m16.8 8.6-3.4 3.4-9.8-9.8c.3-.2.8-.2 1.2 0l12 6.4Z" fill="#00F076"/><path d="m16.8 15.4-12 6.4c-.4.2-.9.2-1.2 0l9.8-9.8 3.4 3.4Z" fill="#FF3A44"/><path d="m20.4 13.3-3.6 2.1-3.4-3.4 3.4-3.4 3.6 2.1c.9.6.9 2 0 2.6Z" fill="#FFD500"/></svg>
+          <span><small>Get it on</small><b>Google Play</b></span>
+        </a>
+        <span class="rating"><b>4.2</b> ★ on Google Play</span>
+        <a class="text-link" href="apps/to-do-list/">App details</a>
       </div>
-    </section>
+    </div>
+  </div>
+</article>
 
-    <section class="contact-section"><p class="eyebrow reveal"><b></b>Say hello</p><h2 class="reveal">Have a question,<br>an idea, or <span class="pop">feedback?</span></h2><a class="contact-link reveal" href="mailto:qunovixtechnologies@gmail.com">qunovixtechnologies@gmail.com <span>↗</span></a></section>
-  </main>
+<article class="chapter" id="weight" style="--app:#D6EDC8;--app-deep:#3E9B45">
+  <div class="wrap chapter-grid">
+    <div class="poster rv" data-no="03">
+      <img class="badge-icon" src="assets/apps/weight-icon.webp" alt="" width="74" height="74" loading="lazy">
+      <div class="shot"><img src="assets/apps/weighttrack/shot-2.webp" alt="WeightTrack dashboard with weight trend" loading="lazy"></div>
+    </div>
+    <div>
+      <span class="tag rv"><i></i>Health &amp; Fitness</span>
+      <h3 class="rv d1">WeightTrack<small>Weight Tracker</small></h3>
+      <p class="pitch rv d1">See how far you've come, one weigh-in at a time.</p>
+      <p class="body rv d2">Log each weigh-in with a note and, if you like, a progress photo. WeightTrack turns them into clear trends, weekly averages and streaks. It works whether your goal is to lose, gain or maintain.</p>
+      <ul class="feats rv d2">
+        <li>Kilograms or pounds</li>
+        <li>Goals, BMI &amp; body-fat estimate</li>
+        <li>Trends, averages &amp; streaks</li>
+        <li>Progress photos</li>
+        <li>Health Connect import</li>
+        <li>Widget, reminders &amp; CSV export</li>
+      </ul>
+      <div class="chapter-ctas rv d3">
+        <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.qunovixtechnologies.weighttrack" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.2 13.4 12l-9.8 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1Z" fill="#00D7FE"/><path d="m16.8 8.6-3.4 3.4-9.8-9.8c.3-.2.8-.2 1.2 0l12 6.4Z" fill="#00F076"/><path d="m16.8 15.4-12 6.4c-.4.2-.9.2-1.2 0l9.8-9.8 3.4 3.4Z" fill="#FF3A44"/><path d="m20.4 13.3-3.6 2.1-3.4-3.4 3.4-3.4 3.6 2.1c.9.6.9 2 0 2.6Z" fill="#FFD500"/></svg>
+          <span><small>Get it on</small><b>Google Play</b></span>
+        </a>
+        <a class="text-link" href="apps/weighttrack/">App details</a>
+      </div>
+    </div>
+  </div>
+</article>
 
-  <footer><a class="brand footer-brand" href="#top" aria-label="Qunovix Technologies home"><img class="brand-mark" src="/favicon.png" width="36" height="36" alt=""><span>Qunovix Technologies</span></a><p>Thoughtful apps for everyday life.</p><div class="footer-links"><a href="#apps">Apps</a><a href="#about">About</a><a href="mailto:qunovixtechnologies@gmail.com">Contact</a></div><small>© 2026 Qunovix Technologies</small></footer>
+<article class="chapter flip" id="bmi" style="--app:#C9EEE2;--app-deep:#149C78">
+  <div class="wrap chapter-grid">
+    <div class="poster rv" data-no="04">
+      <img class="badge-icon" src="assets/apps/bmi-icon.webp" alt="" width="74" height="74" loading="lazy">
+      <div class="shot"><img src="assets/apps/bmi-calculator/shot-2.webp" alt="BMI Calculator gauge showing a normal BMI" loading="lazy"></div>
+    </div>
+    <div id="try">
+      <span class="tag rv"><i></i>Health · New</span>
+      <h3 class="rv d1">BMI Calculator<small>Know your number. Understand your range.</small></h3>
+      <p class="body rv d2">Get your BMI instantly on a colour-coded gauge, along with your healthy weight range and how far you are from it. Use metric, imperial or stones, and choose WHO or DGE standards. No account needed.</p>
+      <div class="tool rv d2" aria-label="BMI mini calculator">
+        <div class="tool-head mono"><b>Try it here</b><span>WHO ranges</span></div>
+        <div class="tool-grid">
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div class="field">
+              <label for="h">Height <output id="hOut">170 cm</output></label>
+              <input type="range" id="h" min="130" max="210" value="170">
+            </div>
+            <div class="field">
+              <label for="w">Weight <output id="wOut">65 kg</output></label>
+              <input type="range" id="w" min="30" max="150" value="65">
+            </div>
+          </div>
+          <div class="gauge">
+            <svg viewBox="0 0 200 116" aria-hidden="true">
+              <g id="arcs" fill="none" stroke-width="14"></g>
+              <g class="needle" id="needle">
+                <line x1="100" y1="100" x2="34" y2="100" stroke="#17140F" stroke-width="3.5" stroke-linecap="round"/>
+              </g>
+              <circle cx="100" cy="100" r="7" fill="#17140F"/>
+              <circle cx="100" cy="100" r="2.5" fill="#F3EEE4"/>
+            </svg>
+            <div class="gauge-val" id="bmiVal" aria-live="polite">22.5</div>
+            <div class="gauge-cat" id="bmiCat">Normal weight</div>
+          </div>
+        </div>
+        <p class="tool-note">For general information only. Not medical advice.</p>
+      </div>
+      <div class="chapter-ctas rv d3">
+        <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.qunovixtechnologies.bmicalculator" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.2 13.4 12l-9.8 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1Z" fill="#00D7FE"/><path d="m16.8 8.6-3.4 3.4-9.8-9.8c.3-.2.8-.2 1.2 0l12 6.4Z" fill="#00F076"/><path d="m16.8 15.4-12 6.4c-.4.2-.9.2-1.2 0l9.8-9.8 3.4 3.4Z" fill="#FF3A44"/><path d="m20.4 13.3-3.6 2.1-3.4-3.4 3.4-3.4 3.6 2.1c.9.6.9 2 0 2.6Z" fill="#FFD500"/></svg>
+          <span><small>Get it on</small><b>Google Play</b></span>
+        </a>
+        <a class="text-link" href="apps/bmi-calculator/">App details</a>
+      </div>
+    </div>
+  </div>
+</article>
 
-  <script>
-    (function(){
-      var els=document.querySelectorAll('.reveal');
-      var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      els.forEach(function(el){
-        var d=el.getAttribute('data-delay');
-        if(d) el.style.setProperty('--delay', d+'s');
-      });
-      if(reduce || !('IntersectionObserver' in window)){
-        els.forEach(function(el){ el.classList.add('in-view'); });
-        return;
-      }
-      var io=new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){
-          if(entry.isIntersecting){ entry.target.classList.add('in-view'); io.unobserve(entry.target); }
-        });
-      },{threshold:.15});
-      els.forEach(function(el){ io.observe(el); });
-    })();
-  </script>
+<article class="chapter" id="fincalc" style="--app:#D3E2F5;--app-deep:#1F5FC4">
+  <div class="wrap chapter-grid">
+    <div class="poster rv" data-no="05">
+      <img class="badge-icon" src="assets/apps/fincalc-icon.webp" alt="" width="74" height="74" loading="lazy">
+      <div class="shot"><img src="assets/apps/financial-calculator-india/shot-1.webp" alt="Finance Calculator India home screen" loading="lazy"></div>
+    </div>
+    <div>
+      <span class="tag rv"><i></i>Finance · Made for India</span>
+      <h3 class="rv d1">FinCalc India<small>Finance Calculator: EMI &amp; SIP</small></h3>
+      <p class="body rv d2">The Indian finance calculators you actually use, all in one app: loans, FD and RD, post-office schemes, mutual funds, income tax, retirement, insurance and bonds. Results come with clear reports, tables and charts.</p>
+      <div class="tool rv d2" aria-label="EMI mini calculator">
+        <div class="tool-head mono"><b>Quick EMI</b><span>1 of 40+</span></div>
+        <div class="tool-grid">
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div class="field">
+              <label for="amt">Loan amount <output id="amtOut">₹25,00,000</output></label>
+              <input type="range" id="amt" min="100000" max="10000000" step="50000" value="2500000">
+            </div>
+            <div class="field">
+              <label for="rate">Interest <output id="rateOut">8.5%</output></label>
+              <input type="range" id="rate" min="5" max="18" step="0.1" value="8.5">
+            </div>
+            <div class="field">
+              <label for="yrs">Tenure <output id="yrsOut">20 yrs</output></label>
+              <input type="range" id="yrs" min="1" max="30" value="20">
+            </div>
+          </div>
+          <div class="emi-out">
+            <span class="mono" style="color:var(--ink-3)">Monthly EMI</span>
+            <div class="emi-big" id="emi" aria-live="polite">₹21,696 <small>/mo</small></div>
+            <div class="emi-bar"><i id="barP"></i><i id="barI"></i></div>
+            <div class="emi-legend">
+              <span><em>Principal</em><b id="lp">—</b></span>
+              <span><em>Interest</em><b id="li">—</b></span>
+            </div>
+          </div>
+        </div>
+        <p class="tool-note">Estimates only. The app adds prepayment analysis, loan comparison and full schedules.</p>
+      </div>
+      <div class="chapter-ctas rv d3">
+        <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.qunovixtechnologies.fincalcindia" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.2 13.4 12l-9.8 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1Z" fill="#00D7FE"/><path d="m16.8 8.6-3.4 3.4-9.8-9.8c.3-.2.8-.2 1.2 0l12 6.4Z" fill="#00F076"/><path d="m16.8 15.4-12 6.4c-.4.2-.9.2-1.2 0l9.8-9.8 3.4 3.4Z" fill="#FF3A44"/><path d="m20.4 13.3-3.6 2.1-3.4-3.4 3.4-3.4 3.6 2.1c.9.6.9 2 0 2.6Z" fill="#FFD500"/></svg>
+          <span><small>Get it on</small><b>Google Play</b></span>
+        </a>
+        <a class="text-link" href="apps/financial-calculator-india/">App details</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ───── Promise ───── -->
+<section class="sec promise" id="promise">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num rv">(02) — The Promise</div>
+      <h2 class="rv d1">Your phone. <em>Your data.</em></h2>
+      <p class="rv d2">We build every app around a few simple rules. They shape what we build, and what we leave out.</p>
+    </div>
+    <div class="pgrid">
+      <div class="pitem rv">
+        <div class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18.5h4"/><path d="M12 7.5v5M9.5 10l2.5 2.5L14.5 10"/></svg></div>
+        <h4>Local-first</h4>
+        <p>Your entries, tasks and records are stored on your device by default.</p>
+      </div>
+      <div class="pitem rv d1">
+        <div class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 8.5a4 4 0 0 1-.5 9.5H7Z"/><path d="m9.5 13 2 2 3.5-3.5"/></svg></div>
+        <h4>Backups on your terms</h4>
+        <p>Cloud backup is optional. It only runs if you turn it on.</p>
+      </div>
+      <div class="pitem rv d2">
+        <div class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M13 2.5 5 13.5h6l-1 8 8-11h-6l1-8Z"/></svg></div>
+        <h4>Useful on the first tap</h4>
+        <p>No long setup and nothing to learn. Open the app and start.</p>
+      </div>
+      <div class="pitem rv d3">
+        <div class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5M20 4v4.5h-4.5M20 12a8 8 0 0 1-13.7 5.6L4 15.5M4 20v-4.5h4.5"/></svg></div>
+        <h4>Always improving</h4>
+        <p>We read every review and ship updates often.</p>
+      </div>
+    </div>
+    <p class="bigquote rv">The best app is the one that <em>gets out of your way</em> and lets you get on with your day.</p>
+  </div>
+</section>
+
+<!-- ───── Workbench ───── -->
+<section class="sec" id="next">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num rv">(03) — On the Workbench</div>
+      <h2 class="rv d1">What we're <em>making next.</em></h2>
+      <p class="rv d2">Early ideas we're turning into real apps. Want one sooner? Tell us.</p>
+    </div>
+    <div class="bench">
+      <div class="sketch rv">
+        <div class="glyph">H</div>
+        <h4>Habit Builder</h4>
+        <p>Small streaks that add up to big change.</p>
+        <div class="status mono"><span>Wellbeing</span><span>In development</span></div>
+      </div>
+      <div class="sketch rv d1">
+        <div class="glyph">₹</div>
+        <h4>Expense Companion</h4>
+        <p>Know where your money goes, without spreadsheets.</p>
+        <div class="status mono"><span>Finance</span><span>In development</span></div>
+      </div>
+      <div class="sketch rv d2">
+        <div class="glyph">F</div>
+        <h4>Focus Timer</h4>
+        <p>Short sessions of deep work with calm breaks.</p>
+        <div class="status mono"><span>Productivity</span><span>In development</span></div>
+      </div>
+      <a class="sketch more rv d3" href="mailto:qunovixtechnologies@gmail.com?subject=App%20idea%20for%20Qunovix" style="text-decoration:none">
+        <div class="glyph">+</div>
+        <h4>Your idea?</h4>
+        <p>Tell us what you'd like on your phone.</p>
+        <div class="status mono"><span>Suggest an app</span><span>↗</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ───── Contact ───── -->
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <div class="mono rv">(04) — Say hello</div>
+    <p class="hello rv d1">Hello<em>,</em><br>there<em>.</em></p>
+    <a class="mail rv d2" href="mailto:qunovixtechnologies@gmail.com">qunovixtechnologies@gmail.com
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.6"/></svg>
+    </a>
+    <p class="sub rv d3">Have a question, a bug report, feedback or an idea for an app? We read every email.</p>
+  </div>
+</section>
+</main>
+
+<!-- ───── Footer ───── -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#17140F"/><circle cx="15" cy="15" r="7.2" fill="none" stroke="#F3EEE4" stroke-width="2.6"/><path d="M18.6 18.6 24 24" stroke="#FF4F1F" stroke-width="3" stroke-linecap="round"/></svg>
+          Qunovix Technologies
+        </a>
+        <p class="foot-about">An independent studio in Pune, India, making useful Android apps for everyday life.</p>
+      </div>
+      <div>
+        <h5>Apps</h5>
+        <ul>
+          <li><a href="apps/my-diary/">My Diary</a></li>
+          <li><a href="apps/to-do-list/">To Do List</a></li>
+          <li><a href="apps/weighttrack/">WeightTrack</a></li>
+          <li><a href="apps/bmi-calculator/">BMI Calculator</a></li>
+          <li><a href="apps/financial-calculator-india/">FinCalc India</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Privacy policies</h5>
+        <ul>
+          <li><a href="/privacy_policy_mydiary.html">My Diary</a></li>
+          <li><a href="/privacy_policy_todolist.html">To Do List</a></li>
+          <li><a href="/privacy_policy_weightrack.html">WeightTrack</a></li>
+          <li><a href="/privacy_policy_bmi_calculator.html">BMI Calculator</a></li>
+          <li><a href="/privacy_policy.html">FinCalc India</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Terms</h5>
+        <ul>
+          <li><a href="/terms_and_conditions_mydiary.html">My Diary</a></li>
+          <li><a href="/terms_and_conditions_todolist.html">To Do List</a></li>
+          <li><a href="/terms_and_conditions_weightrack.html">WeightTrack</a></li>
+          <li><a href="/terms_and_conditions_bmi_calculator.html">BMI Calculator</a></li>
+          <li><a href="/terms_and_conditions.html">FinCalc India</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wordmark" aria-hidden="true">Qunovix</div>
+    <div class="foot-bottom">
+      <span>© <span id="yr">2026</span> Qunovix Technologies. Made in Pune, India.</span>
+      <span>Android and Google Play are trademarks of Google LLC.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>

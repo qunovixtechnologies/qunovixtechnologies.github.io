@@ -1,44 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Qunovix live app pages -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- Qunovix Technologies: home, app detail pages, privacy policies and terms -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://qunovixtech.com/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/diary-icon.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/todo-icon.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/weight-icon.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/bmi-icon.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/fincalc-icon.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://qunovixtech.com/apps/my-diary/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/diary-icon.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/my-diary/shot-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/my-diary/shot-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/my-diary/shot-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/my-diary/shot-5.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://qunovixtech.com/apps/to-do-list/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/todo-icon.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/to-do-list/shot-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/to-do-list/shot-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/to-do-list/shot-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/to-do-list/shot-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/to-do-list/shot-5.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://qunovixtech.com/apps/weighttrack/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/weight-icon.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/weighttrack/shot-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/weighttrack/shot-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/weighttrack/shot-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/weighttrack/shot-5.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/apps/bmi-calculator/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/bmi-icon.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/bmi-calculator/shot-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/bmi-calculator/shot-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/bmi-calculator/shot-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/bmi-calculator/shot-5.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://qunovixtech.com/apps/financial-calculator-india/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/fincalc-icon.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/financial-calculator-india/shot-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/financial-calculator-india/shot-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/financial-calculator-india/shot-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/financial-calculator-india/shot-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/financial-calculator-india/shot-5.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://qunovixtech.com/privacy_policy_mydiary.html</loc>
-    <lastmod>2026-08-20</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://qunovixtech.com/terms_and_conditions_mydiary.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/privacy_policy_todolist.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/terms_and_conditions_todolist.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/privacy_policy_weightrack.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/terms_and_conditions_weightrack.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/privacy_policy_bmi_calculator.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/terms_and_conditions_bmi_calculator.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/privacy_policy.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/terms_and_conditions.html</loc>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
