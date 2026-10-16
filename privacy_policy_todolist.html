@@ -88,10 +88,10 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="effective">Last updated: August 20, 2026</p>
+<p class="effective">Last updated: October 16, 2026</p>
 
 <div class="notice">
-  <strong>Local-first task management:</strong> To Do List stores your tasks and preferences primarily on your device. Task data leaves your device when you choose a feature such as Google Drive backup, file export, sharing, or speech processing. Firebase Core is configured only as technical infrastructure; the App does not use Firebase to upload your task database or to run Firebase Analytics, Crashlytics, Authentication, Firestore, Cloud Storage, Cloud Messaging, Remote Config, or Performance Monitoring. Separate advertising, purchase, account-authorization, and technical data may be processed by the third-party services described below.
+  <strong>Local-first task management:</strong> To Do List stores your tasks and preferences primarily on your device. Task data leaves your device when you choose a feature such as Google Drive backup, file export, sharing, or speech processing. The App uses Google Analytics for Firebase to understand how the App is used (for example, which screens are opened) and Firebase Crashlytics to receive crash reports. Neither service receives your task titles, task lists, or other task content. The App does not use Firebase to upload your task database or to run Authentication, Firestore, Cloud Storage, Cloud Messaging, Remote Config, or Performance Monitoring. Separate advertising, purchase, account-authorization, and technical data may be processed by the third-party services described below.
 </div>
 
 <h2>1. Introduction</h2>
@@ -176,15 +176,46 @@
   The App stores a limited timestamp locally to enforce a minimum interval between full-screen ads. Advertising is disabled in the App while an active Premium entitlement is recognized.
 </p>
 
-<h2>7. Firebase Core</h2>
+<h2>7. Firebase, Analytics, and Crash Reporting</h2>
+
+<h3>7.1 Firebase Core</h3>
 <p>
-  The App initializes Firebase Core using the Android configuration supplied for To Do List. This configuration contains identifiers for the App and its Firebase project, such as the Firebase App ID, project ID, and API key. These configuration values identify the App and project, not an individual user, and allow compatible Firebase products to be added and initialized correctly.
+  The App initializes Firebase Core using the Android configuration supplied for To Do List. This configuration contains identifiers for the App and its Firebase project, such as the Firebase App ID, project ID, and API key. These values identify the App and project, not an individual user.
+</p>
+
+<h3>7.2 Google Analytics for Firebase</h3>
+<p>
+  We use Google Analytics for Firebase to understand how the App is used so we can improve it, fix usability problems, and decide which features to maintain. Google Analytics may automatically collect:
+</p>
+<ul>
+  <li>An app-instance identifier generated for your installation and, where your device settings allow, the Android advertising identifier;</li>
+  <li>Device and App information such as device model, operating-system version, language, App version, and approximate country or region derived from your IP address;</li>
+  <li>Usage events such as first open, session start, engagement time, App updates, in-app purchase events reported by Google Play, and screen views;</li>
+  <li>The names of App screens you open, such as "tasks," "calendar," "stats," "settings," "premium," or "new_task."</li>
+</ul>
+<p>
+  We do not send task titles, task lists, notes, dates you enter, backup contents, or your Google account details to Google Analytics, and we do not use Google Analytics to identify you personally.
+</p>
+
+<h3>7.3 Firebase Crashlytics</h3>
+<p>
+  We use Firebase Crashlytics to receive reports when the App crashes or encounters a serious error, so we can find and fix problems. A crash report may include:
+</p>
+<ul>
+  <li>The technical error message and stack trace (the part of the App's code that failed);</li>
+  <li>Device and App information such as device model, operating-system version, App version, orientation, available memory and storage, and whether the device was rooted;</li>
+  <li>The time of the crash and a Crashlytics installation identifier used to group reports from the same installation.</li>
+</ul>
+<p>
+  Crash reports are intended to describe App failures, not your content. We do not add task content, names, or account information to crash reports.
+</p>
+
+<h3>7.4 When collection happens and your choices</h3>
+<p>
+  Analytics and crash reporting are active in the version of the App distributed through Google Play. You can limit advertising-identifier use by resetting or deleting your advertising ID, or by opting out of ads personalization, in your Android device settings. Uninstalling the App stops all further collection. To ask about or request deletion of analytics or crash data associated with your installation, contact us using the details below.
 </p>
 <p>
-  In the current version, Firebase is used only for core configuration. We have not enabled Firebase Analytics, Crashlytics, Authentication, Firestore, Realtime Database, Cloud Storage, Cloud Messaging, Remote Config, Performance Monitoring, or other Firebase data products in the App. Firebase Core is not used by us to upload task content, create a Firebase user account, log analytics events, or submit crash reports. If we enable an additional Firebase product in a future version, we will update this Policy to describe the product, the information it processes, its purpose, and the choices available to you before or when required by law.
-</p>
-<p>
-  Google provides Firebase and handles Firebase information under its applicable terms, data-processing terms, and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>. You can also review <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Privacy and Security in Firebase</a>.
+  Google provides Firebase and processes this information under its applicable terms, data-processing terms, and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>. See also <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Privacy and Security in Firebase</a> and <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use its services</a>.
 </p>
 
 <h2>8. Premium Purchase and Google Play Billing</h2>
@@ -198,7 +229,7 @@
 <h2>9. Permissions and Device Access</h2>
 <p>The App may request or use the following permissions and device capabilities:</p>
 <ul>
-  <li><strong>Internet and network state:</strong> Used for Firebase initialization, ads, Google Play Billing, Google Sign-In, Google Drive operations, and external links.</li>
+  <li><strong>Internet and network state:</strong> Used for Firebase initialization, analytics, crash reporting, ads, Google Play Billing, Google Sign-In, Google Drive operations, and external links.</li>
   <li><strong>Microphone:</strong> Used only when you start voice entry.</li>
   <li><strong>Notifications:</strong> Used for task reminders, task updates, daily summaries, status information, and notification actions.</li>
   <li><strong>Vibration:</strong> Used for optional reminder and feedback patterns.</li>
@@ -220,14 +251,15 @@
   <li>Display and measure advertising in the free version;</li>
   <li>Process, recognize, and restore Premium purchases through Google Play;</li>
   <li>Prevent fraud, maintain security, troubleshoot errors, and comply with applicable law;</li>
-  <li>Initialize the App's Firebase project configuration so compatible Firebase services can be integrated correctly.</li>
+  <li>Understand aggregate App usage through Google Analytics for Firebase so we can improve features and usability;</li>
+  <li>Detect, diagnose, and fix crashes and serious errors through Firebase Crashlytics.</li>
 </ul>
 
 <h2>11. Information Sharing</h2>
 <p>We do not sell your task content. Information may be processed or disclosed only in the following circumstances:</p>
 <ul>
   <li><strong>At your direction:</strong> When you create a backup, use Google Drive, import or share text, open a link, or select another app or person to receive information.</li>
-  <li><strong>Service providers:</strong> Google provides Firebase Core configuration and may process information for AdMob, Google Play Billing, Google Sign-In, and Google Drive as described in this Policy. Your device or chosen service provider may process information for speech recognition, text-to-speech, notifications, alarms, file selection, or sharing.</li>
+  <li><strong>Service providers:</strong> Google provides Firebase (including Google Analytics for Firebase and Firebase Crashlytics) and may process information for AdMob, Google Play Billing, Google Sign-In, and Google Drive as described in this Policy. Your device or chosen service provider may process information for speech recognition, text-to-speech, notifications, alarms, file selection, or sharing.</li>
   <li><strong>Legal and safety reasons:</strong> When disclosure is reasonably necessary to comply with law, legal process, enforce our rights, prevent fraud, or protect users, the public, or services.</li>
   <li><strong>Business changes:</strong> If the App or business is reorganized, sold, or transferred, relevant information under our control may be transferred subject to this Policy and applicable law. Because task data is primarily local, we generally do not possess that local content to transfer.</li>
 </ul>
@@ -240,7 +272,9 @@
   <li><strong>Local backup files:</strong> Remain where you saved them until you delete them.</li>
   <li><strong>Google Drive backups:</strong> Remain in your Google Drive application-data storage until deleted through Google account controls, App functionality where available, or Google's retention processes.</li>
   <li><strong>Advertising and purchase information:</strong> Is retained by Google and its partners under their respective policies.</li>
-  <li><strong>Firebase configuration:</strong> App and project identifiers are packaged with the App. The current Firebase Core-only integration does not create a Firebase account or store your task database in Firebase.</li>
+  <li><strong>Firebase configuration:</strong> App and project identifiers are packaged with the App. Firebase does not create an account for you or store your task database.</li>
+  <li><strong>Analytics data:</strong> Retained by Google Analytics for the retention period configured for our Google Analytics property, after which user-level data is deleted; aggregated reports may be kept longer.</li>
+  <li><strong>Crash reports:</strong> Retained by Firebase Crashlytics for 90 days and then deleted.</li>
 </ul>
 <p>
   To remove local App data, delete tasks and empty the recycle bin, clear the App's storage through device settings, or uninstall the App. Clearing local data does not automatically delete backup files or information held by third parties.
@@ -259,7 +293,7 @@
   Depending on where you live, you may have rights to access, correct, delete, restrict, object to, or request portability of personal information and to withdraw consent where processing is based on consent.
 </p>
 <p>
-  Because task data is primarily stored locally, you can exercise many choices directly by editing or deleting tasks, permanently deleting recycle-bin items, changing permissions and notification settings, deleting backup files, clearing App data, or uninstalling the App.
+  Because task data is primarily stored locally, you can exercise many choices directly by editing or deleting tasks, permanently deleting recycle-bin items, changing permissions and notification settings, deleting backup files, clearing App data, or uninstalling the App. For analytics and crash-report data, see Section 7.4.
 </p>
 <p>
   Advertising choices may also be available through your Google account, device settings, or controls presented by Google. For information controlled by Google or another provider, submit requests directly to that provider. You may contact us using the details below for information under our control.
