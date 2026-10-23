@@ -4,7 +4,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://qunovixtech.com/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image><image:loc>https://qunovixtech.com/assets/apps/diary-icon.webp</image:loc></image:image>
@@ -12,6 +12,10 @@
     <image:image><image:loc>https://qunovixtech.com/assets/apps/weight-icon.webp</image:loc></image:image>
     <image:image><image:loc>https://qunovixtech.com/assets/apps/bmi-icon.webp</image:loc></image:image>
     <image:image><image:loc>https://qunovixtech.com/assets/apps/fincalc-icon.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/blocktrails-icon.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/amazeblast-icon.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/translator-icon.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/kidsenglish-icon.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://qunovixtech.com/apps/my-diary/</loc>
@@ -71,6 +75,52 @@
     <image:image><image:loc>https://qunovixtech.com/assets/apps/financial-calculator-india/shot-5.webp</image:loc></image:image>
   </url>
   <url>
+    <loc>https://qunovixtech.com/apps/block-trails/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/blocktrails-icon.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/block-trails/shot-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/block-trails/shot-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/block-trails/shot-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/block-trails/shot-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/block-trails/shot-5.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/apps/amaze-blast/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/amazeblast-icon.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/amaze-blast/shot-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/amaze-blast/shot-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/amaze-blast/shot-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/amaze-blast/shot-4.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/apps/english-to-hindi-translator/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/translator-icon.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/english-to-hindi-translator/shot-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/english-to-hindi-translator/shot-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/english-to-hindi-translator/shot-3.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/apps/kids-english/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/kidsenglish-icon.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/kids-english/shot-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/kids-english/shot-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/kids-english/shot-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/kids-english/shot-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/kids-english/shot-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://qunovixtech.com/assets/apps/kids-english/shot-6.webp</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://qunovixtech.com/privacy_policy_mydiary.html</loc>
     <lastmod>2026-10-08</lastmod>
     <changefreq>yearly</changefreq>
@@ -127,6 +177,54 @@
   <url>
     <loc>https://qunovixtech.com/terms_and_conditions.html</loc>
     <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/privacy_policy_blocktrails.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/terms_and_conditions_blocktrails.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/privacy_policy_arrownest.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/terms_and_conditions_arrownest.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/privacy_policy_EnglishToHindiTranslator.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/terms_and_conditions_EnglishToHindiTranslator.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/privacy_policy_kidsenglish.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://qunovixtech.com/terms_and_conditions_kidsenglish.html</loc>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
