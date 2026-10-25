@@ -47,6 +47,7 @@
     h1, h2 { line-height: 1.25; }
     h1 { margin: 0 0 8px; color: var(--primary-strong); font-size: clamp(2rem, 6vw, 3rem); }
     h2 { margin: 34px 0 10px; color: var(--primary-strong); font-size: 1.35rem; }
+    h3 { margin: 22px 0 6px; font-size: 1.05rem; line-height: 1.3; }
     p, li { margin: 10px 0; }
     ul { padding-left: 24px; }
     a { color: var(--primary-strong); text-underline-offset: 3px; }
@@ -125,11 +126,11 @@
   <header>
     <span class="product">Color Flow – Water Sort Puzzle</span>
     <h1>Privacy Policy</h1>
-    <p class="updated">Effective and last updated: 8 October 2026</p>
+    <p class="updated">Effective and last updated: 25 October 2026</p>
   </header>
 
   <div class="summary">
-    <strong>Privacy summary:</strong> Color Flow is an offline-first water sort puzzle game. Your progress, diamonds, settings, and purchase records are saved on your device. There is no Color Flow account and Qunovix Technologies does not run a game server that receives your save data. The game uses Google Analytics for Firebase and Firebase Crashlytics to understand how the game is played and to fix crashes, shows ads through Google AdMob, and processes in-app purchases through Google Play. These Google services may collect device identifiers, usage data, and diagnostics. Where the law requires it, Google's consent form lets you manage your ad choices, and you can reopen it from <strong>Settings ▸ Ad privacy</strong>. We do not sell your personal information.
+    <strong>Privacy summary:</strong> Color Flow is an offline-first water sort puzzle game. Your progress, diamonds, settings, and purchase records are saved on your device. There is no Color Flow account and Qunovix Technologies does not run a game server that receives your save data. The game uses Google Analytics for Firebase and Firebase Crashlytics to understand how the game is played and to fix crashes, shows ads through Google AdMob, and processes in-app purchases through Google Play. These Google services may collect device identifiers, usage data, and diagnostics. Where the law requires it, Google's consent form lets you manage your ad choices, and you can reopen it from <strong>Settings ▸ Ad privacy</strong>. On Android, the game can also show daily reminder notifications if you allow them; these are scheduled on your device and send no data. The current iPhone and iPad version does not use analytics, ads, or in-app purchases. We do not sell your personal information.
   </div>
 
   <nav aria-label="Policy contents">
@@ -141,7 +142,7 @@
       <li><a href="#ads">Advertising (Google AdMob)</a></li>
       <li><a href="#consent">Ad privacy and consent</a></li>
       <li><a href="#purchases">In-app purchases</a></li>
-      <li><a href="#permissions">Android permissions</a></li>
+      <li><a href="#permissions">Permissions and notifications</a></li>
       <li><a href="#retention">Retention and deletion</a></li>
       <li><a href="#children">Children</a></li>
       <li><a href="#choices">Your choices and rights</a></li>
@@ -151,15 +152,18 @@
 
   <h2 id="scope">1. Scope and Developer</h2>
   <p>
-    This Privacy Policy explains how Color Flow – Water Sort Puzzle (the “Game”), Android package <code>com.qunovixtechnologies.colorflow</code>, handles information. The Game is provided by Qunovix Technologies (“we,” “us,” or “our”), located in Pune, Maharashtra, India. This Policy applies to the Game and not to third-party apps, websites, advertisers, or services that you reach through it, including websites opened by tapping an advertisement.
+    This Privacy Policy explains how Color Flow – Water Sort Puzzle (the “Game”), app ID <code>com.qunovixtechnologies.colorflow</code> on Android and on iOS (iPhone and iPad), handles information. The Game is provided by Qunovix Technologies (“we,” “us,” or “our”), located in Pune, Maharashtra, India. This Policy applies to the Game and not to third-party apps, websites, advertisers, or services that you reach through it, including websites opened by tapping an advertisement.
   </p>
+  <div class="highlight">
+    <strong>Android and iOS:</strong> Sections 3 to 6 (analytics and crash reports, ads, ad consent, and in-app purchases) and the daily reminders in section 7 apply to the Android version. The current iOS version does not start Firebase, Google AdMob, or in-app purchases, and does not schedule reminders. It saves your game on your device only and sends no data to us or to third parties. If a future iOS version adds any of these services, we will update this Policy before they are used.
+  </div>
 
   <h2 id="local">2. Information Stored on Your Device</h2>
   <p>To save your game, Color Flow keeps a save file (with a backup copy) in the Game's private storage on your device. It may contain:</p>
   <ul>
     <li>game progress: campaign level progress, stars, best scores, daily puzzle results and streaks, lucky spin status, milestones, and statistics;</li>
     <li>in-game balances and items: diamonds, unlocked themes and bottle cosmetics, and hints or other helpers;</li>
-    <li>settings: sound, music, vibration, reduced motion, high contrast, large text, colour symbols, and tutorial status;</li>
+    <li>settings: sound, music, vibration, reduced motion, high contrast, large text, colour symbols, tutorial status, which version of the Terms and Privacy Policy you accepted, and whether the Game has already asked for notification permission;</li>
     <li>simple counters used to limit how often ads appear, such as the number of levels completed since the last ad; and</li>
     <li>a record of purchases made in the Game (product ID and the purchase token or order reference returned by Google Play) so each purchase is granted only once and can be restored.</li>
   </ul>
@@ -210,14 +214,25 @@
     Optional purchases, such as diamond packs, Remove Ads, theme and bottle bundles, and the Ultimate bundle, are processed by Google Play Billing. Payment details are collected and handled by Google under its own terms and privacy policy; Qunovix Technologies never sees your card number or other payment credentials. Google provides the Game with information needed to confirm and deliver a purchase, such as the product ID, purchase status, and a purchase token. Google Play may also provide us with order and transaction reports through the Play Console. We use this information only to deliver, restore, and support purchases, handle refunds, and meet legal and accounting obligations.
   </p>
 
-  <h2 id="permissions">7. Android Permissions and Device Features</h2>
+  <h2 id="permissions">7. Permissions, Notifications, and Device Features</h2>
+  <h3>Daily reminder notifications (Android)</h3>
+  <p>
+    After you accept these terms, the Game asks once for permission to send notifications (on Android 13 and later, through the standard Android prompt). If you allow it, the Game schedules up to three play reminders a day, at about 10 AM, 5 PM, and 9 PM in your device's local time. The reminders are created and stored by Android on your device. They are not sent from a server, contain no personal information, and do not send any data to us or to third parties. You can turn them off at any time in your device's settings (Settings ▸ Apps ▸ Color Flow ▸ Notifications). If you decline or later turn notifications off, the Game works normally.
+  </p>
+  <h3>Android permissions</h3>
   <ul>
     <li><strong>Internet and network state:</strong> used to send analytics events and crash reports, load ads, show the consent form, and process purchases. The puzzles themselves work without a connection; analytics events are sent later when a connection is available.</li>
     <li><strong>Advertising ID (<code>AD_ID</code>):</strong> declared by the Google Mobile Ads SDK so ads can be delivered and measured as described above.</li>
+    <li><strong>Notifications (<code>POST_NOTIFICATIONS</code>):</strong> used only for the optional daily reminders described above.</li>
+    <li><strong>Run at startup (<code>RECEIVE_BOOT_COMPLETED</code>):</strong> used only to schedule the daily reminders again after your device restarts.</li>
     <li><strong>Vibration:</strong> used for optional haptic feedback. You can turn it off in the Game's Settings.</li>
     <li><strong>Google Play Billing:</strong> used to offer and process in-app purchases.</li>
   </ul>
-  <p>Color Flow does not request access to your location, contacts, camera, microphone, photos, files, or phone calls.</p>
+  <h3>iOS</h3>
+  <p>
+    The current iOS version does not ask for any special permissions. It does not send notifications and does not use your device's advertising identifier (IDFA), so it does not show Apple's App Tracking Transparency prompt. Vibration and sound can be turned off in the Game's Settings.
+  </p>
+  <p>Color Flow does not request access to your location, contacts, camera, microphone, photos, files, or phone calls on any platform.</p>
 
   <h2>8. How Information Is Used and Shared</h2>
   <p>We and the services described above use information to:</p>
@@ -239,7 +254,7 @@
   <h2 id="retention">9. Retention and Deletion</h2>
   <ul>
     <li>Your save file remains on your device until you clear the Game's storage or uninstall Color Flow. There is no server account for us to delete.</li>
-    <li>Depending on your Android settings, Android's own device backup may include app data in your Google account backup. Manage this in your device's backup settings.</li>
+    <li>Depending on your device settings, Android's device backup may include app data in your Google account backup, and on iOS, iCloud or computer backups may include it. Manage this in your device's backup settings.</li>
     <li>Non-consumable purchases (Remove Ads and the bundles) are linked to your Google Play account and can be restored after reinstalling. Diamonds and other progress are not restored unless a device backup restores them.</li>
     <li>Google Analytics event-level data is kept for the retention period set in our Google Analytics settings and then deleted automatically. Crashlytics crash reports are kept for up to 90 days.</li>
     <li>Information collected by Google for ads and purchases is kept according to Google's retention policies.</li>
@@ -247,7 +262,7 @@
 
   <h2>10. Security</h2>
   <p>
-    Game data is kept in Android's private app storage, which other apps cannot normally read, and communication with Google's analytics, crash-reporting, ad, and billing services uses encrypted connections. No method of storage or transmission is completely secure, so we cannot guarantee absolute security. Keep your device and Google account secure.
+    Game data is kept in the Game's private app storage on Android or iOS, which other apps cannot normally read, and communication with Google's analytics, crash-reporting, ad, and billing services uses encrypted connections. No method of storage or transmission is completely secure, so we cannot guarantee absolute security. Keep your device and Google account secure.
   </p>
 
   <h2 id="children">11. Children</h2>
@@ -267,8 +282,9 @@
     <li>reset or delete your advertising ID, or opt out of ad personalisation, in your Android device settings;</li>
     <li>ask us to delete analytics data linked to your device's app-instance ID by contacting us (see below);</li>
     <li>buy Remove Ads to stop interstitial ads;</li>
-    <li>turn off vibration, sound, and music in the Game's Settings; and</li>
-    <li>delete all game data by clearing the Game's storage in Android settings or uninstalling the Game.</li>
+    <li>turn off vibration, sound, and music in the Game's Settings;</li>
+    <li>turn off daily reminders in your device's notification settings; and</li>
+    <li>delete all game data by clearing the Game's storage in Android settings or by uninstalling the Game (on Android or iOS).</li>
   </ul>
   <p>
     Depending on where you live (for example, under the GDPR, UK GDPR, India's Digital Personal Data Protection Act, or US state privacy laws), you may have rights to access, correct, delete, or object to the processing of your personal information, to withdraw consent, and to complain to a data protection authority. Because we do not hold your save data or ad identifiers, most requests can be fulfilled with the controls above. Analytics and crash data are pseudonymous and cannot be linked to your name, so to help with a request about them we may ask you for details from your device. For information held by Google, use your <a href="https://myaccount.google.com/" target="_blank" rel="noopener noreferrer">Google Account</a> controls. You may also contact us about any information we directly hold, such as purchase records.
