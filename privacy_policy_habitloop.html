@@ -60,11 +60,11 @@
     <img class="brand-logo" src="assets/Logo.png" alt="HabitMotive logo" width="72" height="72">
     <span class="product">HabitMotive for Android</span>
     <h1>Privacy Policy</h1>
-    <p class="updated">Effective and last updated: 25 August 2026</p>
+    <p class="updated">Effective and last updated: 4 November 2026</p>
   </header>
 
   <div class="summary">
-    <strong>Privacy summary:</strong> HabitMotive is an offline-first habit and life tracker. Your habits, tasks, moods, money records, focus sessions, journal entries, and attachments are stored primarily in the App's private storage on your Android device. Qunovix Technologies does not operate a HabitMotive account or tracker-data server, does not sell your information, and does not include advertising or analytics SDKs. Network features are limited and are explained below.
+    <strong>Privacy summary:</strong> HabitMotive is an offline-first habit and life tracker. Your habits, tasks, moods, money records, focus sessions, journal entries, and attachments are stored primarily in the App's private storage on your Android device. Qunovix Technologies does not operate a HabitMotive account or tracker-data server, does not sell your information, and does not include advertising SDKs. Firebase Analytics collects app-usage and purchase events, and Firebase Crashlytics collects technical diagnostics. You can disable these separately in Settings. Network features are explained below.
   </div>
 
   <nav aria-label="Policy contents">
@@ -103,12 +103,14 @@
   <p>Source files, copies retained by a document provider, shared copies, and exported or backed-up copies are controlled separately. Removing an attachment or record from HabitMotive may not delete those other copies.</p>
 
   <h2>4. Information We Do Not Collect on Our Servers</h2>
-  <p>HabitMotive does not require a Qunovix Technologies account and does not include third-party advertising, behavioural analytics, or crash-reporting SDKs. We do not sell, rent, or use your tracker content for advertising, data brokerage, credit decisions, or training general-purpose artificial-intelligence or machine-learning models. The App does not request contacts, call logs, SMS, or device location permissions.</p>
+  <p>HabitMotive does not require a Qunovix Technologies account and does not include third-party advertising SDKs. We do not sell, rent, or use your tracker content for advertising, data brokerage, credit decisions, or training general-purpose artificial-intelligence or machine-learning models. Firebase Analytics and Crashlytics process the technical and usage data described below; our custom usage events do not include habit or task names, journal text, mood values or notes, personal financial amounts, account names, receipts, or attachments. The App does not request contacts, call logs, SMS, or device location permissions.</p>
   <p>Google Play, Android, Google Drive, exchange-rate hosts, websites, email apps, and sharing destinations may independently process technical, account, transaction, or content information under their own privacy policies when you use those services.</p>
 
   <h2 id="online-services">5. Limited Online Services</h2>
-  <p>HabitMotive uses the internet only for features that need it:</p>
+  <p>HabitMotive uses the internet for these features and services:</p>
   <ul>
+    <li><strong>Firebase Analytics:</strong> app-instance identifiers, device/app metadata, session and screen events, feature-use events, and Google Play purchase and subscription events help us understand app use and Premium performance. Store product IDs, plans, currency, price, offer/trial information and purchase status may be measured. Personal money-tracker amounts are separate and are not sent in our usage events. Advertising-ID collection and advertising personalization are disabled. Turn off Usage analytics in Settings to stop future Analytics collection on this installation.</li>
+    <li><strong>Firebase Crashlytics:</strong> technical crash reports, stack traces, error information, app/device/operating-system metadata and app-usage breadcrumbs help us diagnose failures. We do not deliberately attach tracker text, media or receipts to crash reports. Turn off Crash reports in Settings to stop automatic future Crashlytics collection. Data already sent remains subject to the Firebase project's retention settings and Google's processing policies.</li>
     <li><strong>Exchange rates:</strong> automatic exchange-rate updates are enabled by default and may run periodically in the background. The App requests a public daily currency file from jsDelivr or a Cloudflare Pages mirror. The request includes the base currency code in the URL and a <code>HabitMotive/1.0</code> user-agent. Like an ordinary internet request, the host can receive network information such as your IP address, request time, and connection metadata. No habit, mood, journal, focus, transaction, account-balance, or attachment content is sent. You can turn automatic rates off in Settings and enter rates manually.</li>
     <li><strong>Google Play Billing:</strong> if you view, buy, or restore HabitMotive Pro, Google Play processes product, price, payment, account, device, and transaction information. HabitMotive receives purchase-status information needed to unlock and restore Pro and stores the entitlement state locally. Qunovix Technologies does not receive your full payment-card details through the App.</li>
     <li><strong>App-store delivery:</strong> Google Play and Android may process device, installation, update, diagnostics, security, and usage information independently as part of distributing and operating apps.</li>
@@ -127,7 +129,7 @@
   <p>Separately from HabitMotive's password-protected backup feature, Android may back up or transfer eligible App data through the device's operating-system backup and restore features, depending on your Android version, Google account, device manufacturer, and settings. Such platform backup is controlled by Android or your device provider and may include private App files and preferences. Review your device's backup settings if you do not want Android to make those copies. Platform backup is governed by the relevant provider's privacy and retention practices and is not operated by Qunovix Technologies.</p>
 
   <h2 id="sharing">8. User-Directed Sharing and External Destinations</h2>
-  <p>HabitMotive sends information outside the App only when you choose an action or enable a network feature. Examples include:</p>
+  <p>In addition to the Analytics and diagnostic collection described above, HabitMotive sends information outside the App when you choose an action or enable a network feature. Examples include:</p>
   <ul>
     <li>sharing an encrypted local backup through the Android share sheet;</li>
     <li>sharing a CSV export of money transactions;</li>
@@ -150,7 +152,7 @@
   <p>App lock invokes Android's system authentication screen and receives an authentication result. HabitMotive does not receive or store your PIN, pattern, password, fingerprint, face image, or biometric template. App lock is an access convenience, not encryption of the local database, attachments, notifications, widgets, exports, or backups.</p>
 
   <h2>10. How Information Is Disclosed</h2>
-  <p>We do not disclose your local tracker content because we do not receive it, except if you voluntarily send it to us. Information otherwise leaves the App only at your direction, through the online services described above, through Android platform backup or transfer settings, or if we are legally required to disclose information that is actually in our possession. We may also use information you send us when reasonably necessary to protect users, rights, safety, and security or to investigate abuse.</p>
+  <p>We do not disclose your local tracker content because we do not receive it, except if you voluntarily send it to us. Technical usage, purchase and diagnostic information is processed by Firebase as described above. Other information leaves the App through the online services described above, at your direction, through Android platform backup or transfer settings, or if we are legally required to disclose information that is actually in our possession. We may also use information you send us when reasonably necessary to protect users, rights, safety, and security or to investigate abuse.</p>
 
   <h2 id="retention">11. Retention and Deletion</h2>
   <ul>
@@ -180,6 +182,7 @@
     <li>review, edit, archive, or delete supported records within the App;</li>
     <li>deny or revoke microphone, notification, exact-alarm, and biometric access in Android settings, understanding that related features may stop working;</li>
     <li>turn off automatic exchange-rate updates and maintain rates manually;</li>
+    <li>disable Usage analytics and Crash reports separately in Settings under Analytics &amp; diagnostics;</li>
     <li>choose whether to create, share, upload, or restore a backup;</li>
     <li>revoke Google Drive access through your Google Account and manage data held by Google;</li>
     <li>manage subscriptions and purchase history through Google Play; and</li>
