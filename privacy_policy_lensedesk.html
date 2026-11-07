@@ -125,11 +125,11 @@
   <header>
     <span class="product">LensDesk for Android</span>
     <h1>Privacy Policy</h1>
-    <p class="updated">Effective and last updated: 23 August 2026</p>
+    <p class="updated">Effective and last updated: 7 November 2026</p>
   </header>
 
   <div class="summary">
-    <strong>Privacy summary:</strong> LensDesk is an offline-first photographer booking calendar. Your live business records are stored in the App's private database on your Android device. Qunovix Technologies does not operate a LensDesk server, does not sell your information, and does not include advertising or analytics SDKs. Google Calendar and Google Drive features are optional and are used only after you connect a Google account.
+    <strong>Privacy summary:</strong> LensDesk is an offline-first photographer booking calendar. Your live business records are stored in the App's private database on your Android device. Qunovix Technologies does not operate a LensDesk server, does not sell your information, and does not include advertising SDKs. The App uses Google Analytics for Firebase and Firebase Crashlytics to receive pseudonymous usage statistics and crash reports; these never include your clients' names, contact details, notes, venues, or payment amounts. Google Calendar and Google Drive features are optional and are used only after you connect a Google account.
   </div>
 
   <nav aria-label="Policy contents">
@@ -137,6 +137,7 @@
     <ul>
       <li><a href="#scope">Scope and developer</a></li>
       <li><a href="#information">Information handled</a></li>
+      <li><a href="#analytics">Analytics and crash reports</a></li>
       <li><a href="#google">Google services</a></li>
       <li><a href="#sharing">Sharing and external apps</a></li>
       <li><a href="#permissions">Android permissions</a></li>
@@ -167,9 +168,24 @@
     We do not receive this local database on a Qunovix Technologies server. The information is used to provide the App's booking, client, calendar, payment, reminder, search, revenue, recycle-bin, export, messaging, security, and settings features.
   </p>
 
-  <h2>3. Information We Do Not Collect</h2>
+  <h2 id="analytics">3. Usage Analytics, Crash Reports, and Information We Do Not Collect</h2>
   <p>
-    LensDesk does not include advertising, analytics, tracking, or crash-reporting SDKs. It does not request access to your contacts, camera, microphone, photo library, media library, call logs, SMS messages, or precise or approximate device location. It does not collect photography image, video, or audio files. Map locations are text or links that you enter; LensDesk does not read the device's live location.
+    LensDesk uses <strong>Google Analytics for Firebase</strong> and <strong>Firebase Crashlytics</strong>, services provided by Google LLC, to understand how the App's features are used and to find and fix crashes and errors. When your device is online, the App sends the following to Firebase:
+  </p>
+  <ul>
+    <li><strong>App activity events:</strong> which screens are opened and which features are used, such as creating, editing, deleting, or restoring a booking; adding a payment or event type; starting a call or WhatsApp message; connecting Google; running a backup, restore, or export; sharing availability; changing a setting; and unlocking the App. Events carry only categories and counts, such as the number of bookings saved, booking status, whether an advance was recorded, an export format, or whether Calendar sync is on.</li>
+    <li><strong>App preferences:</strong> your selected currency, theme, date format, and whether app lock, notifications, Calendar sync, and automatic backup are switched on.</li>
+    <li><strong>Device and app information collected automatically by Firebase:</strong> a pseudonymous app-instance identifier and Firebase installation ID, device model, Android version, App version, language, approximate country or region derived from your IP address, and session start and duration.</li>
+    <li><strong>Crash and error reports:</strong> when the App crashes or an operation fails, a stack trace, the type of error, device state at the time (such as available memory and storage, orientation, and whether the device is rooted), and a short log of the screens and App events that came just before the problem.</li>
+  </ul>
+  <p>
+    <strong>What is not sent to Firebase:</strong> client names, phone numbers, WhatsApp numbers, email addresses, client or booking notes, venues, map locations, package names, team members, payment amounts, your photographer profile, your Google account details, or any other content of your local database. Record identifiers are removed from screen names before they are sent.
+  </p>
+  <p>
+    LensDesk does not collect the Android advertising ID, has advertising personalisation signals turned off, and does not use analytics or crash data for advertising, profiling, or sale. Google processes this data as our service provider under the <a href="https://firebase.google.com/terms/data-processing-terms" target="_blank" rel="noopener noreferrer">Firebase Data Processing and Security Terms</a> and describes its handling in <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Privacy and Security in Firebase</a>.
+  </p>
+  <p>
+    LensDesk does not include advertising or third-party tracking SDKs. It does not request access to your contacts, camera, microphone, photo library, media library, call logs, SMS messages, or precise or approximate device location. It does not collect photography image, video, or audio files. Map locations are text or links that you enter; LensDesk does not read the device's live location.
   </p>
 
   <h2 id="google">4. Optional Google Account and API Data</h2>
@@ -219,7 +235,7 @@
 
   <h2 id="permissions">8. Android Permissions and Device Features</h2>
   <ul>
-    <li><strong>Internet:</strong> used for optional Google sign-in, Calendar, Drive, maps, WhatsApp links, and other online actions you request.</li>
+    <li><strong>Internet and network state:</strong> used for optional Google sign-in, Calendar, Drive, maps, WhatsApp links, and other online actions you request, and to send the usage analytics and crash reports described in Section 3.</li>
     <li><strong>Notifications:</strong> used to show local booking reminders after Android grants permission.</li>
     <li><strong>Receive boot completed:</strong> used by the notification component so scheduled reminders can continue after the device restarts.</li>
     <li><strong>Biometric and fingerprint capability:</strong> used only when you enable LensDesk app lock.</li>
@@ -229,9 +245,9 @@
   </p>
 
   <h2>9. How Information Is Used and Disclosed</h2>
-  <p>Information is used only to operate features you request, maintain App state, and protect access when app lock is enabled. We do not sell, rent, or monetise client records, business records, profile information, or Google user data. We do not use that information for advertising or profiling.</p>
+  <p>Information is used only to operate features you request, maintain App state, protect access when app lock is enabled, and, for the pseudonymous analytics and crash data described in Section 3, to measure feature use, prioritise improvements, and diagnose and fix problems. We do not sell, rent, or monetise client records, business records, profile information, or Google user data. We do not use that information for advertising or profiling.</p>
   <p>
-    Information is disclosed only when you direct the App to an external service, when needed to operate the optional Google features described above, or if disclosure is required by applicable law or necessary to protect legal rights, safety, or security. Because Qunovix Technologies does not receive the local database, we generally cannot disclose local records that remain solely on your device.
+    Information is disclosed only when you direct the App to an external service, when needed to operate the optional Google features described above, to Google as our Firebase service provider for the analytics and crash data described in Section 3, or if disclosure is required by applicable law or necessary to protect legal rights, safety, or security. Because Qunovix Technologies does not receive the local database, we generally cannot disclose local records that remain solely on your device.
   </p>
 
   <h2 id="retention">10. Retention and Deletion</h2>
@@ -242,9 +258,10 @@
     <li>Clearing LensDesk storage or uninstalling removes the App's local data from that device. Android platform backup is disabled for LensDesk.</li>
     <li>CSV and PDF exports remain wherever you or the receiving app save them until deleted there.</li>
     <li>Google Calendar events and Drive backups are retained by Google until changed or deleted through LensDesk or the relevant Google controls, subject to Google's retention practices.</li>
+    <li>Firebase Crashlytics crash and error reports are retained for 90 days. Google Analytics for Firebase event data linked to an app-instance identifier is retained for the period configured for our Firebase project, which is no longer than 14 months; aggregated, non-identifying reports may be kept longer.</li>
   </ul>
   <p>
-    LensDesk does not create a Qunovix Technologies account, so there is no LensDesk server account to delete. If you want to retain local data before clearing storage or uninstalling, create an export or optional Drive backup first.
+    LensDesk does not create a Qunovix Technologies account, so there is no LensDesk server account to delete. Analytics and crash data are not linked to an account, name, or contact details. If you want to retain local data before clearing storage or uninstalling, create an export or optional Drive backup first.
   </p>
 
   <h2>11. Security</h2>
@@ -264,7 +281,7 @@
 
   <h2>14. International Processing</h2>
   <p>
-    Your local records remain on your device unless you choose an external action. Google and any external app or service you select may process information in countries other than your own under their respective terms, safeguards, and privacy policies.
+    Your local records remain on your device unless you choose an external action. The usage analytics and crash reports described in Section 3 are processed by Google on servers that may be located outside your country, including in the United States. Google and any external app or service you select may process information in countries other than your own under their respective terms, safeguards, and privacy policies.
   </p>
 
   <h2 id="choices">15. Your Choices and Privacy Rights</h2>
@@ -273,11 +290,12 @@
     <li>view, edit, delete, restore, or permanently delete applicable local records in LensDesk;</li>
     <li>disable notifications, Google Calendar sync, automatic Drive backup, or app lock in Settings;</li>
     <li>disconnect Google and revoke access through your Google Account;</li>
+    <li>stop future usage analytics and crash reports by uninstalling LensDesk (the App does not currently provide a separate in-app switch for them);</li>
     <li>clear all local App data through Android settings or uninstall LensDesk; and</li>
     <li>delete exports and Google-held data using the controls of the service where they are stored.</li>
   </ul>
   <p>
-    Depending on where you live, you may have additional rights concerning personal information processed by us. Since we do not receive the local database or hidden Drive backup, we ordinarily cannot identify, retrieve, correct, or delete those records for you. Use the device and Google controls described above. You may contact us regarding information, if any, that we directly hold.
+    Depending on where you live, you may have additional rights concerning personal information processed by us. Since we do not receive the local database or hidden Drive backup, we ordinarily cannot identify, retrieve, correct, or delete those records for you. Use the device and Google controls described above. Analytics and crash data are pseudonymous and are not linked to your name or contact details, so we may not be able to locate them from an email request alone; you may still contact us about this or any other information we directly hold, and we will help where we can.
   </p>
 
   <h2>16. Changes to This Policy</h2>
