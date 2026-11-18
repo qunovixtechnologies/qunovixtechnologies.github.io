@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for the ArcNotch Android gesture app by Qunovix Technologies.">
+  <meta name="theme-color" content="#d9541b">
+  <link rel="icon" type="image/png" href="assets/branding/arcnotch-logo.png">
+  <title>Privacy Policy | ArcNotch</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #f8f5f2; --surface: #ffffff; --text: #26211e;
+      --muted: #625851; --primary: #d9541b; --primary-strong: #9a3a16;
+      --border: #e8ddd5; --notice: #fff0e6;
+      --shadow: rgba(44, 29, 19, 0.08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--background); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; font-size: 16px; line-height: 1.7; }
+    main { width: min(940px, calc(100% - 32px)); margin: 32px auto; padding: clamp(24px, 5vw, 56px); background: var(--surface); border: 1px solid var(--border); border-radius: 22px; box-shadow: 0 16px 42px var(--shadow); }
+    h1, h2 { line-height: 1.25; }
+    h1 { margin: 0 0 8px; color: var(--primary-strong); font-size: clamp(2rem, 6vw, 3rem); }
+    h2 { margin: 34px 0 10px; color: var(--primary-strong); font-size: 1.35rem; }
+    p, li { margin: 10px 0; }
+    ul { padding-left: 24px; }
+    a { color: var(--primary-strong); text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+    code { padding: 2px 6px; background: var(--notice); border-radius: 5px; overflow-wrap: anywhere; }
+    .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .brand img { border-radius: 23%; }
+    .product { margin: 0; color: var(--primary-strong); font-weight: 700; }
+    .updated { margin: 0 0 24px; color: var(--muted); }
+    .summary { margin: 24px 0; padding: 18px 20px; border-radius: 10px; }
+    .summary { background: var(--notice); border-left: 4px solid var(--primary); }
+    nav { margin: 28px 0; padding: 18px 20px; border: 1px solid var(--border); border-radius: 14px; }
+    nav strong { display: block; margin-bottom: 8px; }
+    nav ul { margin: 0; columns: 2; }
+    footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.95rem; }
+    footer a + a { margin-left: 18px; }
+    @media (prefers-color-scheme: dark) {
+      :root { --background: #171514; --surface: #211d1a; --text: #f7f0ea; --muted: #c2b4aa; --primary: #ff6a2b; --primary-strong: #ffab83; --border: #463b35; --notice: #34241d; --shadow: transparent; }
+    }
+    @media (max-width: 620px) {
+      main { width: 100%; margin: 0; border: 0; border-radius: 0; }
+      nav ul { columns: 1; }
+      footer a { display: block; margin: 8px 0; }
+      footer a + a { margin-left: 0; }
+    }
+    @media print {
+      body { background: #fff; color: #000; }
+      main { width: 100%; margin: 0; padding: 0; border: 0; box-shadow: none; }
+      nav { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand">
+      <img src="assets/branding/arcnotch-logo.png" alt="" width="56" height="56">
+      <p class="product">ArcNotch for Android</p>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated <time datetime="2026-11-18">18 November 2026</time></p>
+  </header>
+
+  <p class="summary">ArcNotch turns the area around your front camera into a gesture button. It saves your settings, notes and captures on your device. Google services process data for ads, purchases, QR scanner diagnostics, and analytics and crash reporting in release builds.</p>
+
+  <nav aria-label="Policy contents">
+    <strong>Contents</strong>
+    <ul>
+      <li><a href="#developer">Scope and developer</a></li>
+      <li><a href="#accessibility">Accessibility service</a></li>
+      <li><a href="#permissions">Device data and permissions</a></li>
+      <li><a href="#google">Google services</a></li>
+      <li><a href="#sharing">Sharing, backup and support</a></li>
+      <li><a href="#retention">Security, retention and deletion</a></li>
+      <li><a href="#choices">Your choices and rights</a></li>
+      <li><a href="#contact">Contact and changes</a></li>
+    </ul>
+  </nav>
+
+  <h2 id="developer">Scope and developer</h2>
+  <p>This policy covers ArcNotch (listed as “Arc Notch: Touch The Notch” on Google Play), Android package <code>com.qunovixtechnologies.arcnotch</code>. The app is provided by Qunovix Technologies of Pune, Maharashtra, India. You can use ArcNotch without a Qunovix account. We do not operate a server for your gestures, notes or captures.</p>
+
+  <h2 id="accessibility">Accessibility service</h2>
+  <p>ArcNotch uses Android's Accessibility Service API to place a touch area near the front camera and run your assigned actions while other apps are open. You enable the service in Android Settings and can revoke access there at any time.</p>
+  <ul>
+    <li><strong>App context.</strong> The service identifies the foreground app to run your rules and pause gestures in apps you choose. It checks the positions of other accessibility overlays to detect overlap with the touch area.</li>
+    <li><strong>Scrolling.</strong> When you trigger a scroll action, the service checks the accessibility structure for a scrollable area and sends a scroll command or swipe. It does not extract or store screen text for scrolling.</li>
+    <li><strong>Screenshots.</strong> When you trigger ArcNotch's screenshot action, the service captures the screen and saves the image on your device. If you choose the system screenshot action, Android handles the capture.</li>
+  </ul>
+  <p>The service processes this information on your device. User-directed actions that pass information to other apps are described under <a href="#sharing">Sharing, backup and support</a>.</p>
+
+  <h2 id="permissions">Device data and permissions</h2>
+  <ul>
+    <li><strong>Settings and notes.</strong> ArcNotch stores gesture assignments, rules, selected apps or shortcuts, notes, preferences and Pro entitlement state in private app storage.</li>
+    <li><strong>Camera, microphone and screen capture.</strong> Camera access supports quick photos, video and the live mirror. The microphone is used for audio recordings and when you enable microphone sound for video or screen recording. Android asks for permission before screen recording. ArcNotch saves captures to the device's media storage.</li>
+    <li><strong>Contacts and calls.</strong> Android's picker provides the name and number of the contact you choose. ArcNotch passes that number to the dialler when you run the shortcut. It uses the device's audio mode to pause gestures during calls if you enable that setting.</li>
+    <li><strong>Usage and Notification access.</strong> Quick Apps uses installed app names and icons. With Usage access it can display recent or frequently used apps. With Notification access the media controls can use active Android media sessions and show the playing app, track, artist and artwork.</li>
+    <li><strong>System settings and notifications.</strong> Android may request separate access for brightness, rotation, screen timeout or Do Not Disturb controls. Notifications and foreground services support the optional Keep alive feature, timers and active recordings.</li>
+  </ul>
+
+  <h2 id="google">Google services</h2>
+  <ul>
+    <li><strong>AdMob and ad choices.</strong> The free version can show an in-app banner. Google Mobile Ads may collect and share IP addresses (which can indicate approximate location), app interactions, diagnostics, advertising and app set IDs, and, where applicable, identifiers associated with signed-in accounts. Google uses this information for advertising, analytics and fraud prevention. Google's User Messaging Platform checks whether to display privacy choices and applies those choices to ad requests. Pro removes ads.</li>
+    <li><strong>Google Play Billing.</strong> Google Play handles payment and billing account data. ArcNotch receives information such as the product ID, purchase status and purchase token from Google Play. It checks and acknowledges purchases through Play to activate or restore Pro and saves the entitlement and plan on the device. Qunovix does not receive your full payment card details through ArcNotch.</li>
+    <li><strong>Google Code Scanner.</strong> When you request a QR scan, Google Play services processes the image on your device and returns the result to ArcNotch, which copies it to your clipboard. Google does not store the image or scan result. The scanner SDK sends Google device and app information, identifiers, usage events and performance metrics for diagnostics and usage analytics.</li>
+    <li><strong>Google Analytics for Firebase.</strong> Release builds send app activity and session data, app and device information, approximate location inferred by Google, and an app-instance identifier. ArcNotch measures onboarding completion, gesture assignment, opening the gesture test or Pro screen, and starting checkout. Custom events use built-in gesture, action and plan codes. The app leaves out note and recording contents, contact information, shortcut targets, and purchase tokens. Firebase Analytics advertising ID collection and ad personalisation signals are disabled.</li>
+    <li><strong>Firebase Crashlytics.</strong> Release builds send crash and error diagnostics, including stack traces, error details, app and device state, and installation and session identifiers. Recent Analytics events can help explain what happened before a crash. We use these reports to diagnose problems and improve reliability.</li>
+  </ul>
+  <p>Read the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, <a href="https://policies.google.com/technologies/partner-sites">how Google uses data from apps</a>, and the <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Mobile Ads</a>, <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit</a> and <a href="https://firebase.google.com/support/privacy">Firebase</a> privacy information.</p>
+
+  <h2 id="sharing">Sharing, backup and support</h2>
+  <ul>
+    <li><strong>Actions you choose.</strong> Sharing or opening a capture passes the selected file to the app you choose. Search and website shortcuts pass the query or URL to a browser or search provider. An automation shortcut sends the gesture type and toggle state to your chosen receiver, or to apps listening for the broadcast if you leave the receiver open.</li>
+    <li><strong>System backup and transfer.</strong> Android can include eligible settings and notes in backups or device transfers, depending on your settings. Your gallery or storage provider may also sync captures saved in shared media storage.</li>
+    <li><strong>Support.</strong> If you email us, we receive the sender address, message and anything you choose to include. ArcNotch's bug report option can add the app version, phone model and Android version to an email draft. We use the information you send to respond and troubleshoot.</li>
+  </ul>
+
+  <h2 id="retention">Security, retention and deletion</h2>
+  <p>Android protects private app storage. Captures in shared media storage are accessible to apps with relevant media access. Google documents encrypted transfers for Mobile Ads and Code Scanner telemetry.</p>
+  <p>Delete notes in ArcNotch, or clear its storage or uninstall it to remove active private app data. Delete screenshots and recordings separately in the Media tab or your gallery or file manager. Manage backups, shared copies and synced files where they are stored.</p>
+  <p>Google retains ad, scanner, transaction and telemetry data under its policies and the relevant service settings. Firebase retains Crashlytics stack traces and associated identifiers for 90 days before it starts removing them from live and backup systems. We keep support correspondence for as long as needed to address the request and meet applicable legal, security or dispute-resolution obligations. You can email us to request deletion of information we hold.</p>
+
+  <h2 id="choices">Your choices and rights</h2>
+  <p>You can revoke app permissions in Android Settings. Related features may stop working. Where available, use Privacy choices in ArcNotch to revisit your ad preferences. You can also manage your advertising ID in Android Settings and visit <a href="https://myadcenter.google.com/">Google My Ad Center</a>. Contextual ads and measurement may continue if you turn off ad personalisation.</p>
+  <p>Depending on your location, you may have rights to access, correct, delete or object to the use of information we hold. Contact us to make a request. For information held by Google or another service, use that provider's privacy controls.</p>
+
+  <h2 id="contact">Contact and changes</h2>
+  <p>For privacy questions or deletion requests, email Qunovix Technologies at <a href="mailto:support@qunovix.com?subject=ArcNotch%20privacy">support@qunovix.com</a>. We update the date above when this policy changes.</p>
+
+  <footer>
+    <a href="privacy_policy_arcnotch.html" aria-current="page">Privacy Policy</a>
+    <a href="terms_and_conditions_arcnotch.html">Terms &amp; Conditions</a>
+    <p>&copy; 2026 Qunovix Technologies. All rights reserved.</p>
+  </footer>
+</main>
+</body>
+</html>
